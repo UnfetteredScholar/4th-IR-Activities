@@ -4,7 +4,7 @@
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.ImageClassifyCV.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.ImageClassifyCV.Activities.Design</AssemblyName>
-    <PackageId>4th-IR.ImageClassification.Activity.ImageClassification-Classy Vision</PackageId>
+    <PackageId>4thIR.ImageClassification.Activity.ImageClassificationClassyVision</PackageId>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
   <!-- Package Metadata -->

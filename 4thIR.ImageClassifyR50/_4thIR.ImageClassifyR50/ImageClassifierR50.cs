@@ -12,7 +12,7 @@ namespace ImageClassificationR50
 {
     public class ImageClassifierR50
     {
-        private HttpClient client=new HttpClient();
+        private static readonly HttpClient client=new HttpClient();
 
         public ImageClassifierR50()
         {

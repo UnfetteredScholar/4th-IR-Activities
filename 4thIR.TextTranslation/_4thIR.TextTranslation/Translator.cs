@@ -49,8 +49,9 @@ namespace TextTranslation
             var response = await client.PostAsync(requestUri, requestJson);
 
 
-            if (response.IsSuccessStatusCode)
+            try
             {
+                response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();
                 char[] param = { '[', ']' };
@@ -59,21 +60,24 @@ namespace TextTranslation
                 return responseContent?.conversion_text != null ? responseContent.conversion_text : " ";
 
             }
-            else
+            catch(HttpRequestException ex)
             {
+                string message = "";
 
                 if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    return "BAD REQUEST: string too long.";
+                    message= "BAD REQUEST: string too long.";
                 }
                 else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                 {
-                    return "INTERNAL SERVER ERROR: ML model not found.";
+                    message = "INTERNAL SERVER ERROR: ML model not found.";
                 }
                 else
                 {
-                    return "ERROR: TRANSLATOR FAILED.";
+                    message = "ERROR: TRANSLATOR FAILED.";
                 }
+
+                throw new Exception(message,ex);
             }
 
 

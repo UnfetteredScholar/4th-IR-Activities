@@ -11,11 +11,10 @@ namespace ImageClassificationCV
 {
     public class ImageClassifierCV
     {
-        private static HttpClient client;
+        private static readonly HttpClient client=new HttpClient();
 
         public ImageClassifierCV()
         {
-            client = new HttpClient();
             //client.BaseAddress = "https://image-classification-classy-vision.ai-sandbox.4th-ir.io/api/v1/classify";
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -58,7 +57,7 @@ namespace ImageClassificationCV
 
                     return responseContent.label;
                 }
-                catch(Exception ex)
+                catch(HttpRequestException ex)
                 {
                     if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                     {

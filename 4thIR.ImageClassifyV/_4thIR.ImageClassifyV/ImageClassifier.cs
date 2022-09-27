@@ -15,7 +15,7 @@ namespace ImageClassification
     /// </summary>
     public class ImageClassifier
     {
-        private readonly HttpClient client = new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
         /// <summary>
         /// Initializes ImageClassifier object
@@ -52,26 +52,36 @@ namespace ImageClassification
 
                 var response = await client.PostAsync(requestUri, multipartFormContent);
 
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                try
                 {
+                    response.EnsureSuccessStatusCode();
+
                     var r = await response.Content.ReadAsStringAsync();
                     char[] param = new char[] { '[', ']' };
                     ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r.Trim(param));
 
                     return responseContent?.label != null ? responseContent.label : string.Empty;
                 }
-                else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+                catch(HttpRequestException ex)
                 {
-                    return "string too long";
+                    string message = "";
+
+                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+                    {
+                        message= "string too long";
+                    }
+                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                    {
+                        message= "ML model not found";
+                    }
+                    else
+                    {
+                        message= "error";
+                    }
+
+                    throw new Exception(message,ex);
                 }
-                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                {
-                    return "ML model not found";
-                }
-                else
-                {
-                    return "error";
-                }
+
             }
 
 

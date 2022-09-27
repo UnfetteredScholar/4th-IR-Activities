@@ -59,22 +59,33 @@ namespace DocumentClassification
             //Console.WriteLine(JsonConvert.SerializeObject(request));
             var response = await client.PostAsync(requestUrl, requestJson);
 
-            if(response.StatusCode==System.Net.HttpStatusCode.OK)
+            try
             {
+                response.EnsureSuccessStatusCode();
+
                 string r = await response.Content.ReadAsStringAsync();
                 char[] param = { '[', ']' };
                 ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r.Trim(param));
 
-                return responseContent?.document_class!=null?responseContent.document_class:" ";
+                return responseContent?.document_class != null ? responseContent.document_class : " ";
             }
-            else if(response.StatusCode==System.Net.HttpStatusCode.BadRequest)
+            catch(HttpRequestException ex)
             {
-                return "Error processing document_content";
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+                {
+                    message= "Error processing document_content";
+                }
+                else
+                {
+                    message= "Error";
+                }
+
+                throw new Exception(message,ex);
             }
-            else
-            {
-                return "Error";
-            }
+
+           
 
         }
 

@@ -23,12 +23,11 @@ namespace NameEntityRecognition
 
         private static readonly HttpClient client = new HttpClient();
 
-        public NameEntityRecognizer(double timeout=60)
+        public NameEntityRecognizer()
         {
             client.BaseAddress = new Uri("https://text-name-entity-recognition-flair.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.Timeout = TimeSpan.FromSeconds(timeout);
         }
 
         public async Task<WordTag[]> RecognizeNameEntity(string sentence)

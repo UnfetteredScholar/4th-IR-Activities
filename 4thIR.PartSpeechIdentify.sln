@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_4thIR.PartSpeechIdentify", "_4thIR.PartSpeechIdentify", "{681D5A8D-2623-4A87-B5BE-A8CBD7331147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4thIR.PartSpeechIdentify", "4thIR.PartSpeechIdentify\_4thIR.PartSpeechIdentify\_4thIR.PartSpeechIdentify.csproj", "{504EB500-1598-49C3-B7CB-2E67583BA9BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4thIR.PartSpeechIdentify.Activities", "4thIR.PartSpeechIdentify\_4thIR.PartSpeechIdentify.Activities\_4thIR.PartSpeechIdentify.Activities.csproj", "{1FAED74B-5353-42CB-ACCD-FDD54301BFB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4thIR.PartSpeechIdentify.Activities.Design", "4thIR.PartSpeechIdentify\_4thIR.PartSpeechIdentify.Activities.Design\_4thIR.PartSpeechIdentify.Activities.Design.csproj", "{E7C7F703-1471-4EDB-A303-B6CC2B30BBFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{DEBA9FBF-49E6-4666-8ECC-3ECDF6DF61AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities", "Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.shproj", "{4546856D-EA50-45C6-9419-EEEACB5A80AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities.Design", "Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.shproj", "{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{504EB500-1598-49C3-B7CB-2E67583BA9BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{504EB500-1598-49C3-B7CB-2E67583BA9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{504EB500-1598-49C3-B7CB-2E67583BA9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{504EB500-1598-49C3-B7CB-2E67583BA9BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FAED74B-5353-42CB-ACCD-FDD54301BFB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FAED74B-5353-42CB-ACCD-FDD54301BFB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FAED74B-5353-42CB-ACCD-FDD54301BFB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FAED74B-5353-42CB-ACCD-FDD54301BFB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7C7F703-1471-4EDB-A303-B6CC2B30BBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C7F703-1471-4EDB-A303-B6CC2B30BBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C7F703-1471-4EDB-A303-B6CC2B30BBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C7F703-1471-4EDB-A303-B6CC2B30BBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{504EB500-1598-49C3-B7CB-2E67583BA9BE} = {681D5A8D-2623-4A87-B5BE-A8CBD7331147}
+		{1FAED74B-5353-42CB-ACCD-FDD54301BFB7} = {681D5A8D-2623-4A87-B5BE-A8CBD7331147}
+		{E7C7F703-1471-4EDB-A303-B6CC2B30BBFA} = {681D5A8D-2623-4A87-B5BE-A8CBD7331147}
+		{4546856D-EA50-45C6-9419-EEEACB5A80AA} = {DEBA9FBF-49E6-4666-8ECC-3ECDF6DF61AA}
+		{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25} = {DEBA9FBF-49E6-4666-8ECC-3ECDF6DF61AA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD184FE4-82C3-42C6-8B71-A88648E3C294}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{1faed74b-5353-42cb-accd-fdd54301bfb7}*SharedItemsImports = 5
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{4546856d-ea50-45c6-9419-eeeacb5a80aa}*SharedItemsImports = 13
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{df9c43f0-add3-4fbf-995e-84b92f9cbf25}*SharedItemsImports = 13
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{e7c7f703-1471-4edb-a303-b6cc2b30bbfa}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

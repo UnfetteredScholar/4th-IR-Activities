@@ -29,7 +29,7 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>0.1.0</PackageVersion>
+    <PackageVersion>0.3.1</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\TextSummarizationDesigner.xaml" />
@@ -60,6 +60,8 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\_4thIR.TextSummarize.Activities.Design.xml</DocumentationFile>
     <PackageIcon>logo2.png</PackageIcon>
+    <Title>Text Summarization</Title>
+    <Version>$()</Version>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />

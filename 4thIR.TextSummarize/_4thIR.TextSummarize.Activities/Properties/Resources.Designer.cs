@@ -133,6 +133,24 @@ namespace _4thIR.TextSummarize.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Full or relative path to text file or The text to summarized..
+        /// </summary>
+        public static string TextSummarization_Article_Description {
+            get {
+                return ResourceManager.GetString("TextSummarization_Article_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Article.
+        /// </summary>
+        public static string TextSummarization_Article_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarization_Article_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Summarizes text in a given sentence, paraghraph or article..
         /// </summary>
         public static string TextSummarization_Description {
@@ -165,24 +183,6 @@ namespace _4thIR.TextSummarize.Activities.Properties {
         public static string TextSummarization_Model_DisplayName {
             get {
                 return ResourceManager.GetString("TextSummarization_Model_DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Full or relative path to text file..
-        /// </summary>
-        public static string TextSummarization_Path_Description {
-            get {
-                return ResourceManager.GetString("TextSummarization_Path_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Path.
-        /// </summary>
-        public static string TextSummarization_Path_DisplayName {
-            get {
-                return ResourceManager.GetString("TextSummarization_Path_DisplayName", resourceCulture);
             }
         }
         

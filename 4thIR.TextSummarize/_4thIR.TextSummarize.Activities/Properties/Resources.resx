@@ -149,10 +149,6 @@
     <value>Authentication</value>
     <comment>category</comment>
   </data>
-  <data name="Common_Category" xml:space="preserve">
-    <value>Common</value>
-    <comment>category</comment>
-  </data>
   <data name="Input_Category" xml:space="preserve">
     <value>Input</value>
     <comment>category</comment>
@@ -189,17 +185,13 @@
     <value>Summarizes text in a given sentence, paraghraph or article.</value>
     <comment>activity description</comment>
   </data>
-  <data name="TextSummarization_Path_DisplayName" xml:space="preserve">
-    <value>Path</value>
+  <data name="TextSummarization_Article_DisplayName" xml:space="preserve">
+    <value>Article</value>
     <comment>property name</comment>
   </data>
-  <data name="TextSummarization_Path_Description" xml:space="preserve">
-    <value>Full or relative path to text file.</value>
+  <data name="TextSummarization_Article_Description" xml:space="preserve">
+    <value>Full or relative path to text file or The text to summarized.</value>
     <comment>property description</comment>
-  </data>
-  <data name="Input_Category" xml:space="preserve">
-    <value>Input</value>
-    <comment>category</comment>
   </data>
   <data name="TextSummarization_Summary_DisplayName" xml:space="preserve">
     <value>Summary</value>
@@ -209,10 +201,6 @@
     <value>Summarized text.</value>
     <comment>property description</comment>
   </data>
-  <data name="Output_Category" xml:space="preserve">
-    <value>Output</value>
-    <comment>category</comment>
-  </data>
   <data name="TextSummarization_Model_DisplayName" xml:space="preserve">
     <value>Model</value>
     <comment>property name</comment>
@@ -220,9 +208,5 @@
   <data name="TextSummarization_Model_Description" xml:space="preserve">
     <value>AI Model</value>
     <comment>property description</comment>
-  </data>
-  <data name="Output_Category" xml:space="preserve">
-    <value>Output</value>
-    <comment>category</comment>
   </data>
 </root>

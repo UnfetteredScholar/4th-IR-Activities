@@ -29,11 +29,11 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Label Content="{x:Static activity:Resources.TextSummarization_Path_DisplayName}" Grid.Row="0"
-                   ToolTip="{x:Static activity:Resources.TextSummarization_Path_Description}"/>
-            <sapv:ExpressionTextBox Grid.Row="1" ExpressionType="{Binding ModelItem.Properties[Path].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.TextSummarization_Path_Description}" UseLocationExpression="False">
+            <Label Content="{x:Static activity:Resources.TextSummarization_Article_DisplayName}" Grid.Row="0"
+                   ToolTip="{x:Static activity:Resources.TextSummarization_Article_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="1" ExpressionType="{Binding ModelItem.Properties[Article].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.TextSummarization_Article_Description}" UseLocationExpression="False">
                 <sapv:ExpressionTextBox.Expression>
-                    <Binding Path="ModelItem.Path" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                    <Binding Path="ModelItem.Article" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
                 </sapv:ExpressionTextBox.Expression>
             </sapv:ExpressionTextBox>
         </Grid>

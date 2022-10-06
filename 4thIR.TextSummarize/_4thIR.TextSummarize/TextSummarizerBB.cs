@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
@@ -14,7 +16,7 @@ namespace TextSummarizationBB
         {
             public ResponseContent()
             {
-                
+
             }
 
             public string description { get; set; }
@@ -39,19 +41,20 @@ namespace TextSummarizationBB
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        /*
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="articleText"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public async Task<Tuple<string, string>> SummarizeText(string articleText)
         {
 
             using (var formData = new MultipartFormDataContent())
             {
-                StreamContent streamContent = new StreamContent(Stream.Null);
-                streamContent.Headers.ContentType=new MediaTypeWithQualityHeaderValue("text/plain");
-                formData.Add(streamContent, "file");
-            
-
                 RequestContent requestContent = new RequestContent(articleText);
-                formData.Add(new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json"), "article");
+                formData.Add(new StringContent(articleText, Encoding.UTF8, "text/plain"), "article");
 
                 string requestUri = "/summarize/article";
                 var response = await client.PostAsync(requestUri, formData);
@@ -89,61 +92,16 @@ namespace TextSummarizationBB
                 }
             }
         }
-        */
-      
-        public async Task<Tuple<string,string>> SummarizeTextFile(string path)
+
+
+        public async Task<Tuple<string, string>> SummarizeTextFile(string path)
         {
             path = @"" + path;
 
-            using(var formData=new MultipartFormDataContent())
-            {
-                StreamContent streamContent=new StreamContent(File.OpenRead(path));
-                streamContent.Headers.ContentType = new MediaTypeWithQualityHeaderValue("text/plain");
+            string sentence = File.ReadAllText(path);
+            var res = await SummarizeText(sentence);
 
-                int index = path.LastIndexOf('\\')+1;
-                string fileName = path.Substring(index);
-                formData.Add(streamContent, "file", fileName);
-
-                string articleText = File.ReadAllText(path);
-                RequestContent requestContent = new RequestContent(articleText);
-                formData.Add(new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json"), "article");
-                
-                string requestUri = "/summarize/article";
-
-                var response= await client.PostAsync(requestUri,formData);
-
-                try
-                {
-                    response.EnsureSuccessStatusCode();
-
-                    string r = await response.Content.ReadAsStringAsync();
-
-                    char[] chars= {'[', ']'};
-
-                    ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r.Trim(chars));
-
-                    return new Tuple<string, string>(responseContent.description, responseContent.model);
-                }
-                catch(HttpRequestException ex)
-                {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "string too long";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Unable to complete operation";
-                    }
-
-                    throw new Exception(message, ex);
-                }
-            }
+            return res;
         }
 
     }

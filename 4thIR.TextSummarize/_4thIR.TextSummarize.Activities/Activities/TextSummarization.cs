@@ -6,6 +6,7 @@ using _4thIR.TextSummarize.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
 using TextSummarizationBB;
+using System.IO;
 
 namespace _4thIR.TextSummarize.Activities
 {
@@ -28,10 +29,10 @@ namespace _4thIR.TextSummarize.Activities
         [LocalizedDescription(nameof(Resources.Timeout_Description))]
         public InArgument<int> TimeoutMS { get; set; } = 60000;
 
-        [LocalizedDisplayName(nameof(Resources.TextSummarization_Path_DisplayName))]
-        [LocalizedDescription(nameof(Resources.TextSummarization_Path_Description))]
+        [LocalizedDisplayName(nameof(Resources.TextSummarization_Article_DisplayName))]
+        [LocalizedDescription(nameof(Resources.TextSummarization_Article_Description))]
         [LocalizedCategory(nameof(Resources.Input_Category))]
-        public InArgument<string> Path { get; set; }
+        public InArgument<string> Article { get; set; }
 
         [LocalizedDisplayName(nameof(Resources.TextSummarization_Summary_DisplayName))]
         [LocalizedDescription(nameof(Resources.TextSummarization_Summary_Description))]
@@ -60,7 +61,7 @@ namespace _4thIR.TextSummarize.Activities
 
         protected override void CacheMetadata(CodeActivityMetadata metadata)
         {
-            if (Path == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(Path)));
+            if (Article == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(Article)));
 
             base.CacheMetadata(metadata);
         }
@@ -84,9 +85,18 @@ namespace _4thIR.TextSummarize.Activities
 
         private async Task<Tuple<string, string>> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
         {
-            var path = Path.Get(context);
+            var article = Article.Get(context);
 
-            var res = await summarizerBB.SummarizeTextFile(path);
+            Tuple<string, string> res;
+
+            if(File.Exists(article))
+            {
+                res = await summarizerBB.SummarizeTextFile(article);
+            }
+            else
+            {
+                res = await summarizerBB.SummarizeText(article);
+            }
 
             return res;
         }

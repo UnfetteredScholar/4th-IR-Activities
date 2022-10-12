@@ -1,20 +1,14 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
+using System.Threading.Tasks;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 
 
 namespace NameEntityRecognitionFairseq
 {
-    public class WordTag
-    {
-        public WordTag()
-        {
-
-        }
-
-        public string text { get; set; }
-        public string value { get; set; }
-    }
+    
     public class NameEntityRecognizerFairseq
     {
         private class RequestContent

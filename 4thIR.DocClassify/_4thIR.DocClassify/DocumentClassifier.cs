@@ -23,6 +23,23 @@ namespace DocumentClassification
     /// </summary>
     public class DocumentClassifier
     {
+        private class RequestContent
+        {
+            public string document_content { get; set; }
+            public string document_type { get; set; }
+
+            public RequestContent()
+            {
+
+            }
+
+        }
+
+        private class ResponseContent
+        {
+            public string document_class { get; set; }
+        }
+
         private static readonly HttpClient client = new HttpClient();
 
         /// <summary>

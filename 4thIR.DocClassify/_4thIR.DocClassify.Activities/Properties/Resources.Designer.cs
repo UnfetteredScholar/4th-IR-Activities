@@ -106,7 +106,7 @@ namespace _4thIR.DocClassify.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Classify documents.
+        ///   Looks up a localized string similar to Performs classification of documents..
         /// </summary>
         public static string DocumentClassification_Description {
             get {
@@ -124,7 +124,7 @@ namespace _4thIR.DocClassify.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Result of document classification.
+        ///   Looks up a localized string similar to Result of classification..
         /// </summary>
         public static string DocumentClassification_DocumentClass_Description {
             get {
@@ -142,7 +142,7 @@ namespace _4thIR.DocClassify.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DocumentType.Type.
+        ///   Looks up a localized string similar to Format of the document. (DocumentType.Type).
         /// </summary>
         public static string DocumentClassification_DocumentType_Description {
             get {
@@ -160,7 +160,7 @@ namespace _4thIR.DocClassify.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Full or relative path to the document.
+        ///   Looks up a localized string similar to Full path to document..
         /// </summary>
         public static string DocumentClassification_FilePath_Description {
             get {

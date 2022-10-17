@@ -18,13 +18,19 @@ namespace DocumentClassification
     /// </summary>
     public enum DocumentClass { passport, commercial_register, other}
 
+    /// <summary>
+    /// Provides a class for performing document classification.
+    /// </summary>
     public class DocumentClassifier
     {
         private static readonly HttpClient client = new HttpClient();
 
+        /// <summary>
+        /// Initializes a new instance of the DocumentClassifier class
+        /// </summary>
         public DocumentClassifier()
         {
-            //client.BaseAddress = new System.Uri("https://text-document-classifier-4thir-kyc-custom-1.ai-sandbox.4th-ir.io/api/v1/classify/");
+            client.BaseAddress = new Uri("https://text-document-classifier-4thir-kyc-custom-1.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
@@ -36,6 +42,8 @@ namespace DocumentClassification
         /// <returns></returns>
         public string ReadDocumentContentBase64(string path)
         {
+            path = @"" + path;
+
             Byte[] bytes = File.ReadAllBytes(path);
             string file = Convert.ToBase64String(bytes);
 
@@ -48,15 +56,15 @@ namespace DocumentClassification
         /// <param name="documentContent">Base64 encoded string of file</param>
         /// <param name="documentType">File type</param>
         /// <returns>Document class {passport, commercial register, other}</returns>
-        public async Task<string> ClassifyDocument(string documentContent, DocumentType documentType)
+        public async Task<string> ClassifyDocument(string path, DocumentType documentType)
         {
-            string requestUrl = "https://text-document-classifier-4thir-kyc-custom-1.ai-sandbox.4th-ir.io/api/v1/classify/";
+            string requestUrl = "/api/v1/classify/";
+
             RequestContent request = new RequestContent();
-            request.document_content=documentContent;  
+            request.document_content=ReadDocumentContentBase64(path);  
             request.document_type=documentType.ToString();
 
             var requestJson = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8,"application/json");
-            //Console.WriteLine(JsonConvert.SerializeObject(request));
             var response = await client.PostAsync(requestUrl, requestJson);
 
             try
@@ -64,10 +72,10 @@ namespace DocumentClassification
                 response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();
-                char[] param = { '[', ']' };
-                ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r.Trim(param));
 
-                return responseContent?.document_class != null ? responseContent.document_class : " ";
+                ResponseContent[] responseContent = JsonConvert.DeserializeObject<ResponseContent[]>(r);
+
+                return responseContent[0]?.document_class != null ? responseContent[0].document_class : " ";
             }
             catch(HttpRequestException ex)
             {

@@ -13,6 +13,8 @@ namespace _4thIR.DocClassify.Activities
     [LocalizedDescription(nameof(Resources.DocumentClassification_Description))]
     public class DocumentClassification : ContinuableAsyncCodeActivity
     {
+        private static readonly DocumentClassifier classifier = new DocumentClassifier();
+
         #region Properties
 
         /// <summary>
@@ -22,6 +24,11 @@ namespace _4thIR.DocClassify.Activities
         [LocalizedDisplayName(nameof(Resources.ContinueOnError_DisplayName))]
         [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
         public override InArgument<bool> ContinueOnError { get; set; }
+
+        [LocalizedCategory(nameof(Resources.Common_Category))]
+        [LocalizedDisplayName(nameof(Resources.Timeout_DisplayName))]
+        [LocalizedDescription(nameof(Resources.Timeout_Description))]
+        public InArgument<int> TimeoutMS { get; set; } = 60000;
 
         [LocalizedDisplayName(nameof(Resources.DocumentClassification_FilePath_DisplayName))]
         [LocalizedDescription(nameof(Resources.DocumentClassification_FilePath_Description))]
@@ -40,7 +47,6 @@ namespace _4thIR.DocClassify.Activities
 
         #endregion
 
-        private readonly DocumentClassifier classifier = new DocumentClassifier();
 
         #region Constructors
 
@@ -64,16 +70,27 @@ namespace _4thIR.DocClassify.Activities
         protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
         {
             // Inputs
-            var filePath = FilePath.Get(context);
-            var documentType = DocumentType.Get(context);
+            var timeout = TimeoutMS.Get(context);
+            
 
-            string documentContent = classifier.ReadDocumentContentBase64(filePath);
-            string result =await classifier.ClassifyDocument(documentContent, documentType);
+            // Set a timeout on the execution
+            var task = ExecuteWithTimeout(context, cancellationToken);
+            if (await Task.WhenAny(task, Task.Delay(timeout, cancellationToken)) != task) throw new TimeoutException(Resources.Timeout_Error);
 
             // Outputs
             return (ctx) => {
-                DocumentClass.Set(ctx, result);
+                DocumentClass.Set(ctx, task.Result);
             };
+        }
+
+        private async Task<string> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
+        {
+            var filePath = FilePath.Get(context);
+            var documentType = DocumentType.Get(context);
+
+            var res = await classifier.ClassifyDocument(filePath, documentType);
+
+            return res;
         }
 
         #endregion

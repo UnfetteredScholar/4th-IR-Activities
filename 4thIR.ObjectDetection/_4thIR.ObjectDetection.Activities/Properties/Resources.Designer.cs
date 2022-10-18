@@ -106,6 +106,60 @@ namespace _4thIR.ObjectDetection.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Classifies images..
+        /// </summary>
+        public static string ImageClassification_Description {
+            get {
+                return ResourceManager.GetString("ImageClassification_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image Classification.
+        /// </summary>
+        public static string ImageClassification_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassification_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result of classification..
+        /// </summary>
+        public static string ImageClassification_Label_Description {
+            get {
+                return ResourceManager.GetString("ImageClassification_Label_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Label.
+        /// </summary>
+        public static string ImageClassification_Label_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassification_Label_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to image file..
+        /// </summary>
+        public static string ImageClassification_Path_Description {
+            get {
+                return ResourceManager.GetString("ImageClassification_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string ImageClassification_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassification_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input.
         /// </summary>
         public static string Input_Category {
@@ -115,7 +169,7 @@ namespace _4thIR.ObjectDetection.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UI Path activity that can be used for identifying objects in images, in terms of their location in the image and the class they belong to..
+        ///   Looks up a localized string similar to Identifies objects in images, in terms of their location in the image and the class they belong to..
         /// </summary>
         public static string ObjectDetection_Description {
             get {
@@ -187,7 +241,7 @@ namespace _4thIR.ObjectDetection.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Full or relative file path to the image file..
+        ///   Looks up a localized string similar to Full path to image file..
         /// </summary>
         public static string ObjectDetection_Path_Description {
             get {

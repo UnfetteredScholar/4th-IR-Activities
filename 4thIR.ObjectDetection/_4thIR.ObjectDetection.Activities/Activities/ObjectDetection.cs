@@ -13,6 +13,8 @@ namespace _4thIR.ObjectDetection.Activities
     [LocalizedDescription(nameof(Resources.ObjectDetection_Description))]
     public class ObjectDetection : ContinuableAsyncCodeActivity
     {
+        private static readonly ObjectDetector detector = new ObjectDetector();
+
         #region Properties
 
         /// <summary>
@@ -22,6 +24,11 @@ namespace _4thIR.ObjectDetection.Activities
         [LocalizedDisplayName(nameof(Resources.ContinueOnError_DisplayName))]
         [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
         public override InArgument<bool> ContinueOnError { get; set; }
+
+        [LocalizedCategory(nameof(Resources.Common_Category))]
+        [LocalizedDisplayName(nameof(Resources.Timeout_DisplayName))]
+        [LocalizedDescription(nameof(Resources.Timeout_Description))]
+        public InArgument<int> TimeoutMS { get; set; } = 60000;
 
         [LocalizedDisplayName(nameof(Resources.ObjectDetection_Path_DisplayName))]
         [LocalizedDescription(nameof(Resources.ObjectDetection_Path_Description))]
@@ -54,7 +61,6 @@ namespace _4thIR.ObjectDetection.Activities
 
         #endregion
 
-        private readonly ObjectDetector objectDetector = new ObjectDetector();
 
         #region Protected Methods
 
@@ -68,16 +74,28 @@ namespace _4thIR.ObjectDetection.Activities
         protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
         {
             // Inputs
-            var path = Path.Get(context);
+            var timeout = TimeoutMS.Get(context);
+            
 
-            var result = await objectDetector.DetectObject(path);
+            // Set a timeout on the execution
+            var task = ExecuteWithTimeout(context, cancellationToken);
+            if (await Task.WhenAny(task, Task.Delay(timeout, cancellationToken)) != task) throw new TimeoutException(Resources.Timeout_Error);
 
             // Outputs
             return (ctx) => {
-                Detections.Set(ctx, result.Item1);
-                DetectionBoxes.Set(ctx, result.Item2);
-                DetectionClasses.Set(ctx, result.Item3);
+                Detections.Set(ctx, task.Result.Item1);
+                DetectionBoxes.Set(ctx, task.Result.Item2);
+                DetectionClasses.Set(ctx, task.Result.Item3);
             };
+        }
+
+        private async Task<Tuple<int, double[,], double[]>> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
+        {
+            var path = Path.Get(context);
+
+            var res = await detector.DetectObject(path);
+
+            return res;
         }
 
         #endregion

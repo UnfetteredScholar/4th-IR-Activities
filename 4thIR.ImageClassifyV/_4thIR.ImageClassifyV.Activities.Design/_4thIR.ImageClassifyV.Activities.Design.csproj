@@ -4,14 +4,15 @@
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.ImageClassifyV.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.ImageClassifyV.Activities.Design</AssemblyName>
-    <PackageId>4th-IR.ImageClassification.Activity.ImageClassification-Vissl</PackageId>
+    <PackageId>4th-IR.ImageClassificationVissl.Activity.ImageClassification</PackageId>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
   <!-- Package Metadata -->
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>UI Path Activity for image classification.</Description>
+    <Description>UI Path Activity for image classification. (Image Classification - Vissl (RegnetY-60))
+</Description>
     <Authors>Ato Toffah</Authors>
     <Company>4th-IR</Company>
     <Copyright>© 2022 4th-IR</Copyright>
@@ -29,14 +30,14 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>0.1.0</PackageVersion>
+    <PackageVersion>0.2.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\ImageClassificationDesigner.xaml" />
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
-    <None Include="..\..\..\logo2.png">
+    <None Include="..\..\Logo\logo2.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -59,8 +60,9 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\_4thIR.ImageClassifyV.Activities.Design.xml</DocumentationFile>
-    <Title>ImageClassification</Title>
+    <Title>Image Classification</Title>
     <PackageIcon>logo2.png</PackageIcon>
+    <RepositoryUrl>https://github.com/UnfetteredScholar/4thIR.ImageClassification-Vissl-RegnetY-60.git</RepositoryUrl>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />
@@ -87,6 +89,7 @@
     </Page>
     <Page Include="Designers\ImageClassificationDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Themes\Icons.xaml">
       <Generator>XamlIntelliSenseFileGenerator</Generator>

@@ -4,14 +4,14 @@
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.TextSummarize.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.TextSummarize.Activities.Design</AssemblyName>
-    <PackageId>4thIR.TextSummarizationBB.Activity.TextSummarization</PackageId>
+    <PackageId>4thIR.TextSummarizationBigBird.Activity.TextSummarization</PackageId>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
   <!-- Package Metadata -->
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>Activity for summarizing text in a file.</Description>
+    <Description>Activity for summarizing text in a file.(Text Summarization - BigBird)</Description>
     <Authors>Ato Toffah</Authors>
     <Company>4th-IR</Company>
     <Copyright>© 2022 4th-IR</Copyright>
@@ -36,7 +36,7 @@
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
-    <None Include="..\..\..\logo2.png">
+    <None Include="..\..\Logo\logo2.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -62,6 +62,7 @@
     <PackageIcon>logo2.png</PackageIcon>
     <Title>Text Summarization</Title>
     <Version>$()</Version>
+    <RepositoryUrl>https://github.com/UnfetteredScholar/4thIR.TextSummarization-BigBird.git</RepositoryUrl>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />

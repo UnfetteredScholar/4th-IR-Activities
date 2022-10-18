@@ -11,11 +11,17 @@ namespace ImageClassificationCV
 {
     public class ImageClassifierCV
     {
+        private class ResponseContent
+        {
+            public string label { get; set; }
+            public string score { get; set; }
+        }
+
         private static readonly HttpClient client=new HttpClient();
 
         public ImageClassifierCV()
         {
-            //client.BaseAddress = "https://image-classification-classy-vision.ai-sandbox.4th-ir.io/api/v1/classify";
+            client.BaseAddress = new Uri("https://image-classification-classy-vision.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             
@@ -43,7 +49,7 @@ namespace ImageClassificationCV
 
                 multipartFormContent.Add(fileStreamContent,"file", fileName);
 
-                string requestUr = "https://image-classification-classy-vision.ai-sandbox.4th-ir.io/api/v1/classify";
+                string requestUr = "/api/v1/classify";
 
                 var response = await client.PostAsync(requestUr, multipartFormContent);
 

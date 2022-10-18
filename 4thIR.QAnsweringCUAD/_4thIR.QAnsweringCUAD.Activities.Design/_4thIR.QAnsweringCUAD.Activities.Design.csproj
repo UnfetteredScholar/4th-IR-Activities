@@ -11,7 +11,7 @@
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>UI Path activity for answering questions based on context.</Description>
+    <Description>UI Path activity for answering questions based on context.(Question Answer - RoBerta Base CUAD)</Description>
     <Authors>Ato Toffah</Authors>
     <Company>4th-IR</Company>
     <Copyright>© 2022 4th-IR</Copyright>
@@ -36,7 +36,7 @@
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
-    <None Include="..\..\..\logo2.png">
+    <None Include="..\..\Logo\logo2.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -60,6 +60,7 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\_4thIR.QAnsweringCUAD.Activities.Design.xml</DocumentationFile>
     <PackageIcon>logo2.png</PackageIcon>
+    <Title>Question Answering</Title>
   </PropertyGroup>
   <ItemGroup>
 		<Reference Include="System" />

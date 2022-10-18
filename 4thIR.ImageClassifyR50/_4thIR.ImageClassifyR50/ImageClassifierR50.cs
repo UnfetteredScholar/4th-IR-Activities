@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -12,10 +9,17 @@ namespace ImageClassificationR50
 {
     public class ImageClassifierR50
     {
+        private class ResponseContent
+        {
+            public string label { get; set; }
+            public string model { get; set; }
+        }
+
         private static readonly HttpClient client=new HttpClient();
 
         public ImageClassifierR50()
         {
+            client.BaseAddress = new Uri("https://image-classification-resnet50-1.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -27,6 +31,7 @@ namespace ImageClassificationR50
 
             using(var multipartContent=new MultipartFormDataContent())
             {
+                /*
                 byte[] bytes = File.ReadAllBytes(path);
                 string imageBase64 = Convert.ToBase64String(bytes);
 
@@ -34,12 +39,13 @@ namespace ImageClassificationR50
                 request.base64_image_string = imageBase64;
 
                 multipartContent.Add(new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json"), "base64_image_string");
+                */
 
                 StreamContent streamContent=new StreamContent(File.OpenRead(path));
                 streamContent.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
 
-                int index = path.LastIndexOf("\\");
-                index++;
+                int index = path.LastIndexOf("\\")+1;
+
 
                 string fileName = path.Substring(index);
 
@@ -47,7 +53,7 @@ namespace ImageClassificationR50
 
                
 
-                string requestUri = "https://image-classification-resnet50-1.ai-sandbox.4th-ir.io/api/v1/classify";
+                string requestUri = "/api/v1/classify";
                 var response = await client.PostAsync(requestUri, multipartContent);
 
                 try
@@ -62,18 +68,22 @@ namespace ImageClassificationR50
                 }
                 catch(HttpRequestException ex)
                 {
+                    string message = "";
+
                     if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                     {
-                        throw new Exception("string too long", ex);
+                        message = "string too long";
                     }
                     else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                     {
-                        throw new Exception("ML model not found", ex);
+                        message = "ML model not found";
                     }
                     else
                     {
-                        throw new Exception("Error: Unable to classify image", ex);
+                        message = "Error: Unable to classify image";
                     }
+
+                    throw new Exception(message, ex);
                 }
             }
         }

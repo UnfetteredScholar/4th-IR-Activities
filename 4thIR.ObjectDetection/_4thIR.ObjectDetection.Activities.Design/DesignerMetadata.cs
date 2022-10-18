@@ -19,6 +19,10 @@ namespace _4thIR.ObjectDetection.Activities.Design
             builder.AddCustomAttributes(typeof(ObjectDetection), new DesignerAttribute(typeof(ObjectDetectionDesigner)));
             builder.AddCustomAttributes(typeof(ObjectDetection), new HelpKeywordAttribute(""));
 
+            builder.AddCustomAttributes(typeof(ImageClassification), categoryAttribute);
+            builder.AddCustomAttributes(typeof(ImageClassification), new DesignerAttribute(typeof(ImageClassificationDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassification), new HelpKeywordAttribute(""));
+
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }

@@ -4,14 +4,14 @@
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.ObjectDetection.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.ObjectDetection.Activities.Design</AssemblyName>
-    <PackageId>4thIR.ObjectDetection.Activity.ObjectDetection</PackageId>
+    <PackageId>4thIR.ObjectDetectionEfficientDet.Activity.ObjectDetection</PackageId>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
   <!-- Package Metadata -->
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>UI Path activity for detecting objects in images.</Description>
+    <Description>UI Path activity for detecting objects in images. (EfficientDet Object detection model)</Description>
     <Authors>Ato Toffah</Authors>
     <Company>4th-IR</Company>
     <Copyright>© 2022 4th-IR</Copyright>
@@ -29,14 +29,15 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>0.1.0</PackageVersion>
+    <PackageVersion>0.2.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Designers\ImageClassificationDesigner.xaml" />
     <None Remove="Designers\ObjectDetectionDesigner.xaml" />
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
-    <None Include="..\..\..\logo2.png">
+    <None Include="..\..\Logo\logo2.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -61,6 +62,8 @@
     <DocumentationFile>bin\$(Configuration)\_4thIR.ObjectDetection.Activities.Design.xml</DocumentationFile>
     <Product>Object Detection</Product>
     <PackageIcon>logo2.png</PackageIcon>
+    <Title>Object Detection</Title>
+    <RepositoryUrl>https://github.com/UnfetteredScholar/4thIR.ObjectDetection.git</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
 		<Reference Include="System" />
@@ -85,8 +88,12 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
+    <Page Include="Designers\ImageClassificationDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
     <Page Include="Designers\ObjectDetectionDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Themes\Icons.xaml">
       <Generator>XamlIntelliSenseFileGenerator</Generator>

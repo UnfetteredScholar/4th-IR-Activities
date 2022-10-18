@@ -15,10 +15,32 @@ namespace TextTranslation
 
 
     /// <summary>
-    /// Class which provides  functionality for translating text form source language to target language.
+    /// Provides functionality for translating text form source language to target language.
     /// </summary>
     public class Translator
     {
+        private class RequestContent
+        {
+            public string sentence { get; set; }
+
+            public RequestContent(string request)
+            {
+                sentence = request;
+            }
+        }
+
+        private class ResponseContent
+        {
+            public string original_text { get; set; }
+            public string conversion_text { get; set; }
+
+            public ResponseContent()
+            {
+                original_text = null;
+                conversion_text = null;
+            }
+        }
+
         private static readonly HttpClient client = new HttpClient();
 
         /// <summary>
@@ -26,7 +48,7 @@ namespace TextTranslation
         /// </summary>
         public Translator()
         {
-            client.BaseAddress = new System.Uri("https://text-translation-fairseq-1.ai-sandbox.4th-ir.io/");
+            client.BaseAddress = new Uri("https://text-translation-fairseq-1.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
@@ -43,7 +65,7 @@ namespace TextTranslation
         {
             RequestContent request = new RequestContent(sentence);
 
-            string requestUri = $"api/v1/sentence?source_lang={sourceLanguage}&conversion_lang={conversionLanguage}";
+            string requestUri = $"/api/v1/sentence?source_lang={sourceLanguage}&conversion_lang={conversionLanguage}";
 
             var requestJson = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
             var response = await client.PostAsync(requestUri, requestJson);

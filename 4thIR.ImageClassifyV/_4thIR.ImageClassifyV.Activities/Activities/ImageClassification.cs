@@ -13,6 +13,8 @@ namespace _4thIR.ImageClassifyV.Activities
     [LocalizedDescription(nameof(Resources.ImageClassification_Description))]
     public class ImageClassification : ContinuableAsyncCodeActivity
     {
+        private static readonly ImageClassifier classifier = new ImageClassifier();
+
         #region Properties
 
         /// <summary>
@@ -22,6 +24,11 @@ namespace _4thIR.ImageClassifyV.Activities
         [LocalizedDisplayName(nameof(Resources.ContinueOnError_DisplayName))]
         [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
         public override InArgument<bool> ContinueOnError { get; set; }
+
+        [LocalizedCategory(nameof(Resources.Common_Category))]
+        [LocalizedDisplayName(nameof(Resources.Timeout_DisplayName))]
+        [LocalizedDescription(nameof(Resources.Timeout_Description))]
+        public InArgument<int> TimeoutMS { get; set; } = 60000;
 
         [LocalizedDisplayName(nameof(Resources.ImageClassification_Path_DisplayName))]
         [LocalizedDescription(nameof(Resources.ImageClassification_Path_Description))]
@@ -43,7 +50,7 @@ namespace _4thIR.ImageClassifyV.Activities
         }
 
         #endregion
-        private readonly ImageClassifier classifier = new ImageClassifier();
+
 
         #region Protected Methods
 
@@ -57,14 +64,26 @@ namespace _4thIR.ImageClassifyV.Activities
         protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
         {
             // Inputs
-            var path = Path.Get(context);
+            var timeout = TimeoutMS.Get(context);
+            
 
-            var result = await classifier.ClassifyImage(path);
+            // Set a timeout on the execution
+            var task = ExecuteWithTimeout(context, cancellationToken);
+            if (await Task.WhenAny(task, Task.Delay(timeout, cancellationToken)) != task) throw new TimeoutException(Resources.Timeout_Error);
 
             // Outputs
             return (ctx) => {
-                Label.Set(ctx, result);
+                Label.Set(ctx, task.Result);
             };
+        }
+
+        private async Task<Task<string>> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
+        {
+            var path = Path.Get(context);
+
+            var res = classifier.ClassifyImage(path);
+
+            return res;
         }
 
         #endregion

@@ -106,7 +106,7 @@ namespace _4thIR.ImageClassifyR50.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activity for performing image classification. (Image Classification - Resnet 50).
+        ///   Looks up a localized string similar to Activity for performing image classification..
         /// </summary>
         public static string ImageClassification_Description {
             get {
@@ -124,7 +124,7 @@ namespace _4thIR.ImageClassifyR50.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Result of the image classification..
+        ///   Looks up a localized string similar to Result of image classification..
         /// </summary>
         public static string ImageClassification_Label_Description {
             get {
@@ -142,7 +142,7 @@ namespace _4thIR.ImageClassifyR50.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Full or relative file path to the image file..
+        ///   Looks up a localized string similar to Full path to image file..
         /// </summary>
         public static string ImageClassification_Path_Description {
             get {

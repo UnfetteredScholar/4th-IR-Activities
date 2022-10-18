@@ -160,7 +160,7 @@ namespace _4thIR.TextTranslation.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language.ConversionLanguage.
+        ///   Looks up a localized string similar to The target language. (Language.ConversionLanguage).
         /// </summary>
         public static string Translation_ConversionLanguage_Description {
             get {
@@ -178,7 +178,7 @@ namespace _4thIR.TextTranslation.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Translates text from source language to a target language.
+        ///   Looks up a localized string similar to Translates text to target language..
         /// </summary>
         public static string Translation_Description {
             get {
@@ -196,7 +196,7 @@ namespace _4thIR.TextTranslation.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Text to be translated.
+        ///   Looks up a localized string similar to The original text..
         /// </summary>
         public static string Translation_Sentence_Description {
             get {
@@ -214,7 +214,7 @@ namespace _4thIR.TextTranslation.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language.SourceLanguage.
+        ///   Looks up a localized string similar to The original language. (Language.SourceLanguage).
         /// </summary>
         public static string Translation_SourceLanguage_Description {
             get {
@@ -232,7 +232,7 @@ namespace _4thIR.TextTranslation.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Result of the translation.
+        ///   Looks up a localized string similar to The translated text..
         /// </summary>
         public static string Translation_TranslatedText_Description {
             get {

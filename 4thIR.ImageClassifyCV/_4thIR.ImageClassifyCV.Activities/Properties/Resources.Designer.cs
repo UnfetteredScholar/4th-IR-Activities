@@ -106,7 +106,7 @@ namespace _4thIR.ImageClassifyCV.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UI Path activity for image classification (Image Classification - Classy Vision).
+        ///   Looks up a localized string similar to Activity for classifying images..
         /// </summary>
         public static string ImageClassification_Description {
             get {
@@ -115,7 +115,7 @@ namespace _4thIR.ImageClassifyCV.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ImageClassification.
+        ///   Looks up a localized string similar to Image Classification.
         /// </summary>
         public static string ImageClassification_DisplayName {
             get {
@@ -124,7 +124,7 @@ namespace _4thIR.ImageClassifyCV.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Result of the image classification.
+        ///   Looks up a localized string similar to Result of the classification..
         /// </summary>
         public static string ImageClassification_Label_Description {
             get {
@@ -142,7 +142,7 @@ namespace _4thIR.ImageClassifyCV.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Full or relative file path to the image resource.
+        ///   Looks up a localized string similar to Full path to image file..
         /// </summary>
         public static string ImageClassification_Path_Description {
             get {

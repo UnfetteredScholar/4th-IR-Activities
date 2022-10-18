@@ -12,10 +12,18 @@ namespace EfficientDetObjectDetection
     /// </summary>
     public class ObjectDetector
     {
+        private class ResponseContent
+        {
+            public int num_detections { get; set; }
+            public double[,] detection_boxes { get; set; }
+            public double[] detection_classes { get; set; }
+        }
+
         private static readonly HttpClient client=new HttpClient();
 
         public ObjectDetector()
         {
+            client.BaseAddress = new Uri("https://image-sentiment-analysis-bert-1.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
@@ -40,7 +48,7 @@ namespace EfficientDetObjectDetection
 
                 multipartFormData.Add(streamContent, "file", fileName);
 
-                const string requestUri = "https://image-sentiment-analysis-bert-1.ai-sandbox.4th-ir.io/detection/image";
+                const string requestUri = "/detection/image";
                 var response = await client.PostAsync(requestUri, multipartFormData);
 
                 try

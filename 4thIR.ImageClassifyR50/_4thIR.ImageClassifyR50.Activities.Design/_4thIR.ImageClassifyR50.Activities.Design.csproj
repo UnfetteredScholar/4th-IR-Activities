@@ -4,7 +4,7 @@
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.ImageClassifyR50.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.ImageClassifyR50.Activities.Design</AssemblyName>
-    <PackageId>4thIR.ImageClassificationResnet50.Activity.ImageClassificationResnet50</PackageId>
+    <PackageId>4thIR.ImageClassificationResnet50.Activity.ImageClassification</PackageId>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
   <!-- Package Metadata -->

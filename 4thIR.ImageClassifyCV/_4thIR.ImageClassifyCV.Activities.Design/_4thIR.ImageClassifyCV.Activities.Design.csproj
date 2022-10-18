@@ -4,7 +4,7 @@
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.ImageClassifyCV.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.ImageClassifyCV.Activities.Design</AssemblyName>
-    <PackageId>4thIR.ImageClassification.Activity.ImageClassificationClassyVision</PackageId>
+    <PackageId>4thIR.ImageClassificationClassyVision.Activity.ImageClassification</PackageId>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
   <!-- Package Metadata -->
@@ -29,14 +29,14 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>0.1.0</PackageVersion>
+    <PackageVersion>0.2.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\ImageClassificationDesigner.xaml" />
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
-    <None Include="..\..\..\logo2.png">
+    <None Include="..\..\Logo\logo2.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -61,6 +61,8 @@
     <DocumentationFile>bin\$(Configuration)\_4thIR.ImageClassifyCV.Activities.Design.xml</DocumentationFile>
     <PackageIcon>logo2.png</PackageIcon>
     <Product>Image Classification - Classy Vision</Product>
+    <Title>Image Classification</Title>
+    <RepositoryUrl>https://github.com/UnfetteredScholar/4th-IR.ImageClassification-ClassyVision.git</RepositoryUrl>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />
@@ -87,6 +89,7 @@
     </Page>
     <Page Include="Designers\ImageClassificationDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Themes\Icons.xaml">
       <Generator>XamlIntelliSenseFileGenerator</Generator>

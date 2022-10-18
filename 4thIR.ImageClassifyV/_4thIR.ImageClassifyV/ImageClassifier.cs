@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -15,6 +12,12 @@ namespace ImageClassification
     /// </summary>
     public class ImageClassifier
     {
+        private class ResponseContent
+        {
+            public string label { get; set; }
+            public string model { get; set; }
+        }
+
         private static readonly HttpClient client = new HttpClient();
 
         /// <summary>
@@ -22,7 +25,7 @@ namespace ImageClassification
         /// </summary>
         public ImageClassifier()
         {
-            //client.BaseAddress = "https://image-classification-vissl.ai-sandbox.4th-ir.io/api/v1/classify";
+            client.BaseAddress = new Uri("https://image-classification-vissl.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -36,7 +39,7 @@ namespace ImageClassification
         /// <returns>Image Label</returns>
         public async Task<string> ClassifyImage(string path)
         {
-            string requestUri = "https://image-classification-vissl.ai-sandbox.4th-ir.io/api/v1/classify";
+            string requestUri = "/api/v1/classify";
             path=@""+path;
 
             using (var multipartFormContent = new MultipartFormDataContent())
@@ -57,10 +60,10 @@ namespace ImageClassification
                     response.EnsureSuccessStatusCode();
 
                     var r = await response.Content.ReadAsStringAsync();
-                    char[] param = new char[] { '[', ']' };
-                    ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r.Trim(param));
+                    //char[] param = new char[] { '[', ']' };
+                    ResponseContent[] responseContent = JsonConvert.DeserializeObject<ResponseContent[]>(r);
 
-                    return responseContent?.label != null ? responseContent.label : string.Empty;
+                    return responseContent[0]?.label != null ? responseContent[0].label : string.Empty;
                 }
                 catch(HttpRequestException ex)
                 {

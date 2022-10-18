@@ -65,18 +65,22 @@ namespace ImageClassificationCV
                 }
                 catch(HttpRequestException ex)
                 {
+                    string message = "";
+
                     if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                     {
-                        throw new Exception("string too long", ex);
+                        message = "string too long";
                     }
                     else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                     {
-                        throw new Exception("ML model not found", ex);
+                        message = "ML model not found";
                     }
                     else
                     {
-                        throw new Exception("Unable to classify", ex);
+                        message = "Unable to classify";
                     }
+
+                    throw new Exception(message, ex);
                 }
 
 

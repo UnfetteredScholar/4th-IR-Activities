@@ -11,7 +11,7 @@
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>UI Path Activity for TextTranslation Transformers.</Description>
+    <Description>UI Path Activity for Text Translation.(Text Translation - Transformers(English, French, Romanian, German))</Description>
     <Authors>Ato Toffah</Authors>
     <Company>4th-IR</Company>
     <Copyright>© 2022 4th-IR</Copyright>
@@ -36,7 +36,7 @@
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
-    <None Include="..\..\..\logo2.png">
+    <None Include="..\..\Logo\logo2.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -61,6 +61,7 @@
     <DocumentationFile>bin\$(Configuration)\_4thIR.TextTranslationT.Activities.Design.xml</DocumentationFile>
     <Title>Text Translation</Title>
     <PackageIcon>logo2.png</PackageIcon>
+    <RepositoryUrl>https://github.com/UnfetteredScholar/4thIR.TextTranslation-Transformers.git</RepositoryUrl>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />

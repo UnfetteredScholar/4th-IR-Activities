@@ -61,7 +61,7 @@ namespace _4thIR.TextGenerateT.Activities.Design.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4thIR.TextGeneration.Transformers.
+        ///   Looks up a localized string similar to 4th-IR.Text Generation.Transformers.
         /// </summary>
         public static string Category {
             get {

@@ -61,9 +61,9 @@ namespace ImageClassification
 
                     var r = await response.Content.ReadAsStringAsync();
                     //char[] param = new char[] { '[', ']' };
-                    ResponseContent[] responseContent = JsonConvert.DeserializeObject<ResponseContent[]>(r);
+                    ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r);
 
-                    return responseContent[0]?.label != null ? responseContent[0].label : string.Empty;
+                    return responseContent?.label != null ? responseContent.label : string.Empty;
                 }
                 catch(HttpRequestException ex)
                 {

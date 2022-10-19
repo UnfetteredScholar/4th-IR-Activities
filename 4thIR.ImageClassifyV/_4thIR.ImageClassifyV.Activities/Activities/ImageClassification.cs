@@ -77,11 +77,11 @@ namespace _4thIR.ImageClassifyV.Activities
             };
         }
 
-        private async Task<Task<string>> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
+        private async Task<string> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
         {
             var path = Path.Get(context);
 
-            var res = classifier.ClassifyImage(path);
+            var res =await classifier.ClassifyImage(path);
 
             return res;
         }

@@ -36,7 +36,7 @@ namespace _4thIR.NERecognizeF.Activities
         [LocalizedDisplayName(nameof(Resources.NameEntityRecognition_TextValue_DisplayName))]
         [LocalizedDescription(nameof(Resources.NameEntityRecognition_TextValue_Description))]
         [LocalizedCategory(nameof(Resources.Output_Category))]
-        public OutArgument<WordTag[]> TextValue { get; set; }
+        public OutArgument<TextValuePair[]> TextValue { get; set; }
 
         #endregion
 
@@ -76,7 +76,7 @@ namespace _4thIR.NERecognizeF.Activities
             };
         }
 
-        private async Task<WordTag[]> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
+        private async Task<TextValuePair[]> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
         {
             var sentence = Sentence.Get(context);
 

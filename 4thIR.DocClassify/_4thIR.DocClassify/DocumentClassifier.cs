@@ -90,9 +90,9 @@ namespace DocumentClassification
 
                 string r = await response.Content.ReadAsStringAsync();
 
-                ResponseContent[] responseContent = JsonConvert.DeserializeObject<ResponseContent[]>(r);
+                ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r);
 
-                return responseContent[0]?.document_class != null ? responseContent[0].document_class : " ";
+                return responseContent?.document_class != null ? responseContent.document_class : " ";
             }
             catch(HttpRequestException ex)
             {

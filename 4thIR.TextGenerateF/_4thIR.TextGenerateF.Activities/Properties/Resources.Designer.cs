@@ -133,7 +133,7 @@ namespace _4thIR.TextGenerateF.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The text to be summarized..
+        ///   Looks up a localized string similar to The input text..
         /// </summary>
         public static string TextGeneration_Article_Description {
             get {
@@ -151,7 +151,7 @@ namespace _4thIR.TextGenerateF.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UI Path activity for summarizing text..
+        ///   Looks up a localized string similar to Activity for generating text..
         /// </summary>
         public static string TextGeneration_Description {
             get {
@@ -169,7 +169,7 @@ namespace _4thIR.TextGenerateF.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The summarized text..
+        ///   Looks up a localized string similar to The generated text..
         /// </summary>
         public static string TextGeneration_GeneratedText1_Description {
             get {
@@ -187,7 +187,7 @@ namespace _4thIR.TextGenerateF.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The summarized text..
+        ///   Looks up a localized string similar to The generated text..
         /// </summary>
         public static string TextGeneration_GeneratedText2_Description {
             get {

@@ -149,10 +149,6 @@
     <value>Authentication</value>
     <comment>category</comment>
   </data>
-  <data name="Common_Category" xml:space="preserve">
-    <value>Common</value>
-    <comment>category</comment>
-  </data>
   <data name="Input_Category" xml:space="preserve">
     <value>Input</value>
     <comment>category</comment>
@@ -186,7 +182,7 @@
     <comment>activity name</comment>
   </data>
   <data name="TextGeneration_Description" xml:space="preserve">
-    <value>UI Path activity for summarizing text.</value>
+    <value>Activity for generating text.</value>
     <comment>activity description</comment>
   </data>
   <data name="TextGeneration_Article_DisplayName" xml:space="preserve">
@@ -194,35 +190,23 @@
     <comment>property name</comment>
   </data>
   <data name="TextGeneration_Article_Description" xml:space="preserve">
-    <value>The text to be summarized.</value>
+    <value>The input text.</value>
     <comment>property description</comment>
-  </data>
-  <data name="Input_Category" xml:space="preserve">
-    <value>Input</value>
-    <comment>category</comment>
   </data>
   <data name="TextGeneration_GeneratedText1_DisplayName" xml:space="preserve">
     <value>Generated Text 1</value>
     <comment>property name</comment>
   </data>
   <data name="TextGeneration_GeneratedText1_Description" xml:space="preserve">
-    <value>The summarized text.</value>
+    <value>The generated text.</value>
     <comment>property description</comment>
-  </data>
-  <data name="Output_Category" xml:space="preserve">
-    <value>Output</value>
-    <comment>category</comment>
   </data>
   <data name="TextGeneration_GeneratedText2_DisplayName" xml:space="preserve">
     <value>Generated Text 2</value>
     <comment>property name</comment>
   </data>
   <data name="TextGeneration_GeneratedText2_Description" xml:space="preserve">
-    <value>The summarized text.</value>
+    <value>The generated text.</value>
     <comment>property description</comment>
-  </data>
-  <data name="Output_Category" xml:space="preserve">
-    <value>Output</value>
-    <comment>category</comment>
   </data>
 </root>

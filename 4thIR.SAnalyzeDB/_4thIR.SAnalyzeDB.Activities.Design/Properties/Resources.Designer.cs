@@ -61,7 +61,7 @@ namespace _4thIR.SAnalyzeDB.Activities.Design.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4thIR.SentimentAnalysis.DeBERTA.
+        ///   Looks up a localized string similar to 4th-IR.Sentiment Analysis.DeBERTA.
         /// </summary>
         public static string Category {
             get {

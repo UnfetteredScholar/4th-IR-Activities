@@ -4,17 +4,17 @@
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.TextTranslationT.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.TextTranslationT.Activities.Design</AssemblyName>
-    <PackageId>_4thIR.TextTranslationT.Activities</PackageId>
+    <PackageId>4thIR.TextTranslationTransformers.Activity.TextTranslation</PackageId>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
   <!-- Package Metadata -->
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>This package was generated using the UiPath VS Extension.</Description>
-    <Authors>Company</Authors>
-    <Company>Company</Company>
-    <Copyright>© 2022 Company</Copyright>
+    <Description>UI Path Activity for TextTranslation Transformers.</Description>
+    <Authors>Ato Toffah</Authors>
+    <Company>4th-IR</Company>
+    <Copyright>© 2022 4th-IR</Copyright>
     <PackageTags>UiPath Activit𝗒</PackageTags>
     <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/NuGet/Samples/master/PackageIconNuspecExample/icon.png</PackageIconUrl>
@@ -31,8 +31,15 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <PackageVersion>0.1.0</PackageVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Designers\TextTranslationDesigner.xaml" />
+  </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
+    <None Include="..\..\..\logo2.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="packageIcon.png" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
   <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
@@ -52,6 +59,8 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\_4thIR.TextTranslationT.Activities.Design.xml</DocumentationFile>
+    <Title>Text Translation</Title>
+    <PackageIcon>logo2.png</PackageIcon>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />
@@ -76,6 +85,9 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
+    <Page Include="Designers\TextTranslationDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
     <Page Include="Themes\Icons.xaml">
       <Generator>XamlIntelliSenseFileGenerator</Generator>
       <SubType>Designer</SubType>
@@ -83,10 +95,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\_4thIR.TextTranslationT.Activities\_4thIR.TextTranslationT.Activities.csproj" PrivateAssets="All"/>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Designers\" />
+    <ProjectReference Include="..\_4thIR.TextTranslationT.Activities\_4thIR.TextTranslationT.Activities.csproj" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

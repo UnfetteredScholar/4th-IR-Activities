@@ -30,7 +30,7 @@ namespace NameEntityRecognition
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<WordTag[]> RecognizeNameEntity(string sentence)
+        public async Task<TextValuePair[]> RecognizeNameEntity(string sentence)
         {
             RequestContent requestContent = new RequestContent(sentence);
 
@@ -45,7 +45,7 @@ namespace NameEntityRecognition
 
                 string r = await response.Content.ReadAsStringAsync();
 
-                WordTag[] result = JsonConvert.DeserializeObject<WordTag[]>(r);
+                TextValuePair[] result = JsonConvert.DeserializeObject<TextValuePair[]>(r);
 
                 return result;
             }

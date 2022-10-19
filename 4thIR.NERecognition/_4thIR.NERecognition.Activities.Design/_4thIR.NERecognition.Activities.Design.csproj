@@ -4,17 +4,17 @@
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.NERecognition.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.NERecognition.Activities.Design</AssemblyName>
-    <PackageId>_4thIR.NERecognition.Activities</PackageId>
+    <PackageId>4thIR.NameEntityRecognition.Activity.NameEntityRecognition</PackageId>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
   <!-- Package Metadata -->
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>This package was generated using the UiPath VS Extension.</Description>
-    <Authors>Company</Authors>
-    <Company>Company</Company>
-    <Copyright>© 2022 Company</Copyright>
+    <Description>UI Path activity for name entity recognition in a sentence.</Description>
+    <Authors>Ato Toffah</Authors>
+    <Company>4th-IR</Company>
+    <Copyright>© 2022 4th-IR</Copyright>
     <PackageTags>UiPath Activit𝗒</PackageTags>
     <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/NuGet/Samples/master/PackageIconNuspecExample/icon.png</PackageIconUrl>
@@ -36,6 +36,10 @@
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
+    <None Include="..\..\..\logo2.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="packageIcon.png" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
   <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
@@ -55,6 +59,8 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\_4thIR.NERecognition.Activities.Design.xml</DocumentationFile>
+    <Title>Name Entity Recognition</Title>
+    <PackageIcon>logo2.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
 		<Reference Include="System" />

@@ -61,7 +61,7 @@ namespace _4thIR.NERecognition.Activities.Design.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _4thIR.NameEntityRecognition.
+        ///   Looks up a localized string similar to 4th-IR.Name Entity Recognition.Flair.
         /// </summary>
         public static string Category {
             get {

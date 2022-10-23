@@ -31,9 +31,6 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <PackageVersion>0.1.0</PackageVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Designers\ImageClassifyDesigner.xaml" />
-  </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
     <None Include="packageIcon.png" Pack="true" Visible="false" PackagePath="" />
@@ -67,9 +64,6 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
-    <Page Include="Designers\ImageClassifyDesigner.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </Page>
     <Page Include="Themes\Icons.xaml">
       <Generator>XamlIntelliSenseFileGenerator</Generator>
       <SubType>Designer</SubType>
@@ -77,7 +71,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\_4thIR.ImageClassifyFL.Activities\_4thIR.ImageClassifyFL.Activities.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\_4thIR.ImageClassifyFL.Activities\_4thIR.ImageClassifyFL.Activities.csproj" PrivateAssets="All"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Designers\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

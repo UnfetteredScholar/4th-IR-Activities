@@ -61,7 +61,7 @@ namespace _4thIR.ImageClassifyFL.Activities.Design.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4thIR.Image Classification.Facebook Levit 128S.
+        ///   Looks up a localized string similar to 4th-IR.Image Classification.Facebook Levit 128S.
         /// </summary>
         public static string Category {
             get {

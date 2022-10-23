@@ -14,7 +14,14 @@ namespace ImageClassification
 
         }
 
+        /// <summary>
+        /// The label or description of the image
+        /// </summary>
         public string label { get; set; }
+
+        /// <summary>
+        /// The probability or accuracy of the label
+        /// </summary>
         public double probability { get; set; }
     }
 }

@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using _4thIR.ImageClassifyVB.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using Microsoft.Extensions.Http;
 using Microsoft.Extensions.DependencyInjection;
 using ImageClassification;
 using System.Net.Http;

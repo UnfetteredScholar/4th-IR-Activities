@@ -8,10 +8,11 @@ using System.Net.Http.Headers;
 namespace FormulaRecognition
 {
     public enum FormulaType { Normal, HandWritten}
+    
     /// <summary>
     /// Provides functionality for detecting formulas in images
     /// </summary>
-    class FormulaRecognizerOV
+    public class FormulaRecognizerOV
     {
         private class ResponseContent
         {

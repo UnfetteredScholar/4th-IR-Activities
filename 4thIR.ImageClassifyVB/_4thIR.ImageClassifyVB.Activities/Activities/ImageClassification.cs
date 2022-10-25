@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using _4thIR.ImageClassifyVB.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
+using Microsoft.Extensions.Http;
+using Microsoft.Extensions.DependencyInjection;
+using ImageClassification;
+using System.Net.Http;
 
 namespace _4thIR.ImageClassifyVB.Activities
 {
@@ -12,6 +16,8 @@ namespace _4thIR.ImageClassifyVB.Activities
     [LocalizedDescription(nameof(Resources.ImageClassification_Description))]
     public class ImageClassification : ContinuableAsyncCodeActivity
     {
+        private readonly ImageClassifierViTBase _classifier;
+
         #region Properties
 
         /// <summary>
@@ -44,6 +50,9 @@ namespace _4thIR.ImageClassifyVB.Activities
 
         public ImageClassification()
         {
+            var serviceProvider = new ServiceCollection().AddHttpClient().BuildServiceProvider();
+
+            _classifier = new ImageClassifierViTBase(serviceProvider.GetService<IHttpClientFactory>());
         }
 
         #endregion
@@ -62,7 +71,7 @@ namespace _4thIR.ImageClassifyVB.Activities
         {
             // Inputs
             var timeout = TimeoutMS.Get(context);
-            var path = Path.Get(context);
+            
 
             // Set a timeout on the execution
             var task = ExecuteWithTimeout(context, cancellationToken);
@@ -70,15 +79,16 @@ namespace _4thIR.ImageClassifyVB.Activities
 
             // Outputs
             return (ctx) => {
-                Label.Set(ctx, null);
+                Label.Set(ctx, task.Result);
             };
         }
 
-        private async Task ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
+        private async Task<string> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
         {
-            ///////////////////////////
-            // Add execution logic HERE
-            ///////////////////////////
+            var path = Path.Get(context);
+            var res = await _classifier.ClassifyImage(path);
+
+            return res;
         }
 
         #endregion

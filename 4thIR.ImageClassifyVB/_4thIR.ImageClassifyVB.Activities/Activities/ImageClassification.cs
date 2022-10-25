@@ -5,9 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ImageClassifyVB.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using Microsoft.Extensions.DependencyInjection;
 using ImageClassification;
-using System.Net.Http;
 
 namespace _4thIR.ImageClassifyVB.Activities
 {
@@ -15,7 +13,7 @@ namespace _4thIR.ImageClassifyVB.Activities
     [LocalizedDescription(nameof(Resources.ImageClassification_Description))]
     public class ImageClassification : ContinuableAsyncCodeActivity
     {
-        private readonly ImageClassifierViTBase _classifier;
+        private static readonly ImageClassifierViTBase _classifier=new ImageClassifierViTBase();
 
         #region Properties
 
@@ -49,9 +47,7 @@ namespace _4thIR.ImageClassifyVB.Activities
 
         public ImageClassification()
         {
-            var serviceProvider = new ServiceCollection().AddHttpClient().BuildServiceProvider();
 
-            _classifier = new ImageClassifierViTBase(serviceProvider.GetService<IHttpClientFactory>());
         }
 
         #endregion

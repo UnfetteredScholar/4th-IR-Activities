@@ -22,15 +22,16 @@ namespace ImageClassification
             public string classes { get; set; }
         }
 
-        private readonly IHttpClientFactory _httpClientFactory = null;
+        private static readonly HttpClient client = new HttpClient();
 
         /// <summary>
         /// Creates an instance of the ImageClassifierViTBase class
         /// </summary>
-        /// <param name="httpClientFactory">HttpClientFactory object for creating HttpClient instances</param>
-        public ImageClassifierViTBase(IHttpClientFactory httpClientFactory)
+        public ImageClassifierViTBase()
         {
-            _httpClientFactory = httpClientFactory;
+            client.BaseAddress = new Uri("https://image-classification-vit-base-384.ai-sandbox.4th-ir.io");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         /// <summary>
@@ -43,14 +44,11 @@ namespace ImageClassification
         {
             path = @"" + path;
 
-            HttpClient client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://image-classification-vit-base-384.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            
             
             using (var formData = new MultipartFormDataContent())
             {
-                StreamContent imageStream = new StreamContent(System.IO.File.OpenRead(path));
+                StreamContent imageStream = new StreamContent(File.OpenRead(path));
                 imageStream.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
 
                 int index = path.LastIndexOf('\\') + 1;

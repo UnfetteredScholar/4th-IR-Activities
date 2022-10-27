@@ -15,7 +15,13 @@ namespace _4thIR.AgeClassGVB.AgeClassification.GoogeVitBase
 
         }
 
+        /// <summary>
+        /// The possible age range
+        /// </summary>
         public string AgeRange { get; set; }
+        /// <summary>
+        /// The probability or degree of accuracy
+        /// </summary>
         public double Probability { get; set; }
 
     }

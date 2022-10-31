@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.DocClassify.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using DocumentClassification;
+using _4thIR.DocClassify.DocumentClassification.KYC;
 
 namespace _4thIR.DocClassify.Activities
 {

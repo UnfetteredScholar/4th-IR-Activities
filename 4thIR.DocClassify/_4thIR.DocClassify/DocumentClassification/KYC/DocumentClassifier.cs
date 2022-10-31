@@ -3,7 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.IO;
 using _4thIR.DocClassify.DocumentClassification.Exceptions;
 
@@ -76,13 +76,15 @@ namespace _4thIR.DocClassify.DocumentClassification.KYC
         /// <returns>Document class {passport, commercial register, other}</returns>
         public async Task<string> ClassifyDocument(string path, DocumentType documentType)
         {
+            path = @"" + path;
+
             string requestUrl = "/api/v1/classify/";
 
             RequestContent request = new RequestContent();
             request.document_content = ReadDocumentContentBase64(path);
             request.document_type = documentType.ToString();
 
-            var requestJson = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+            var requestJson = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
             var response = await client.PostAsync(requestUrl, requestJson);
 
             try
@@ -91,7 +93,7 @@ namespace _4thIR.DocClassify.DocumentClassification.KYC
 
                 string r = await response.Content.ReadAsStringAsync();
 
-                ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r);
+                ResponseContent responseContent = JsonSerializer.Deserialize<ResponseContent>(r);
 
                 return responseContent?.document_class != null ? responseContent.document_class : " ";
             }

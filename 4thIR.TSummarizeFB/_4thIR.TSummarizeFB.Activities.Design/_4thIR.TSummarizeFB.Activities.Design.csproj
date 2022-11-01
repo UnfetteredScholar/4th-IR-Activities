@@ -4,7 +4,7 @@
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.TSummarizeFB.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.TSummarizeFB.Activities.Design</AssemblyName>
-    <PackageId>4thIR.TextSummarizationMeetingSummaryFacebook Bart Large.Activity.TextSummarization</PackageId>
+    <PackageId>4thIR.TextSummarizationMeetingSummaryFacebookBartLarge.Activity.TextSummarization</PackageId>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
   </PropertyGroup>
   <!-- Package Metadata -->

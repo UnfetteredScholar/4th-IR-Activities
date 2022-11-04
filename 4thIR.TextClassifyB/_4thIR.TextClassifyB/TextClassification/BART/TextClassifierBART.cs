@@ -8,7 +8,7 @@ using _4thIR.TextClassifyB.TextClassification.Exceptions;
 
 namespace _4thIR.TextClassifyB.TextClassification.BART
 {
-    internal class TextClassifierBART
+    public class TextClassifierBART
     {
         private class ResponseContent
         {

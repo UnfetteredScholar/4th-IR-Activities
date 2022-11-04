@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_4thIR.DGenerate", "_4thIR.DGenerate", "{2253B436-FEA9-4890-9C30-607CE718C641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4thIR.DGenerate", "4thIR.DGenerate\_4thIR.DGenerate\_4thIR.DGenerate.csproj", "{02110A5A-5A99-4417-9A42-DFD9CAD86060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4thIR.DGenerate.Activities", "4thIR.DGenerate\_4thIR.DGenerate.Activities\_4thIR.DGenerate.Activities.csproj", "{98C423F6-621F-47E2-8CE8-AD090841CE2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4thIR.DGenerate.Activities.Design", "4thIR.DGenerate\_4thIR.DGenerate.Activities.Design\_4thIR.DGenerate.Activities.Design.csproj", "{768EA54D-3ACA-4CA9-B698-6E5779CFF607}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{FD16C0CA-D8C3-450A-BA55-36129C578003}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities", "Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.shproj", "{4546856D-EA50-45C6-9419-EEEACB5A80AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities.Design", "Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.shproj", "{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02110A5A-5A99-4417-9A42-DFD9CAD86060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02110A5A-5A99-4417-9A42-DFD9CAD86060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02110A5A-5A99-4417-9A42-DFD9CAD86060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02110A5A-5A99-4417-9A42-DFD9CAD86060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C423F6-621F-47E2-8CE8-AD090841CE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C423F6-621F-47E2-8CE8-AD090841CE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C423F6-621F-47E2-8CE8-AD090841CE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C423F6-621F-47E2-8CE8-AD090841CE2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{768EA54D-3ACA-4CA9-B698-6E5779CFF607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768EA54D-3ACA-4CA9-B698-6E5779CFF607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768EA54D-3ACA-4CA9-B698-6E5779CFF607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768EA54D-3ACA-4CA9-B698-6E5779CFF607}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02110A5A-5A99-4417-9A42-DFD9CAD86060} = {2253B436-FEA9-4890-9C30-607CE718C641}
+		{98C423F6-621F-47E2-8CE8-AD090841CE2F} = {2253B436-FEA9-4890-9C30-607CE718C641}
+		{768EA54D-3ACA-4CA9-B698-6E5779CFF607} = {2253B436-FEA9-4890-9C30-607CE718C641}
+		{4546856D-EA50-45C6-9419-EEEACB5A80AA} = {FD16C0CA-D8C3-450A-BA55-36129C578003}
+		{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25} = {FD16C0CA-D8C3-450A-BA55-36129C578003}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B849E62-42E6-4F45-B983-6E5D01B7A6E8}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{4546856d-ea50-45c6-9419-eeeacb5a80aa}*SharedItemsImports = 13
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{768ea54d-3aca-4ca9-b698-6e5779cff607}*SharedItemsImports = 5
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{98c423f6-621f-47e2-8ce8-ad090841ce2f}*SharedItemsImports = 5
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{df9c43f0-add3-4fbf-995e-84b92f9cbf25}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

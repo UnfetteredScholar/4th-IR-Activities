@@ -9,6 +9,9 @@ using _4thIR.DocClassifyVLA.DocumentClassification.Exceptions;
 
 namespace _4thIR.DocClassifyVLA.DocumentClassification.VLA
 {
+    /// <summary>
+    /// Stores data relating to a document
+    /// </summary>
     public class DocumentInfo
     {
         public DocumentInfo(string documentName, string documentClass, string documentText, DocumentMeta documentMeta)
@@ -20,12 +23,30 @@ namespace _4thIR.DocClassifyVLA.DocumentClassification.VLA
 
         }
 
+        /// <summary>
+        /// The name of the document
+        /// </summary>
         public string DocumentName { get; set; }
+
+        /// <summary>
+        /// The label or document class
+        /// </summary>
         public string DocumentClass { get; set; }
+
+        /// <summary>
+        /// The document content
+        /// </summary>
         public string DocumentText { get; set; }
+
+        /// <summary>
+        /// The document meta data
+        /// </summary>
         public DocumentMeta DocumentMeta { get; set; }
     }
 
+    /// <summary>
+    /// Stores the meta data of a document
+    /// </summary>
     public class DocumentMeta
     {
         public DocumentMeta(string siteID, string startDate, string endDate, string[] relatedParties)

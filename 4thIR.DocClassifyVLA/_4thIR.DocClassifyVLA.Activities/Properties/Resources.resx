@@ -145,4 +145,224 @@
     <value>Common</value>
     <comment>category</comment>
   </data>
+  <data name="Authentication_Category" xml:space="preserve">
+    <value>Authentication</value>
+    <comment>category</comment>
+  </data>
+  <data name="Common_Category" xml:space="preserve">
+    <value>Common</value>
+    <comment>category</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="Options_Category" xml:space="preserve">
+    <value>Options</value>
+    <comment>category</comment>
+  </data>
+  <data name="ValidationScope_Error" xml:space="preserve">
+    <value>Cannot be used outside of a {0}.</value>
+    <comment>error message; {0} is a container activity (e.g. a scope)</comment>
+  </data>
+  <data name="ValidationValue_Error" xml:space="preserve">
+    <value>Please provide a value for {0}.</value>
+    <comment>error message; {0} is the name of a missing property</comment>
+  </data>
+  <data name="ValidationExclusiveProperties_Error" xml:space="preserve">
+    <value>Please provide a value either for {0} or {1}, but not both.</value>
+    <comment>error message; {0} &amp; {1} are mutually exclusive activities</comment>
+  </data>
+  <data name="ValidationOverloadGroup_Error" xml:space="preserve">
+    <value>Please provide values for both {0} and {1}.</value>
+    <comment>error message; {0} &amp; {1} are complementary properties</comment>
+  </data>
+  <data name="DocumentClassification_DisplayName" xml:space="preserve">
+    <value>Document Classification</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentClassification_Description" xml:space="preserve">
+    <value>Performs classification of a PDF document.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentClassification_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentClassification_Path_Description" xml:space="preserve">
+    <value>Full path to PDF document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentClassification_DocumentInfo_DisplayName" xml:space="preserve">
+    <value>Document Info</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentClassification_DocumentInfo_Description" xml:space="preserve">
+    <value>Object containing the document info.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentMetaExtraction_DisplayName" xml:space="preserve">
+    <value>Document Meta Extraction</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentMetaExtraction_Description" xml:space="preserve">
+    <value>Extracts the meta data of a PDF document.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentMetaExtraction_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentMetaExtraction_Path_Description" xml:space="preserve">
+    <value>Full path to PDF file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentMetaExtraction_DocumentInfo_DisplayName" xml:space="preserve">
+    <value>Document Info</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentMetaExtraction_DocumentInfo_Description" xml:space="preserve">
+    <value>Object containing the document info.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentAnalysis_DisplayName" xml:space="preserve">
+    <value>Document Analysis</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentAnalysis_Description" xml:space="preserve">
+    <value>Performs classification of a PDF document and extracts its meta data.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentAnalysis_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentAnalysis_Path_Description" xml:space="preserve">
+    <value>Full path to the PDF document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentAnalysis_DocumentInfo_DisplayName" xml:space="preserve">
+    <value>Document Info</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentAnalysis_DocumentInfo_Description" xml:space="preserve">
+    <value>Object containing document info.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentTextAnalysis_DisplayName" xml:space="preserve">
+    <value>Document Text Analysis</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentTextAnalysis_Description" xml:space="preserve">
+    <value>Performs classification of a document and extracts its meta data.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentTextAnalysis_DocumentName_DisplayName" xml:space="preserve">
+    <value>Document Name</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextAnalysis_DocumentName_Description" xml:space="preserve">
+    <value>The name of the document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentTextAnalysis_DocumentText_DisplayName" xml:space="preserve">
+    <value>Document Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextAnalysis_DocumentText_Description" xml:space="preserve">
+    <value>The document text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentTextAnalysis_DocumentInfo_DisplayName" xml:space="preserve">
+    <value>Document Info</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextAnalysis_DocumentInfo_Description" xml:space="preserve">
+    <value>Object containing the document info.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentTextExtraction_DisplayName" xml:space="preserve">
+    <value>Document Text Extraction</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentTextExtraction_Description" xml:space="preserve">
+    <value>Extracts the text of a PDF document.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentTextExtraction_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextExtraction_Path_Description" xml:space="preserve">
+    <value>Full path to PDF document file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentTextExtraction_DocumentName_DisplayName" xml:space="preserve">
+    <value>Document Name</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextExtraction_DocumentName_Description" xml:space="preserve">
+    <value>Name of the document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="DocumentTextExtraction_DocumentText_DisplayName" xml:space="preserve">
+    <value>Document Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextExtraction_DocumentText_Description" xml:space="preserve">
+    <value>The document text content.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
 </root>

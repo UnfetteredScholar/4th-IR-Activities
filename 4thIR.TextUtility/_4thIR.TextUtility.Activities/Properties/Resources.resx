@@ -145,4 +145,260 @@
     <value>Common</value>
     <comment>category</comment>
   </data>
+  <data name="Authentication_Category" xml:space="preserve">
+    <value>Authentication</value>
+    <comment>category</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="Options_Category" xml:space="preserve">
+    <value>Options</value>
+    <comment>category</comment>
+  </data>
+  <data name="ValidationScope_Error" xml:space="preserve">
+    <value>Cannot be used outside of a {0}.</value>
+    <comment>error message; {0} is a container activity (e.g. a scope)</comment>
+  </data>
+  <data name="ValidationValue_Error" xml:space="preserve">
+    <value>Please provide a value for {0}.</value>
+    <comment>error message; {0} is the name of a missing property</comment>
+  </data>
+  <data name="ValidationExclusiveProperties_Error" xml:space="preserve">
+    <value>Please provide a value either for {0} or {1}, but not both.</value>
+    <comment>error message; {0} &amp; {1} are mutually exclusive activities</comment>
+  </data>
+  <data name="ValidationOverloadGroup_Error" xml:space="preserve">
+    <value>Please provide values for both {0} and {1}.</value>
+    <comment>error message; {0} &amp; {1} are complementary properties</comment>
+  </data>
+  <data name="TextTokenizationNLP_DisplayName" xml:space="preserve">
+    <value>Text Tokenization NLP</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextTokenizationNLP_Description" xml:space="preserve">
+    <value>Performs NLP tokenization of text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextTokenizationNLP_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTokenizationNLP_Text_Description" xml:space="preserve">
+    <value>Raw text or Full path to txt or pdf file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTokenizationNLP_Format_DisplayName" xml:space="preserve">
+    <value>Format</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTokenizationNLP_Format_Description" xml:space="preserve">
+    <value>Input format. (Format.format)</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTokenizationNLP_TokenizedText_DisplayName" xml:space="preserve">
+    <value>Tokenized Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTokenizationNLP_TokenizedText_Description" xml:space="preserve">
+    <value>The processed text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTokenizationSpacy_DisplayName" xml:space="preserve">
+    <value>Text Tokenization Spacy</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextTokenizationSpacy_Description" xml:space="preserve">
+    <value>Performs Spacy tokenization of text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextTokenizationSpacy_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTokenizationSpacy_Text_Description" xml:space="preserve">
+    <value>Raw text or Full path to txt or pdf file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTokenizationSpacy_Format_DisplayName" xml:space="preserve">
+    <value>Format</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTokenizationSpacy_Format_Description" xml:space="preserve">
+    <value>Input format. (Format.format)</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTokenizationSpacy_TokenizedText_DisplayName" xml:space="preserve">
+    <value>Tokenized Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTokenizationSpacy_TokenizedText_Description" xml:space="preserve">
+    <value>The processed text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ImageTextExtraction_DisplayName" xml:space="preserve">
+    <value>Image Text Extraction</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="ImageTextExtraction_Description" xml:space="preserve">
+    <value>Reads text in an image.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="ImageTextExtraction_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ImageTextExtraction_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ImageTextExtraction_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ImageTextExtraction_Text_Description" xml:space="preserve">
+    <value>The image text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PDFTextExtraction_DisplayName" xml:space="preserve">
+    <value>PDF Text Extraction</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="PDFTextExtraction_Description" xml:space="preserve">
+    <value>Reads text from a PDF document.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="PDFTextExtraction_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PDFTextExtraction_Path_Description" xml:space="preserve">
+    <value>Full Path to PDF document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PDFTextExtraction_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PDFTextExtraction_Text_Description" xml:space="preserve">
+    <value>The PDF text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PDFParsing_DisplayName" xml:space="preserve">
+    <value>PDF Parsing</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="PDFParsing_Description" xml:space="preserve">
+    <value>Reads PDF documents.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="PDFParsing_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PDFParsing_Path_Description" xml:space="preserve">
+    <value>Full Path to PDF document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PDFParsing_NumberOfPages_DisplayName" xml:space="preserve">
+    <value>Number of Pages</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PDFParsing_NumberOfPages_Description" xml:space="preserve">
+    <value>Number of pages in the document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PDFParsing_Content_DisplayName" xml:space="preserve">
+    <value>Content</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PDFParsing_Content_Description" xml:space="preserve">
+    <value>The document content.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Authentication_Category" xml:space="preserve">
+    <value>Authentication</value>
+    <comment>category</comment>
+  </data>
+  <data name="Common_Category" xml:space="preserve">
+    <value>Common</value>
+    <comment>category</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="Options_Category" xml:space="preserve">
+    <value>Options</value>
+    <comment>category</comment>
+  </data>
+  <data name="ValidationScope_Error" xml:space="preserve">
+    <value>Cannot be used outside of a {0}.</value>
+    <comment>error message; {0} is a container activity (e.g. a scope)</comment>
+  </data>
+  <data name="ValidationValue_Error" xml:space="preserve">
+    <value>Please provide a value for {0}.</value>
+    <comment>error message; {0} is the name of a missing property</comment>
+  </data>
+  <data name="ValidationExclusiveProperties_Error" xml:space="preserve">
+    <value>Please provide a value either for {0} or {1}, but not both.</value>
+    <comment>error message; {0} &amp; {1} are mutually exclusive activities</comment>
+  </data>
+  <data name="ValidationOverloadGroup_Error" xml:space="preserve">
+    <value>Please provide values for both {0} and {1}.</value>
+    <comment>error message; {0} &amp; {1} are complementary properties</comment>
+  </data>
+  <data name="PDFParsing_DisplayName" xml:space="preserve">
+    <value>PDF Parsing</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="PDFParsing_Description" xml:space="preserve">
+    <value>Processes PDF documents.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="PDFParsing_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PDFParsing_Path_Description" xml:space="preserve">
+    <value>Full path to PDF document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="PDFParsing_NumberOfPages_DisplayName" xml:space="preserve">
+    <value>Number of Pages</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PDFParsing_NumberOfPages_Description" xml:space="preserve">
+    <value>The number of pages.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="PDFParsing_Content_DisplayName" xml:space="preserve">
+    <value>Content</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PDFParsing_Content_Description" xml:space="preserve">
+    <value>The document contents.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
 </root>

@@ -31,6 +31,13 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <PackageVersion>0.1.0</PackageVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Designers\ImageTextExtractionDesigner.xaml" />
+    <None Remove="Designers\PDFParsingDesigner.xaml" />
+    <None Remove="Designers\PDFTextExtractionDesigner.xaml" />
+    <None Remove="Designers\TextTokenizationNLPDesigner.xaml" />
+    <None Remove="Designers\TextTokenizationSpacyDesigner.xaml" />
+  </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
     <None Include="packageIcon.png" Pack="true" Visible="false" PackagePath="" />
@@ -64,6 +71,22 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
+    <Page Include="Designers\ImageTextExtractionDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\PDFParsingDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\PDFTextExtractionDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\TextTokenizationNLPDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\TextTokenizationSpacyDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
     <Page Include="Themes\Icons.xaml">
       <Generator>XamlIntelliSenseFileGenerator</Generator>
       <SubType>Designer</SubType>
@@ -71,10 +94,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\_4thIR.TextUtility.Activities\_4thIR.TextUtility.Activities.csproj" PrivateAssets="All"/>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Designers\" />
+    <ProjectReference Include="..\_4thIR.TextUtility.Activities\_4thIR.TextUtility.Activities.csproj" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

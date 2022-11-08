@@ -1,6 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
 		<RootNamespace>_4thIR.ImageClassifyR50</RootNamespace>
 		<AssemblyName>_4thIR.ImageClassifyR50</AssemblyName>
   </PropertyGroup>
@@ -31,8 +31,5 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
 </Project>

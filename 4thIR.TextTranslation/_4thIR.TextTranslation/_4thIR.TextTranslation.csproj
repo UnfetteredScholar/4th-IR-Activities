@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
 		<RootNamespace>_4thIR.TextTranslation</RootNamespace>
 		<AssemblyName>_4thIR.TextTranslation</AssemblyName>
   </PropertyGroup>
@@ -8,23 +8,6 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\_4thIR.TextTranslation.xml</DocumentationFile>
   </PropertyGroup>
-	<ItemGroup>
-		<Reference Include="System" />
-		
-		<Reference Include="System.Core" />
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Data.DataSetExtensions" />
-		
-		
-		<Reference Include="Microsoft.CSharp" />
- 		
-		<Reference Include="System.Data" />
-		<Reference Include="System.Xml" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="WindowsBase" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>

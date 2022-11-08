@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using _4thIR.ImageClassifyCV.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using ImageClassificationCV;
- 
+using ImageClassification.ClassyVision;
+
 namespace _4thIR.ImageClassifyCV.Activities
 {
     [LocalizedDisplayName(nameof(Resources.ImageClassification_DisplayName))]

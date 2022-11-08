@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Text;
+using _4thIR.TextTranslation.TextTranslation.Exceptions;
 
-
-namespace TextTranslation
+namespace _4thIR.TextTranslation.TextTranslation.Multilanguage
 {
     /// <summary>
     /// Supported Languages for translation
@@ -82,13 +82,13 @@ namespace TextTranslation
                 return responseContent?.conversion_text != null ? responseContent.conversion_text : " ";
 
             }
-            catch(HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
                 if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    message= "BAD REQUEST: string too long.";
+                    message = "BAD REQUEST: string too long.";
                 }
                 else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                 {
@@ -99,7 +99,7 @@ namespace TextTranslation
                     message = "ERROR: TRANSLATOR FAILED.";
                 }
 
-                throw new Exception(message,ex);
+                throw new TextTranslationException(message, ex);
             }
 
 

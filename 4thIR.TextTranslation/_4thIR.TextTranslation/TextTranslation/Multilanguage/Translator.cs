@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Text;
-using _4thIR.TextTranslation.TextTranslation.Exceptions;
+using TextTranslation.Exceptions;
 
-namespace _4thIR.TextTranslation.TextTranslation.Multilanguage
+namespace TextTranslation.Multilanguage
 {
     /// <summary>
     /// Supported Languages for translation

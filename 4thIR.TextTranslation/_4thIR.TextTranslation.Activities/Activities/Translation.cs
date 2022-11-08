@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.TextTranslation.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.TextTranslation.TextTranslation.Multilanguage;
+using TextTranslation.Multilanguage;
 
 namespace _4thIR.TextTranslation.Activities
 {

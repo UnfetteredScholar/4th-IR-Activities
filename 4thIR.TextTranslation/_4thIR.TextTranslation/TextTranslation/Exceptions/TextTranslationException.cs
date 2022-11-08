@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4thIR.TextTranslation.TextTranslation.Exceptions
+namespace TextTranslation.Exceptions
 {
     public class TextTranslationException:Exception
     {

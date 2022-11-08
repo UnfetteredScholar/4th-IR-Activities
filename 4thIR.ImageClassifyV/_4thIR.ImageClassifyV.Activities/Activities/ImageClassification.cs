@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ImageClassifyV.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using ImageClassification;
+using ImageClassification.Vissl;
 
 namespace _4thIR.ImageClassifyV.Activities
 {

@@ -4,8 +4,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.IO;
+using ImageClassification.Exceptions;
 
-namespace ImageClassification
+namespace ImageClassification.Vissl
 {
     /// <summary>
     /// Class containing functionality for image classification
@@ -31,7 +32,7 @@ namespace ImageClassification
 
         }
 
-      
+
         /// <summary>
         /// Performs classification of an image
         /// </summary>
@@ -40,14 +41,14 @@ namespace ImageClassification
         public async Task<string> ClassifyImage(string path)
         {
             string requestUri = "/api/v1/classify";
-            path=@""+path;
+            path = @"" + path;
 
             using (var multipartFormContent = new MultipartFormDataContent())
             {
                 StreamContent fileStreamContent = new StreamContent(File.OpenRead(path));
                 fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/png");
-                int index=path.LastIndexOf('\\');
-                index = index == -1 ? 0 : index+1;
+                int index = path.LastIndexOf('\\');
+                index = index == -1 ? 0 : index + 1;
 
                 string fileName = path.Substring(index);
                 multipartFormContent.Add(fileStreamContent, "file", fileName);
@@ -65,29 +66,29 @@ namespace ImageClassification
 
                     return responseContent?.label != null ? responseContent.label : string.Empty;
                 }
-                catch(HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
                     if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                     {
-                        message= "string too long";
+                        message = "string too long";
                     }
                     else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                     {
-                        message= "ML model not found";
+                        message = "ML model not found";
                     }
                     else
                     {
-                        message= "error";
+                        message = "Error: Operation failed";
                     }
 
-                    throw new Exception(message,ex);
+                    throw new ImageClassificationException(message, ex);
                 }
 
             }
 
 
         }
-    } 
+    }
 }

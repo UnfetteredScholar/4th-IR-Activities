@@ -5,9 +5,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.IO;
-using _4thIR.DocClassify.DocumentClassification.Exceptions;
+using DocumentClassification.Exceptions;
 
-namespace _4thIR.DocClassify.DocumentClassification.KYC
+namespace DocumentClassification.KYC
 {
     /// <summary>
     /// Document Type

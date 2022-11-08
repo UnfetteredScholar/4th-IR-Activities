@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _4thIR.DocClassify.DocumentClassification.Exceptions
+namespace DocumentClassification.Exceptions
 {
     internal class DocumentClassificationException:Exception
     {

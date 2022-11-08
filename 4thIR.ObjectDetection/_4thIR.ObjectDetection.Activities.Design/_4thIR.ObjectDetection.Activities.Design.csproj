@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.ObjectDetection.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.ObjectDetection.Activities.Design</AssemblyName>
@@ -65,21 +65,9 @@
     <RepositoryUrl>https://github.com/UnfetteredScholar/4thIR.ObjectDetection.git</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-		<Reference Include="System" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Data.DataSetExtensions" />
-		<Reference Include="Microsoft.CSharp" />
-		<Reference Include="PresentationCore" />
-		<Reference Include="PresentationFramework" />
-		<Reference Include="System.Data" />
-		<Reference Include="System.Xml" />
-		<Reference Include="System.Activities" />
-		<Reference Include="System.Activities.Presentation" />
-		<Reference Include="System.Xaml" />
-		<Reference Include="WindowsBase" />
-		<Reference Include="System.Activities.Core.Presentation" />
-	</ItemGroup>
+    <PackageReference Include="UiPath.Workflow" Version="6.0.0-20220909-01" PrivateAssets="All" />
+    <PackageReference Include="System.Activities.Core.Presentation" Version="6.0.0-*" PrivateAssets="All" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="..\..\Shared\Themes\Generic.xaml">
       <Link>Themes\Generic.xaml</Link>

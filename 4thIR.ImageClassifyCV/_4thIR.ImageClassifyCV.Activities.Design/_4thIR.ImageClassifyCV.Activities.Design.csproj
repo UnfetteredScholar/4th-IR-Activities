@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
 		<RootNamespace>_4thIR.ImageClassifyCV.Activities.Design</RootNamespace>
 		<AssemblyName>_4thIR.ImageClassifyCV.Activities.Design</AssemblyName>
@@ -16,7 +16,7 @@
     <Company>4th-IR</Company>
     <Copyright>© 2022 4th-IR</Copyright>
     <PackageTags>UiPath Activit𝗒</PackageTags>
-    <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
+    <PackageProjectUrl>https://www.4th-ir.com</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/NuGet/Samples/master/PackageIconNuspecExample/icon.png</PackageIconUrl>
     <!--<PackageIcon>packageIcon.png</PackageIcon>--> <!--PackageIcon not yet supported in UiPath Studio-->
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -65,20 +65,8 @@
     <RepositoryUrl>https://github.com/UnfetteredScholar/4th-IR.ImageClassification-ClassyVision.git</RepositoryUrl>
   </PropertyGroup>
 	<ItemGroup>
-		<Reference Include="System" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Data.DataSetExtensions" />
-		<Reference Include="Microsoft.CSharp" />
-		<Reference Include="PresentationCore" />
-		<Reference Include="PresentationFramework" />
-		<Reference Include="System.Data" />
-		<Reference Include="System.Xml" />
-		<Reference Include="System.Activities" />
-		<Reference Include="System.Activities.Presentation" />
-		<Reference Include="System.Xaml" />
-		<Reference Include="WindowsBase" />
-		<Reference Include="System.Activities.Core.Presentation" />
+		<PackageReference Include="UiPath.Workflow" Version="6.0.0-20220909-01" PrivateAssets="All" />
+		<PackageReference Include="System.Activities.Core.Presentation" Version="6.0.0-*" PrivateAssets="All" />
 	</ItemGroup>
   <ItemGroup>
     <Page Include="..\..\Shared\Themes\Generic.xaml">

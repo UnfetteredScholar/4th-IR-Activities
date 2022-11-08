@@ -17,7 +17,7 @@
     <Company>4th-IR</Company>
     <Copyright>© 2022 4th-IR</Copyright>
     <PackageTags>UiPath Activit𝗒</PackageTags>
-    <PackageProjectUrl></PackageProjectUrl>
+    <PackageProjectUrl>https://www.4th-ir.com</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/NuGet/Samples/master/PackageIconNuspecExample/icon.png</PackageIconUrl>
     <!--<PackageIcon>packageIcon.png</PackageIcon>--> <!--PackageIcon not yet supported in UiPath Studio-->
     <AssemblyVersion>1.0.0.0</AssemblyVersion>

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ImageClassifyR50.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using ImageClassificationR50;
+using ImageClassification.Resnet50;
 
 namespace _4thIR.ImageClassifyR50.Activities
 {

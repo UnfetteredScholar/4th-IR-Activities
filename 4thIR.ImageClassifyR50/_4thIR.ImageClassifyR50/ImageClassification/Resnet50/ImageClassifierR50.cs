@@ -4,8 +4,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.IO;
 using Newtonsoft.Json;
+using ImageClassification.Exceptions;
 
-namespace ImageClassificationR50
+namespace ImageClassification.Resnet50
 {
     public class ImageClassifierR50
     {
@@ -15,7 +16,7 @@ namespace ImageClassificationR50
             public string model { get; set; }
         }
 
-        private static readonly HttpClient client=new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
         public ImageClassifierR50()
         {
@@ -29,29 +30,20 @@ namespace ImageClassificationR50
         {
             path = @"" + path;
 
-            using(var multipartContent=new MultipartFormDataContent())
+            using (var multipartContent = new MultipartFormDataContent())
             {
-                /*
-                byte[] bytes = File.ReadAllBytes(path);
-                string imageBase64 = Convert.ToBase64String(bytes);
 
-                RequestContent request = new RequestContent();
-                request.base64_image_string = imageBase64;
-
-                multipartContent.Add(new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json"), "base64_image_string");
-                */
-
-                StreamContent streamContent=new StreamContent(File.OpenRead(path));
+                StreamContent streamContent = new StreamContent(File.OpenRead(path));
                 streamContent.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
 
-                int index = path.LastIndexOf("\\")+1;
+                int index = path.LastIndexOf("\\") + 1;
 
 
                 string fileName = path.Substring(index);
 
-                multipartContent.Add(streamContent,"file",fileName);
+                multipartContent.Add(streamContent, "file", fileName);
 
-               
+
 
                 string requestUri = "/api/v1/classify";
                 var response = await client.PostAsync(requestUri, multipartContent);
@@ -66,7 +58,7 @@ namespace ImageClassificationR50
 
                     return responseContent.label;
                 }
-                catch(HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -83,7 +75,7 @@ namespace ImageClassificationR50
                         message = "Error: Unable to classify image";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new ImageClassificationException(message, ex);
                 }
             }
         }

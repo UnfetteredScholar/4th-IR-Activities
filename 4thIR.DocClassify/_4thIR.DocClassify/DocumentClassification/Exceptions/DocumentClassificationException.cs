@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DocumentClassification.Exceptions
 {
-    internal class DocumentClassificationException:Exception
+    public class DocumentClassificationException:Exception
     {
         public DocumentClassificationException(string message, Exception innerException):base(message,innerException)
         {

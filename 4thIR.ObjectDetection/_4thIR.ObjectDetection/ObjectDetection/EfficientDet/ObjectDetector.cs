@@ -4,8 +4,9 @@ using System.Net.Http;
 using System.IO;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using ObjectDetection.Exceptions;
 
-namespace EfficientDetObjectDetection
+namespace ObjectDetection.EfficientDet
 {
     /// <summary>
     /// Detects objects using Object detection model that can be used for identifying objects in the image, in terms of their location in the image and class they belong to.
@@ -19,7 +20,7 @@ namespace EfficientDetObjectDetection
             public double[] detection_classes { get; set; }
         }
 
-        private static readonly HttpClient client=new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
         public ObjectDetector()
         {
@@ -38,9 +39,9 @@ namespace EfficientDetObjectDetection
         {
             path = "" + path;
 
-            using(var multipartFormData=new MultipartFormDataContent())
+            using (var multipartFormData = new MultipartFormDataContent())
             {
-                StreamContent streamContent=new StreamContent(File.OpenRead(path));
+                StreamContent streamContent = new StreamContent(File.OpenRead(path));
                 streamContent.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
 
                 int index = path.LastIndexOf("\\") + 1;
@@ -55,27 +56,31 @@ namespace EfficientDetObjectDetection
                 {
                     response.EnsureSuccessStatusCode();
 
-                    string r=await response.Content.ReadAsStringAsync();
+                    string r = await response.Content.ReadAsStringAsync();
                     char[] chars = { '[', ']' };
                     r = r.Replace("[[", "[").Replace("]]", "]");
                     ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r);
 
                     return new Tuple<int, double[,], double[]>(responseContent.num_detections, responseContent.detection_boxes, responseContent.detection_classes);
                 }
-                catch(HttpRequestException ex)
+                catch (Exception ex)
                 {
+                    string message="";
+
                     if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                     {
-                        throw new Exception("Image must be jpeg or png format", ex);
+                        message = "Image must be jpeg or png format";
                     }
                     else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                     {
-                        throw new Exception("ML model not found", ex);
+                        message = "ML model not found";
                     }
                     else
                     {
-                        throw new Exception("Error: Unable to complete object detection", ex);
+                        message = "Error: Unable to complete object detection";
                     }
+
+                    throw new ObjectDetectionException(message, ex);
                 }
 
             }

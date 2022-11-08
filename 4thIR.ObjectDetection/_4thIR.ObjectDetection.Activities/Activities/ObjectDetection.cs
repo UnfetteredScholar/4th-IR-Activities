@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ObjectDetection.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using EfficientDetObjectDetection;
+using ObjectDetection.EfficientDet;
 
 namespace _4thIR.ObjectDetection.Activities
 {

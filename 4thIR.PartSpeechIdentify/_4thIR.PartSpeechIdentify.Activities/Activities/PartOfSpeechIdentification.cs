@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.PartSpeechIdentify.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using PartOfSpeechIdentification;
+using PartOfScpeech.Tagging;
 
 namespace _4thIR.PartSpeechIdentify.Activities
 {

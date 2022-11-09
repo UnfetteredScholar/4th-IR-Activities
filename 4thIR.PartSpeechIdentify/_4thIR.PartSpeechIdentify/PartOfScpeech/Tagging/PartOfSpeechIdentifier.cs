@@ -4,8 +4,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using PartOfScpeech.Exceptions;
 
-namespace PartOfSpeechIdentification
+namespace PartOfScpeech.Tagging
 {
     public class PartOfSpeechIdentifier
     {
@@ -19,7 +20,7 @@ namespace PartOfSpeechIdentification
             public string sentence { get; set; }
         }
 
-        private static readonly HttpClient client=new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
         public PartOfSpeechIdentifier()
         {
@@ -41,13 +42,13 @@ namespace PartOfSpeechIdentification
             {
                 response.EnsureSuccessStatusCode();
 
-                string r=await response.Content.ReadAsStringAsync();
+                string r = await response.Content.ReadAsStringAsync();
 
-                WordTag[] result=JsonConvert.DeserializeObject<WordTag[]>(r);
+                WordTag[] result = JsonConvert.DeserializeObject<WordTag[]>(r);
 
                 return result;
             }
-            catch(HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
@@ -64,7 +65,7 @@ namespace PartOfSpeechIdentification
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new Exception(message, ex);
+                throw new PartOfSpeechIdentificationException(message, ex);
             }
         }
     }

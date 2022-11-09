@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PartOfSpeechIdentification
+namespace PartOfScpeech.Tagging
 {
     /// <summary>
     /// Stores a Word and its Part of Speech

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.TextSummarizeF.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using TextSummarizationFairseq;
+using TextSummarization.Fairseq;
 
 namespace _4thIR.TextSummarizeF.Activities
 {

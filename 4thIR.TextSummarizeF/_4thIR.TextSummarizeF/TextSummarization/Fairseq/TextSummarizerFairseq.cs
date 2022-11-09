@@ -4,8 +4,10 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using TextSummarization.Fairseq;
+using TextSummarization.Exceptions;
 
-namespace TextSummarizationFairseq
+namespace TextSummarization.Fairseq
 {
     public class TextSummarizerFairseq
     {
@@ -32,7 +34,7 @@ namespace TextSummarizationFairseq
 
         }
 
-        private static readonly HttpClient client=new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
         public TextSummarizerFairseq()
         {
@@ -41,14 +43,14 @@ namespace TextSummarizationFairseq
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<Tuple<string,string>> SummarizeText(string article)
+        public async Task<Tuple<string, string>> SummarizeText(string article)
         {
             RequestContent requestContent = new RequestContent(article);
 
             StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
-            
+
             string requestUri = "/api/v1/sentence";
-            var response = await client.PostAsync(requestUri,stringContent);
+            var response = await client.PostAsync(requestUri, stringContent);
 
 
             try
@@ -62,7 +64,7 @@ namespace TextSummarizationFairseq
 
                 return new Tuple<string, string>(responseContent.summary, responseContent.model);
             }
-            catch(HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
@@ -79,7 +81,7 @@ namespace TextSummarizationFairseq
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new Exception(message, ex);
+                throw new TextSummarizationException(message, ex);
             }
 
         }

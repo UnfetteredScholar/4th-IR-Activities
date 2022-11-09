@@ -5,8 +5,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using NameEntityRecognition.Exceptions;
 
-namespace NameEntityRecognitionBERT
+namespace NameEntityRecognition.BERT
 {
     public class TextValuePair
     {
@@ -21,8 +22,8 @@ namespace NameEntityRecognitionBERT
 
     public class NameEntityRecognizerBERT
     {
-      
-        private static readonly HttpClient client=new HttpClient();
+
+        private static readonly HttpClient client = new HttpClient();
 
         public NameEntityRecognizerBERT()
         {
@@ -86,7 +87,7 @@ namespace NameEntityRecognitionBERT
                 int index = path.LastIndexOf("\\") + 1;
                 string fileName = path.Substring(index);
 
-                formData.Add(streamContent, "text_file",fileName);
+                formData.Add(streamContent, "text_file", fileName);
 
                 string requestUri = "/api/v1/sentence";
                 var response = await client.PostAsync(requestUri, formData);
@@ -101,7 +102,7 @@ namespace NameEntityRecognitionBERT
 
                     return result;
                 }
-                catch (HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -118,7 +119,7 @@ namespace NameEntityRecognitionBERT
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new NameEntityRecognitionException(message, ex);
                 }
             }
         }

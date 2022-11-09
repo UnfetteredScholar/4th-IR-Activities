@@ -6,7 +6,7 @@ using System.IO;
 using _4thIR.NERecognizeB.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using NameEntityRecognitionBERT;
+using NameEntityRecognition.BERT;
 
 namespace _4thIR.NERecognizeB.Activities
 {

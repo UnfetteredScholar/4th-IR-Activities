@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.TextGenerateT.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using TextGeneration;
+using TextGeneration.Transformers;
 
 namespace _4thIR.TextGenerateT.Activities
 {

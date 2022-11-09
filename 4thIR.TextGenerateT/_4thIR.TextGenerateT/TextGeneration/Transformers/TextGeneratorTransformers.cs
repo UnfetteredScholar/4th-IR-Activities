@@ -4,8 +4,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using TextGeneration.Exceptions;
 
-namespace TextGeneration
+namespace TextGeneration.Transformers
 {
     public class TextGeneratorTransformers
     {
@@ -58,7 +59,7 @@ namespace TextGeneration
 
                 return new Tuple<string, string>(responseContent[0].generated_text_1, responseContent[0].generated_text_2);
             }
-            catch (HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
@@ -75,7 +76,7 @@ namespace TextGeneration
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new Exception(message, ex);
+                throw new TextGenerationException(message, ex);
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
 		<RootNamespace>_4thIR.NERecognizeF.Activities</RootNamespace>
 		<AssemblyName>_4thIR.NERecognizeF.Activities</AssemblyName>
     <PackageId>_4thIR.NERecognizeF.Activities.Implementation</PackageId>
@@ -10,22 +10,9 @@
     <DocumentationFile>bin\$(Configuration)\_4thIR.NERecognizeF.Activities.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-		<Reference Include="System" />
-
-		<Reference Include="System.Core" />
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Data.DataSetExtensions" />
-
-
-		<Reference Include="Microsoft.CSharp" />
-
-		<Reference Include="System.Data" />
-		<Reference Include="System.Xml" />
-		<Reference Include="System.Activities" />
-		<Reference Include="System.Windows" />
-		<Reference Include="System.Xaml" />
-		<Reference Include="WindowsBase" />
-	</ItemGroup>
+    <PackageReference Include="System.Activities.Metadata" Version="6.0.0-*" PrivateAssets="All" />
+    <PackageReference Include="UiPath.Workflow.Runtime" Version="6.0.0-20220909-01" PrivateAssets="All"/>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\_4thIR.NERecognizeF\_4thIR.NERecognizeF.csproj" PrivateAssets="All" />
   </ItemGroup>

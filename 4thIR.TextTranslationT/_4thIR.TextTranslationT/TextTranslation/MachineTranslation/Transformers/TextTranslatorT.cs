@@ -4,8 +4,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using TextTranslation.Exceptions;
 
-namespace TextTranslation
+namespace TextTranslation.MachineTranslation.Transformers
 {
     public enum Language { English, French, Romanian, German }
     public class TextTranslatorT
@@ -18,9 +19,9 @@ namespace TextTranslation
                 this.sentence = sentence;
             }
 
-            public string sentence { get; set; }    
+            public string sentence { get; set; }
         }
-             
+
 
         private class ResponseContent
         {
@@ -33,7 +34,7 @@ namespace TextTranslation
             public string conversion_text { get; set; }
         }
 
-        private static readonly HttpClient client=new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
         public TextTranslatorT()
         {
@@ -42,9 +43,9 @@ namespace TextTranslation
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<string> TranslateText(string text,Language sourceLanguage,Language conversionLanguage)
+        public async Task<string> TranslateText(string text, Language sourceLanguage, Language conversionLanguage)
         {
-            using(var formData=new MultipartFormDataContent())
+            using (var formData = new MultipartFormDataContent())
             {
                 formData.Add(new StringContent(text, Encoding.UTF8, "text/plain"), "sentence");
 
@@ -62,7 +63,7 @@ namespace TextTranslation
 
                     return responseContent[0].conversion_text;
                 }
-                catch(HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -79,7 +80,7 @@ namespace TextTranslation
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new TextTranslationException(message, ex);
                 }
             }
 

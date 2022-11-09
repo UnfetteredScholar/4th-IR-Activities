@@ -4,10 +4,11 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using NameEntityRecognition.Exceptions;
 
-namespace NameEntityRecognition
+namespace NameEntityRecognition.Flair
 {
-    
+
 
     public class NameEntityRecognizer
     {
@@ -49,7 +50,7 @@ namespace NameEntityRecognition
 
                 return result;
             }
-            catch (HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
@@ -66,7 +67,7 @@ namespace NameEntityRecognition
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new Exception(message, ex);
+                throw new NameEntityRecognitionException(message, ex);
             }
         }
     }

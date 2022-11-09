@@ -1,5 +1,4 @@
-﻿
-namespace NameEntityRecognition
+﻿namespace NameEntityRecognition.Flair
 {
     /// <summary>
     /// Defines a word and its corresponding value
@@ -11,7 +10,7 @@ namespace NameEntityRecognition
         /// </summary>
         public TextValuePair()
         {
-            
+
         }
 
         /// <summary>

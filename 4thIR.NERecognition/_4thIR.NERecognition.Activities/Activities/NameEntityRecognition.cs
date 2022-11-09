@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.NERecognition.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using NameEntityRecognition;
-using System.Runtime.Remoting.Messaging;
+using NameEntityRecognition.Flair;
 
 namespace _4thIR.NERecognition.Activities
 {

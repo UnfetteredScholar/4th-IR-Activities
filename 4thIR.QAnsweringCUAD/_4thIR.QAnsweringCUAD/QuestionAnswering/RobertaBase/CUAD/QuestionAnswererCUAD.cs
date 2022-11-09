@@ -4,8 +4,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using QuestionAnswering.Exceptions;
 
-namespace QuestionAnswerCUAD
+namespace QuestionAnswering.RobertaBase.CUAD
 {
     /// <summary>
     /// Provides methods for answering questions based on context
@@ -79,7 +80,7 @@ namespace QuestionAnswerCUAD
 
                 return new Tuple<string, double>(responseContent.answer, responseContent.score);
             }
-            catch (HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
@@ -96,7 +97,7 @@ namespace QuestionAnswerCUAD
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new Exception(message, ex);
+                throw new QuestionAnsweringException(message, ex);
             }
         }
     }

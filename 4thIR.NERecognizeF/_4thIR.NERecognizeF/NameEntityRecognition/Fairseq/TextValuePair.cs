@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NameEntityRecognitionFairseq
+namespace NameEntityRecognition.Fairseq
 {
     public class TextValuePair
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.NERecognizeF.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using NameEntityRecognitionFairseq;
+using NameEntityRecognition.Fairseq;
 
 namespace _4thIR.NERecognizeF.Activities
 {

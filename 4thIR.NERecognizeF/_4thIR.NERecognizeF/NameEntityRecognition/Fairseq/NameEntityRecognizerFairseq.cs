@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using NameEntityRecognition.Exceptions;
 
-
-namespace NameEntityRecognitionFairseq
+namespace NameEntityRecognition.Fairseq
 {
-    
+
     public class NameEntityRecognizerFairseq
     {
         private class RequestContent
@@ -49,7 +49,7 @@ namespace NameEntityRecognitionFairseq
 
                 return result;
             }
-            catch (HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
@@ -66,7 +66,7 @@ namespace NameEntityRecognitionFairseq
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new Exception(message, ex);
+                throw new NameEntityRecognitionException(message, ex);
             }
         }
 

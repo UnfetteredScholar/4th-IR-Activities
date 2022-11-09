@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
 		<RootNamespace>_4thIR.SAnalyzeDB</RootNamespace>
 		<AssemblyName>_4thIR.SAnalyzeDB</AssemblyName>
   </PropertyGroup>
@@ -30,8 +30,5 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
 </Project>

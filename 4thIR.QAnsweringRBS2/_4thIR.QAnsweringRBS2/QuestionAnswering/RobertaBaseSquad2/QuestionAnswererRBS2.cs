@@ -4,8 +4,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using QuestionAnswering.Exceptions;
 
-namespace QuestionAnswerRBS2
+namespace QuestionAnswering.RobertaBaseSquad2
 {
     /// <summary>
     /// Provides methods for answering questions based on context
@@ -28,7 +29,7 @@ namespace QuestionAnswerRBS2
         {
             private ResponseContent()
             {
-               
+
             }
 
             public string answer { get; set; }
@@ -59,9 +60,9 @@ namespace QuestionAnswerRBS2
         /// <exception cref="Exception"></exception>
         public async Task<Tuple<string, double>> AnswerQuestion(string question, string context)
         {
-            RequestContent requestContent=new RequestContent(question, context);
+            RequestContent requestContent = new RequestContent(question, context);
 
-            StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent),Encoding.UTF8,"application/json");
+            StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
 
             string requestUri = "/question";
             var response = await client.PostAsync(requestUri, stringContent);
@@ -70,22 +71,22 @@ namespace QuestionAnswerRBS2
             {
                 response.EnsureSuccessStatusCode();
 
-                string r=await response.Content.ReadAsStringAsync();
+                string r = await response.Content.ReadAsStringAsync();
                 char[] chars = { '[', ']' };
 
                 ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r.Trim(chars));
 
                 return new Tuple<string, double>(responseContent.answer, responseContent.score);
             }
-            catch(HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
-                if(response.StatusCode==System.Net.HttpStatusCode.BadRequest)
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
                     message = "string too long";
                 }
-                else if(response.StatusCode==System.Net.HttpStatusCode.InternalServerError)
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                 {
                     message = "ML model not found";
                 }
@@ -94,7 +95,7 @@ namespace QuestionAnswerRBS2
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new Exception(message, ex);
+                throw new QuestionAnsweringException(message, ex);
             }
         }
     }

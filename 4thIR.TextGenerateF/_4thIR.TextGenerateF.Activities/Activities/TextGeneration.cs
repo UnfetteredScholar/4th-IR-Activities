@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.TextGenerateF.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using TextGenerationFairseq;
+using TextGeneration.Fairseq;
 
 namespace _4thIR.TextGenerateF.Activities
 {

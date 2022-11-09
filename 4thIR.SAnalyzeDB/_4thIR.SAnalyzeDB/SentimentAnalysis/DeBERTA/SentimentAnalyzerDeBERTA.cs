@@ -4,8 +4,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using SentimentAnalysis.Exceptions;
 
-namespace SentimentAnalysis
+namespace SentimentAnalysis.DeBERTA
 {
     public class SentimentAnalyzerDeBERTA
     {
@@ -40,13 +41,13 @@ namespace SentimentAnalysis
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<Tuple<string,double>> Analyze(string sentence)
+        public async Task<Tuple<string, double>> Analyze(string sentence)
         {
             RequestContent requestContent = new RequestContent(sentence);
             StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
 
             string resquestUri = "/api/v1/sentence";
-            var response=await client.PostAsync(resquestUri, stringContent);
+            var response = await client.PostAsync(resquestUri, stringContent);
 
             try
             {
@@ -59,7 +60,7 @@ namespace SentimentAnalysis
                 return new Tuple<string, double>(responseContent[0].label, responseContent[0].score);
 
             }
-            catch(HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
@@ -76,10 +77,10 @@ namespace SentimentAnalysis
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new Exception(message, ex);
+                throw new SentimentAnalysisException(message, ex);
             }
         }
     }
 
-    
+
 }

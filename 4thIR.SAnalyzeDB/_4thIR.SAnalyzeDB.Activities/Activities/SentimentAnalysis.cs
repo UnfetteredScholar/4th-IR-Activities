@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.SAnalyzeDB.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using SentimentAnalysis;
+using SentimentAnalysis.DeBERTA;
 
 namespace _4thIR.SAnalyzeDB.Activities
 {

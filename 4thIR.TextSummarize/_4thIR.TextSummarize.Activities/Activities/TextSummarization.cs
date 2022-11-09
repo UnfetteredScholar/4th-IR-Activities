@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using _4thIR.TextSummarize.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using TextSummarizationBB;
 using System.IO;
+using TextSummarization.BigBird;
 
 namespace _4thIR.TextSummarize.Activities
 {

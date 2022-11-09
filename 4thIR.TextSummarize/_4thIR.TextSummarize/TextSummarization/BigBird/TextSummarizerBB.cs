@@ -7,8 +7,9 @@ using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using TextSummarization.Exceptions;
 
-namespace TextSummarizationBB
+namespace TextSummarization.BigBird
 {
     public class TextSummarizerBB
     {
@@ -27,7 +28,7 @@ namespace TextSummarizationBB
         {
             public RequestContent(string articleText)
             {
-                this.article = articleText;
+                article = articleText;
             }
 
             public string article { get; set; }
@@ -71,7 +72,7 @@ namespace TextSummarizationBB
 
                     return new Tuple<string, string>(responseContent.description, responseContent.model);
                 }
-                catch (HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -88,7 +89,7 @@ namespace TextSummarizationBB
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new TextSummarizationException(message, ex);
                 }
             }
         }

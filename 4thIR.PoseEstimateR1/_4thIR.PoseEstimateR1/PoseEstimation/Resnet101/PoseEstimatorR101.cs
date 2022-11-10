@@ -3,9 +3,9 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using _4thIR.PoseEstimateR1.PoseEstimation.Exceptions;
+using PoseEstimation.Exceptions;
 
-namespace _4thIR.PoseEstimateR1.PoseEstimation.Resnet101
+namespace PoseEstimation.Resnet101
 {
     public class PoseEstimatorR101
     {
@@ -72,7 +72,7 @@ namespace _4thIR.PoseEstimateR1.PoseEstimation.Resnet101
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new PoseEstimateException(message, ex);
+                    throw new PoseEstimationException(message, ex);
                 }
 
             }

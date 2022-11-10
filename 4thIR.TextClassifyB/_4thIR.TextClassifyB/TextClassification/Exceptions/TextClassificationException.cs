@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4thIR.TextClassifyB.TextClassification.Exceptions
+namespace TextClassification.Exceptions
 {
     public class TextClassificationException : Exception
     {

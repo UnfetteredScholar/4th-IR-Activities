@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
-using _4thIR.TextClassifyB.TextClassification.Exceptions;
+using TextClassification.Exceptions;
 
-namespace _4thIR.TextClassifyB.TextClassification.BART
+namespace TextClassification.BART
 {
     public class TextClassifierBART
     {

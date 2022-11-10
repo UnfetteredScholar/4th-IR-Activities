@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.TextClassifyB.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.TextClassifyB.TextClassification.BART;
+using TextClassification.BART;
 
 namespace _4thIR.TextClassifyB.Activities
 {

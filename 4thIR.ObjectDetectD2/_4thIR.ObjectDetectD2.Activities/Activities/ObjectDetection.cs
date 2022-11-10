@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ObjectDetectD2.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using ObjectDetectionD2;
+using ObjectDetection.Detectron2;
 
 namespace _4thIR.ObjectDetectD2.Activities
 {

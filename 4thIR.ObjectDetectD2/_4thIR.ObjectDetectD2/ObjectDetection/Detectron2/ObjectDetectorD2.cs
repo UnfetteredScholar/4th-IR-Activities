@@ -4,8 +4,9 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using ObjectDetection.Exceptions;
 
-namespace ObjectDetectionD2
+namespace ObjectDetection.Detectron2
 {
     /// <summary>
     /// Stores information about detected objects
@@ -46,7 +47,7 @@ namespace ObjectDetectionD2
         /// </summary>
         public ObjectDetectorD2()
         {
-            
+
             client.BaseAddress = new Uri("https://image-object-dectection-detectron2.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -57,7 +58,7 @@ namespace ObjectDetectionD2
         {
             path = @"" + path;
 
-            
+
             using (var formData = new MultipartFormDataContent())
             {
                 StreamContent imageStream = new StreamContent(File.OpenRead(path));

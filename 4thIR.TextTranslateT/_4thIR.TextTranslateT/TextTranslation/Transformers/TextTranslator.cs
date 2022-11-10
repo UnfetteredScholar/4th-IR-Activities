@@ -5,9 +5,9 @@ using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
-using _4thIR.TextTranslateT.TextTranslation.Exceptions;
+using TextTranslation.Exceptions;
 
-namespace _4thIR.TextTranslateT.TextTranslation.Transformers
+namespace TextTranslation.Transformers
 {
     public enum Language { English, French, Romanian, German };
 

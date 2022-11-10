@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _4thIR.SSegmentS.SemanticSegmentation.Exceptions
+namespace SemanticSegmentation.Exceptions
 {
     public class SemanticSegmentationException : Exception
     {

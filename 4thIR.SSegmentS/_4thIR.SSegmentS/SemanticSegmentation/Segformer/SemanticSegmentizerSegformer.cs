@@ -3,9 +3,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.IO;
 using System.Threading.Tasks;
-using _4thIR.SSegmentS.SemanticSegmentation.Exceptions;
+using SemanticSegmentation.Exceptions;
 
-namespace _4thIR.SSegmentS.SemanticSegmentation.Segformer
+namespace SemanticSegmentation.Segformer
 {
     public enum SegmentationType { Simple, Detailed }
 

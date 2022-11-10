@@ -4,8 +4,9 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using ImageClassification.Exceptions;
 
-namespace ImageClassification
+namespace ImageClassification.GoogleVitBase.FineTuned
 {
 
     /// <summary>
@@ -28,7 +29,6 @@ namespace ImageClassification
         /// <summary>
         /// Creates an instance of the ImageClassifierGVBFineTuned class
         /// </summary>
-        /// <param name="httpClientFactory">HttpClientFactory object for creating HttpClient instances</param>
         public ImageClassifierGVBFineTuned()
         {
             client.BaseAddress = new Uri("https://image-classification-vit-finetunned.ai-sandbox.4th-ir.io");
@@ -41,13 +41,13 @@ namespace ImageClassification
         {
             path = @"" + path;
 
-            
-            using(var formData=new MultipartFormDataContent())
+
+            using (var formData = new MultipartFormDataContent())
             {
-                StreamContent imageStream=new StreamContent(File.OpenRead(path));
+                StreamContent imageStream = new StreamContent(File.OpenRead(path));
                 imageStream.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
 
-                int index = path.LastIndexOf('\\')+1;
+                int index = path.LastIndexOf('\\') + 1;
                 string fileName = path.Substring(index);
 
                 formData.Add(imageStream, "file", fileName);
@@ -60,11 +60,11 @@ namespace ImageClassification
                     response.EnsureSuccessStatusCode();
 
                     string r = await response.Content.ReadAsStringAsync();
-                    ResponseContent[] responseContent=JsonSerializer.Deserialize<ResponseContent[]>(r);
+                    ResponseContent[] responseContent = JsonSerializer.Deserialize<ResponseContent[]>(r);
 
                     return responseContent[0].answer;
                 }
-                catch(HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -81,7 +81,7 @@ namespace ImageClassification
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new ImageClassificationException(message, ex);
                 }
             }
         }

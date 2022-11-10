@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.DGenerate.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.DGenerate.TextGenerarion.MultiTurnConversation;
+using TextGenerarion.MultiTurnConversation;
 
 namespace _4thIR.DGenerate.Activities
 {

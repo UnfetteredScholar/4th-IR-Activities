@@ -4,15 +4,16 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using HandwrittenTextRecognition.Exceptions;
 
-namespace WordRecognition
+namespace HandwrittenTextRecognition.OpenVino
 {
-    public enum Language { English, Chinese, Japanese}
+    public enum Language { English, Chinese, Japanese }
 
     // <summary>
     /// Provides functionality for detecting handwritten English, Chinese and Japanese words in images. (Handwritten Recognition for Engish, Japanese and Chinese Openvino)
     /// </summary>
-    public class HandwrittenRecognizer
+    public class HandwrittenTextRecognizer
     {
         private class ResponseContent
         {
@@ -31,7 +32,7 @@ namespace WordRecognition
         /// Creates an instance of the HandwrittenRecognizer class
         /// </summary>
         /// <param name="httpClientFactory">HttpClientFactory object for creating HttpClient instances</param>
-        public HandwrittenRecognizer()
+        public HandwrittenTextRecognizer()
         {
             client.BaseAddress = new Uri("https://image-handwritten-recognition-openvino.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
@@ -39,11 +40,11 @@ namespace WordRecognition
 
         }
 
-        public async Task<string> DetectWords(string path,Language language)
+        public async Task<string> DetectWords(string path, Language language)
         {
             path = @"" + path;
 
-            
+
             using (var formData = new MultipartFormDataContent())
             {
                 StreamContent imageStream = new StreamContent(File.OpenRead(path));
@@ -53,7 +54,7 @@ namespace WordRecognition
                 string fileName = path.Substring(index);
 
                 formData.Add(imageStream, "file", fileName);
-                
+
                 string requestUri = null;
                 switch (language)
                 {
@@ -71,7 +72,7 @@ namespace WordRecognition
                         break;
                 }
 
-                
+
                 var response = await client.PostAsync(requestUri, formData);
 
                 try
@@ -83,7 +84,7 @@ namespace WordRecognition
 
                     return responseContent.label;
                 }
-                catch (HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -100,7 +101,7 @@ namespace WordRecognition
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new HandwrittenTextRecognitionException(message, ex);
                 }
             }
         }

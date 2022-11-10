@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.HwrittenRecOV.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using WordRecognition;
+using HandwrittenTextRecognition.OpenVino;
 
 namespace _4thIR.HwrittenRecOV.Activities
 {
@@ -13,7 +13,7 @@ namespace _4thIR.HwrittenRecOV.Activities
     [LocalizedDescription(nameof(Resources.HandwrittenRecognition_Description))]
     public class HandwrittenRecognition : ContinuableAsyncCodeActivity
     {
-        private static readonly HandwrittenRecognizer _recognizer = new HandwrittenRecognizer();
+        private static readonly HandwrittenTextRecognizer _recognizer = new HandwrittenTextRecognizer();
 
         #region Properties
 

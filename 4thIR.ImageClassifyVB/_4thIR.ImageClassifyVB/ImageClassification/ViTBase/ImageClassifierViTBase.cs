@@ -4,8 +4,9 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using ImageClassification.Exceptions;
 
-namespace ImageClassification
+namespace ImageClassification.ViTBase
 {
     /// <summary>
     /// Provides functionality for image classification.(Image Classification - ViT-Base)
@@ -44,8 +45,8 @@ namespace ImageClassification
         {
             path = @"" + path;
 
-            
-            
+
+
             using (var formData = new MultipartFormDataContent())
             {
                 StreamContent imageStream = new StreamContent(File.OpenRead(path));
@@ -67,7 +68,7 @@ namespace ImageClassification
 
                     ResponseContent responseContent = JsonSerializer.Deserialize<ResponseContent>(r);
 
-                    return responseContent != null ? responseContent.classes : String.Empty;
+                    return responseContent != null ? responseContent.classes : string.Empty;
                 }
                 catch (HttpRequestException ex)
                 {

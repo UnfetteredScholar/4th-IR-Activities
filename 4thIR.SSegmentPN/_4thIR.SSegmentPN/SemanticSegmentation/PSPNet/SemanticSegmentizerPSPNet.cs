@@ -3,9 +3,9 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using _4thIR.SSegmentPN.SemanticSegmentation.Exceptions;
+using SemanticSegmentation.Exceptions;
 
-namespace _4thIR.SSegmentPN.SemanticSegmentation.PSPNet
+namespace SemanticSegmentation.PSPNet
 {
     public class SemanticSegmentizerPSPNet
     {

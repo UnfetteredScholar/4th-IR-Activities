@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.SSegmentPN.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.SSegmentPN.SemanticSegmentation.PSPNet;
+using SemanticSegmentation.PSPNet;
 
 namespace _4thIR.SSegmentPN.Activities
 {

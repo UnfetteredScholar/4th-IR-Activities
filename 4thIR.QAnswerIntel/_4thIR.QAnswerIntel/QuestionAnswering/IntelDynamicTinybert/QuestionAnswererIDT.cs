@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using _4thIR.QAnswerIntel.QuestionAnswering.Exceptions;
+using QuestionAnswering.Exceptions;
 
-namespace _4thIR.QAnswerIntel.QuestionAnswering.IntelDynamicTinybert
+namespace QuestionAnswering.IntelDynamicTinybert
 {
     public class QuestionAnswererIDT
     {

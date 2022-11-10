@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
-using _4thIR.TSummarizeFB.TextSummarization.Exceptions;
+using TextSummarization.Exceptions;
 
-namespace _4thIR.TSummarizeFB.TextSummarization.MeetingSummary
+namespace TextSummarization.MeetingSummary
 {
     public class TextSummarizerMS
     {

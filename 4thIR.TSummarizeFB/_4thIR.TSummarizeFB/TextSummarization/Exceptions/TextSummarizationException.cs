@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4thIR.TSummarizeFB.TextSummarization.Exceptions
+namespace TextSummarization.Exceptions
 {
     public class TextSummarizationException : Exception
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ImageClassifyEB1.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using ImageClassification;
+using ImageClassification.EfficientNetB1;
 
 namespace _4thIR.ImageClassifyEB1.Activities
 {

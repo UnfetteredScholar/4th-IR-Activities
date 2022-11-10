@@ -4,15 +4,16 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.IO;
+using ImageClassification.Exceptions;
 
-namespace ImageClassification
+namespace ImageClassification.EfficientNetB1
 {
     /// <summary>
     /// Provides functionality for image classification. (Image Classification - EfficientNetB1)
     /// </summary>
     public class ImageClassifierENB1
     {
-        
+
         private class ResponseContent
         {
             public ResponseContent()
@@ -36,7 +37,7 @@ namespace ImageClassification
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<Tuple<string,string>> ClassifyImage(string path)
+        public async Task<Tuple<string, string>> ClassifyImage(string path)
         {
             path = @"" + path;
 
@@ -58,13 +59,13 @@ namespace ImageClassification
                 {
                     response.EnsureSuccessStatusCode();
 
-                    string r=await response.Content.ReadAsStringAsync();
+                    string r = await response.Content.ReadAsStringAsync();
 
                     ResponseContent responseContent = JsonSerializer.Deserialize<ResponseContent>(r);
 
-                    return new Tuple<string, string>(responseContent.label,responseContent.model);
+                    return new Tuple<string, string>(responseContent.label, responseContent.model);
                 }
-                catch(HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -81,7 +82,7 @@ namespace ImageClassification
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new ImageClassificationException(message, ex);
                 }
             }
         }

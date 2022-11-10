@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4thIR.TextUtility.TextUtilities.Exceptions
+namespace TextUtilities.Exceptions
 {
     internal class TextUtilityException : Exception
     {

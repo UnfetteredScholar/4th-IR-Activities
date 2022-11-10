@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.TextUtility.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.TextUtility.TextUtilities;
+using TextUtilities;
 
 namespace _4thIR.TextUtility.Activities
 {

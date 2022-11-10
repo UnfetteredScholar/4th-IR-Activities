@@ -5,10 +5,10 @@ using System.Text.Json;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
-using _4thIR.TextUtility.TextUtilities.Exceptions;
+using TextUtilities.Exceptions;
 
 
-namespace _4thIR.TextUtility.TextUtilities
+namespace TextUtilities
 {
     public enum Format { RawText, txt, pdf };
 

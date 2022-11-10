@@ -5,9 +5,9 @@ using System.Text.Json;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
-using _4thIR.TextGenerateOG.TextGeneration.Exceptions;
+using TextGeneration.Exceptions;
 
-namespace _4thIR.TextGenerateOG.TextGeneration.OpenaiGpt
+namespace TextGeneration.OpenaiGpt
 {
     public class TextGeneratorOG
     {

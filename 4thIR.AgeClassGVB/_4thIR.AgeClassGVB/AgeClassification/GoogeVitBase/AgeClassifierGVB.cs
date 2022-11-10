@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using _4thIR.AgeClassGVB.AgeClassification.Exceptions;
+using AgeClassification.Exceptions;
 
-namespace _4thIR.AgeClassGVB.AgeClassification.GoogeVitBase
+namespace AgeClassification.GoogeVitBase
 {
     
 

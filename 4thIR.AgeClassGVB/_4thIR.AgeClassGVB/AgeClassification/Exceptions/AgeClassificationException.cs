@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _4thIR.AgeClassGVB.AgeClassification.Exceptions
+namespace AgeClassification.Exceptions
 {
     public class AgeClassificationException : Exception
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _4thIR.AgeClassGVB.AgeClassification.GoogeVitBase
+namespace AgeClassification.GoogeVitBase
 {
     public class AgeProbabilityPair
     {

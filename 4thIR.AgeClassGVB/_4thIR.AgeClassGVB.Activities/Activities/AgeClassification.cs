@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.AgeClassGVB.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.AgeClassGVB.AgeClassification.GoogeVitBase;
+using AgeClassification.GoogeVitBase;
 
 namespace _4thIR.AgeClassGVB.Activities
 {

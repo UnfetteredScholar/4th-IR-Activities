@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4thIR.TextGenerateG2.TextGeneration.Exceptions
+namespace TextGeneration.Exceptions
 {
     public class TextGenerationException : Exception
     {

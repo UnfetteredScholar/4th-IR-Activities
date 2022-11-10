@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.TextGenerateG2.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.TextGenerateG2.TextGeneration.Gpt2;
+using TextGeneration.Gpt2;
 
 namespace _4thIR.TextGenerateG2.Activities
 {

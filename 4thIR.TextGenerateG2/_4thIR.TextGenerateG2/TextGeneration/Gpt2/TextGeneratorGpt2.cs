@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
-using _4thIR.TextGenerateG2.TextGeneration.Exceptions;
+using TextGeneration.Exceptions;
 
-namespace _4thIR.TextGenerateG2.TextGeneration.Gpt2
+namespace TextGeneration.Gpt2
 {
     public class TextGeneratorGpt2
     {

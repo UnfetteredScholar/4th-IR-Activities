@@ -5,9 +5,9 @@ using System.Text.Json;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
-using _4thIR.DocClassifyVLA.DocumentClassification.Exceptions;
+using DocumentClassification.Exceptions;
 
-namespace _4thIR.DocClassifyVLA.DocumentClassification.VLA
+namespace DocumentClassification.VLA
 {
     /// <summary>
     /// Stores data relating to a document

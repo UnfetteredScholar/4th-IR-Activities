@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.DocClassifyVLA.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.DocClassifyVLA.DocumentClassification.VLA;
+using DocumentClassification.VLA;
 
 namespace _4thIR.DocClassifyVLA.Activities
 {

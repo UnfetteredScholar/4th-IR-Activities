@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4thIR.DocClassifyVLA.DocumentClassification.Exceptions
+namespace DocumentClassification.Exceptions
 {
     public class DocumentClassificationException : Exception
     {

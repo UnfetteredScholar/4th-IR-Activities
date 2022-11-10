@@ -5,9 +5,9 @@ using System.Text.Json;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
-using _4thIR.TextSpeechGen.TextToSpeech.Exceptions;
+using TextToSpeech.Exceptions;
 
-namespace _4thIR.TextSpeechGen.TextToSpeech.Openvino
+namespace TextToSpeech.Openvino
 {
     public class TextToSpeechGenerator
     {

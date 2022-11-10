@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4thIR.TextSpeechGen.TextToSpeech.Exceptions
+namespace TextToSpeech.Exceptions
 {
     public class TextToSpeechException : Exception
     {

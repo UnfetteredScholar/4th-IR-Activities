@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ObjectDetectFR.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using ObjectDetectionFRC;
+using ObjectDetection.FasterRCNN.Resnet50fpn;
 
 namespace _4thIR.ObjectDetectFR.Activities
 {

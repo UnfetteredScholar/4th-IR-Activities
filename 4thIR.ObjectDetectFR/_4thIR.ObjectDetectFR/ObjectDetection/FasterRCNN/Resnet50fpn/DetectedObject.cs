@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObjectDetectionFRC
+namespace ObjectDetection.FasterRCNN.Resnet50fpn
 {
     /// <summary>
     /// Stores information about detected objects

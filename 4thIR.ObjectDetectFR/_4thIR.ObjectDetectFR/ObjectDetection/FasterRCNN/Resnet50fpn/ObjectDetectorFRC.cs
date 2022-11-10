@@ -4,10 +4,11 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using ObjectDetection.Exceptions;
 
-namespace ObjectDetectionFRC
+namespace ObjectDetection.FasterRCNN.Resnet50fpn
 {
-    
+
 
     /// <summary>
     /// Provides functionality for detecting objects in images
@@ -25,7 +26,7 @@ namespace ObjectDetectionFRC
         }
 
         private static readonly HttpClient client = new HttpClient();
-         
+
         /// <summary>
         /// Creates an instance of the ObjectDetectorFRC class
         /// </summary>
@@ -41,7 +42,7 @@ namespace ObjectDetectionFRC
         {
             path = @"" + path;
 
-            
+
             using (var formData = new MultipartFormDataContent())
             {
                 StreamContent imageStream = new StreamContent(File.OpenRead(path));
@@ -61,17 +62,17 @@ namespace ObjectDetectionFRC
 
                     string r = await response.Content.ReadAsStringAsync();
 
-                    r = r.Remove(r.IndexOf('['),1);
-                    r=r.Remove(r.LastIndexOf(']'),1);
-                    
-                    r = '{'+ r.Replace("{", "").Replace("}", "") + '}';
-                    r=r.Remove(1,r.IndexOf(':'));
+                    r = r.Remove(r.IndexOf('['), 1);
+                    r = r.Remove(r.LastIndexOf(']'), 1);
+
+                    r = '{' + r.Replace("{", "").Replace("}", "") + '}';
+                    r = r.Remove(1, r.IndexOf(':'));
 
                     DetectedObject responseContent = JsonSerializer.Deserialize<DetectedObject>(r);
-                    
+
                     return responseContent;
                 }
-                catch (HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -88,7 +89,7 @@ namespace ObjectDetectionFRC
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new ObjectDetectionException(message, ex);
                 }
             }
         }

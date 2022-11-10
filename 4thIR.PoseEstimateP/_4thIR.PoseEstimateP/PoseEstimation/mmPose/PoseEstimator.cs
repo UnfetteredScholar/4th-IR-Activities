@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using _4thIR.PoseEstimateP.PoseEstimation.Exceptions;
+using PoseEstimation.Exceptions;
 
-namespace _4thIR.PoseEstimateP.PoseEstimation.mmPose
+namespace PoseEstimation.mmPose
 {
     
 
@@ -85,7 +85,7 @@ namespace _4thIR.PoseEstimateP.PoseEstimation.mmPose
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new PoseEstimateException(message, ex);
+                    throw new PoseEstimationException(message, ex);
                 }
 
             }

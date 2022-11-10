@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.PoseEstimateP.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.PoseEstimateP.PoseEstimation.mmPose;
+using PoseEstimation.mmPose;
 
 namespace _4thIR.PoseEstimateP.Activities
 {

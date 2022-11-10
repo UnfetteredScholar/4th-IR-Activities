@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4thIR.SCompletePosT.SentenceCompletion.Exceptions
+namespace SentenceCompletion.Exceptions
 {
     public class SentenceCompletionException : Exception
     {

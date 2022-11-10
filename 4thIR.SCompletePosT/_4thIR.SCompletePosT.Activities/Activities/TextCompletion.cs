@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.SCompletePosT.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.SCompletePosT.SentenceCompletion.TransformerXL;
+using SentenceCompletion.TransformerXL;
 
 namespace _4thIR.SCompletePosT.Activities
 {

@@ -5,9 +5,9 @@ using System.Text.Json;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
-using _4thIR.SCompletePosT.SentenceCompletion.Exceptions;
+using SentenceCompletion.Exceptions;
 
-namespace _4thIR.SCompletePosT.SentenceCompletion.TransformerXL
+namespace SentenceCompletion.TransformerXL
 {
     public class SentenceCompleter
     {

@@ -4,11 +4,12 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using FormulaRecognition.Exceptions;
 
-namespace FormulaRecognition
+namespace FormulaRecognition.OpenVino
 {
-    public enum FormulaType { Normal, HandWritten}
-    
+    public enum FormulaType { Normal, HandWritten }
+
     /// <summary>
     /// Provides functionality for detecting formulas in images
     /// </summary>
@@ -32,7 +33,7 @@ namespace FormulaRecognition
         /// </summary>
         public FormulaRecognizerOV()
         {
-            
+
             client.BaseAddress = new Uri("https://image-formula-recognition-openvino.ai-sandbox.4th-ir.io");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -73,16 +74,16 @@ namespace FormulaRecognition
                         return new Tuple<string, double>(responseContent.label, responseContent.score);
                     }
 
-                    
+
                 }
-                catch (HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
                     if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                     {
                         message = "Media type not supported";
-                    }                 
+                    }
                     else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                     {
                         message = "ML model not found";
@@ -92,7 +93,7 @@ namespace FormulaRecognition
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new FormulaRecognitionException(message, ex);
                 }
             }
         }

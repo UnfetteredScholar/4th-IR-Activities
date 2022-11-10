@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.FormulaRecOV.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using FormulaRecognition;
+using FormulaRecognition.OpenVino;
 
 namespace _4thIR.FormulaRecOV.Activities
 {

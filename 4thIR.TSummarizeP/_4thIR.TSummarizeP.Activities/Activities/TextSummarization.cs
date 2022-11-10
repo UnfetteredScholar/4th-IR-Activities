@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.TSummarizeP.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.TSummarizeP.TextSummarization.Pegasus;
+using TextSummarization.Pegasus;
 
 namespace _4thIR.TSummarizeP.Activities
 {

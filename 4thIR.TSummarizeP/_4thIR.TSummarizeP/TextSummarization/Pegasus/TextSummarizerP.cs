@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
-using _4thIR.TSummarizeP.TextSummarization.Exceptions;
+using TextSummarization.Exceptions;
 
-namespace _4thIR.TSummarizeP.TextSummarization.Pegasus
+namespace TextSummarization.Pegasus
 {
     public class TextSummarizerP
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ObjectDetectY4.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.ObjectDetectY4.ObjectDetection.Yolov4;
+using ObjectDetection.Yolov4;
 
 namespace _4thIR.ObjectDetectY4.Activities
 {

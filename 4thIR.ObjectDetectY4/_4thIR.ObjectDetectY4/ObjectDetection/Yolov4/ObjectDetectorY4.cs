@@ -3,9 +3,9 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using _4thIR.ObjectDetectY4.ObjectDetection.Exceptions;
+using ObjectDetection.Exceptions;
 
-namespace _4thIR.ObjectDetectY4.ObjectDetection.Yolov4
+namespace ObjectDetection.Yolov4
 {
     public class ObjectDetectorY4
     {
@@ -67,7 +67,7 @@ namespace _4thIR.ObjectDetectY4.ObjectDetection.Yolov4
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new ObjectDetectException(message, ex);
+                    throw new ObjectDetectionException(message, ex);
                 }
 
             }

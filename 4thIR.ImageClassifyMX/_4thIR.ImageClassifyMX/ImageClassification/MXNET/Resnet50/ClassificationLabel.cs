@@ -1,5 +1,4 @@
-﻿
-namespace ImageClassification
+﻿namespace ImageClassification.MXNET.Resnet50
 {
     /// <summary>
     /// Contains a classification label and its probability/ accuracy

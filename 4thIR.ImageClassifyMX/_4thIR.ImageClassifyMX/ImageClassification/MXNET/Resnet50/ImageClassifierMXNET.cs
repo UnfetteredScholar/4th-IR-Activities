@@ -4,8 +4,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.IO;
+using ImageClassification.Exceptions;
 
-namespace ImageClassification
+namespace ImageClassification.MXNET.Resnet50
 {
     /// <summary>
     /// Provides functionality for image classification. (Image Classification (MXNET_Resnet50))
@@ -52,7 +53,7 @@ namespace ImageClassification
 
                     return classificationLabels;
                 }
-                catch (HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -69,7 +70,7 @@ namespace ImageClassification
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new ImageClassificationException(message, ex);
                 }
             }
         }

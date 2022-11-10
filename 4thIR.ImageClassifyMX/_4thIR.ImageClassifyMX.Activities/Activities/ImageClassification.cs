@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ImageClassifyMX.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using ImageClassification;
+using ImageClassification.MXNET.Resnet50;
 
 namespace _4thIR.ImageClassifyMX.Activities
 {

@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
-using _4thIR.QAnswerRBS2.QuestionAnswering.Exceptions;
+using QuestionAnswering.Exceptions;
 
-namespace _4thIR.QAnswerRBS2.QuestionAnswering.RobertaBaseSquad2
+namespace QuestionAnswering.XLM.RobertaBaseSquad2
 {
     public class QuestionAnswererRBS2
     {

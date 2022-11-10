@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace _4thIR.QAnswerRBS2.QuestionAnswering.Exceptions
+namespace QuestionAnswering.Exceptions
 {
     public class QuestionAnsweringException : Exception
     {

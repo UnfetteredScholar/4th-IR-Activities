@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.QAnswerRBS2.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.QAnswerRBS2.QuestionAnswering.RobertaBaseSquad2;
+using QuestionAnswering.XLM.RobertaBaseSquad2;
 
 namespace _4thIR.QAnswerRBS2.Activities
 {

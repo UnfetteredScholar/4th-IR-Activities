@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.ImageClassifyGVB.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using ImageClassification;
+using ImageClassification.GoogleVitBase;
 
 namespace _4thIR.ImageClassifyGVB.Activities
 {

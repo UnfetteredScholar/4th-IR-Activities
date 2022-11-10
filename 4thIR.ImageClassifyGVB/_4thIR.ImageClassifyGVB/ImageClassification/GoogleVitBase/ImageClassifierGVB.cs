@@ -4,8 +4,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading.Tasks;
+using ImageClassification.Exceptions;
 
-namespace ImageClassification
+namespace ImageClassification.GoogleVitBase
 {
     /// <summary>
     /// Provides functionality for image classification. (Image Classification - Google Vit Base)
@@ -62,7 +63,7 @@ namespace ImageClassification
 
                     return responseContent[0].answer;
                 }
-                catch (HttpRequestException ex)
+                catch (Exception ex)
                 {
                     string message = "";
 
@@ -79,7 +80,7 @@ namespace ImageClassification
                         message = "Error: Unable to complete operation";
                     }
 
-                    throw new Exception(message, ex);
+                    throw new ImageClassificationException(message, ex);
                 }
             }
         }

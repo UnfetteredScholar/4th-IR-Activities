@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
-using _4thIR.HGenerateTS.TextSummarization.Exceptions;
+using TextSummarization.HeadlineGeneration.Exceptions;
 
-namespace _4thIR.HGenerateTS.TextSummarization.HeadlineGeneration
+namespace TextSummarization.HeadlineGeneration
 {
     public class HeadlineGenerator
     {
@@ -63,7 +63,7 @@ namespace _4thIR.HGenerateTS.TextSummarization.HeadlineGeneration
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new TextSummarizationException(message, ex);
+                throw new HeadlineGenerationException(message, ex);
             }
         }
     }

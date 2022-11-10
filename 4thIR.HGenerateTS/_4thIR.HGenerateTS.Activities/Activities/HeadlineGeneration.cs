@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using _4thIR.HGenerateTS.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using _4thIR.HGenerateTS.TextSummarization.HeadlineGeneration;
+using TextSummarization.HeadlineGeneration;
 
 namespace _4thIR.HGenerateTS.Activities
 {

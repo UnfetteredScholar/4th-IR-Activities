@@ -8,7 +8,7 @@ using TextClassification.Exceptions;
 
 namespace TextClassification.Facebook.Bart
 {
-    internal class TextClassifierFB
+    public class TextClassifierFB
     {
         private class ResponseContent
         {

@@ -8,7 +8,7 @@ using TextClassification.Exceptions;
 
 namespace TextClassification.Valhalla
 {
-    internal class TextClassifierV
+    public class TextClassifierV
     {
         private class ResponseContent
         {

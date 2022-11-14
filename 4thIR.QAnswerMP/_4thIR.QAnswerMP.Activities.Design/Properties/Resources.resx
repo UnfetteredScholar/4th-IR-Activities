@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Category" xml:space="preserve">
-    <value>_4thIR.QAnswerMP</value>
+    <value>4th-IR.Question Answering.MPnet Base.V1</value>
     <comment>category</comment>
   </data>
   <data name="Collection" xml:space="preserve">

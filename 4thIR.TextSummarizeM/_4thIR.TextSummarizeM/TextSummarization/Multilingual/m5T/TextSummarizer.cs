@@ -10,7 +10,7 @@ using TextSummarization.Exceptions;
 
 namespace TextSummarization.Multilingual.m5T
 {
-    internal class TextSummarizer
+    public class TextSummarizer
     {
         private class ResponseContent
         {

@@ -10,17 +10,7 @@ namespace TextTranslation.OpenVino
 {
     public enum TransationType { English_To_Deutsch, Deutsch_To_English, Russian_To_English, English_To_Russian };
 
-    public class TranslatedText
-    {
-        public TranslatedText(string originaltext, string translatedText)
-        {
-            OriginalSentence = originaltext;
-            TranslatedSentence = translatedText;
-        }
-
-        public string OriginalSentence { get; set; }
-        public string TranslatedSentence { get; set; }
-    }
+    
 
     public class TextTranslator
     {

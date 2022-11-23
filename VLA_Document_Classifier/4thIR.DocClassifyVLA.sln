@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_4thIR.DocClassifyVLA", "_4thIR.DocClassifyVLA", "{62802C80-50FA-4024-B5DE-9CFC5574BCC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4thIR.DocClassifyVLA", "4thIR.DocClassifyVLA\_4thIR.DocClassifyVLA\_4thIR.DocClassifyVLA.csproj", "{724AC8E3-8DCB-43FD-9C45-8770A86E7FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4thIR.DocClassifyVLA.Activities", "4thIR.DocClassifyVLA\_4thIR.DocClassifyVLA.Activities\_4thIR.DocClassifyVLA.Activities.csproj", "{665DC6BB-52CC-451B-BEA6-E38644D1A429}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4thIR.DocClassifyVLA.Activities.Design", "4thIR.DocClassifyVLA\_4thIR.DocClassifyVLA.Activities.Design\_4thIR.DocClassifyVLA.Activities.Design.csproj", "{83DE3749-9CCA-46A5-AFEE-3F8E61448470}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3C89C1C9-4B01-4BB2-AC1B-F0B4C6E42894}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities", "Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.shproj", "{4546856D-EA50-45C6-9419-EEEACB5A80AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities.Design", "Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.shproj", "{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{724AC8E3-8DCB-43FD-9C45-8770A86E7FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724AC8E3-8DCB-43FD-9C45-8770A86E7FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724AC8E3-8DCB-43FD-9C45-8770A86E7FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724AC8E3-8DCB-43FD-9C45-8770A86E7FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665DC6BB-52CC-451B-BEA6-E38644D1A429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665DC6BB-52CC-451B-BEA6-E38644D1A429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665DC6BB-52CC-451B-BEA6-E38644D1A429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665DC6BB-52CC-451B-BEA6-E38644D1A429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83DE3749-9CCA-46A5-AFEE-3F8E61448470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83DE3749-9CCA-46A5-AFEE-3F8E61448470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83DE3749-9CCA-46A5-AFEE-3F8E61448470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83DE3749-9CCA-46A5-AFEE-3F8E61448470}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{724AC8E3-8DCB-43FD-9C45-8770A86E7FAE} = {62802C80-50FA-4024-B5DE-9CFC5574BCC0}
+		{665DC6BB-52CC-451B-BEA6-E38644D1A429} = {62802C80-50FA-4024-B5DE-9CFC5574BCC0}
+		{83DE3749-9CCA-46A5-AFEE-3F8E61448470} = {62802C80-50FA-4024-B5DE-9CFC5574BCC0}
+		{4546856D-EA50-45C6-9419-EEEACB5A80AA} = {3C89C1C9-4B01-4BB2-AC1B-F0B4C6E42894}
+		{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25} = {3C89C1C9-4B01-4BB2-AC1B-F0B4C6E42894}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CDDB517-18E4-4252-96DF-59E7D8DC60AB}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{4546856d-ea50-45c6-9419-eeeacb5a80aa}*SharedItemsImports = 13
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{665dc6bb-52cc-451b-bea6-e38644d1a429}*SharedItemsImports = 5
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{83de3749-9cca-46a5-afee-3f8e61448470}*SharedItemsImports = 5
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{df9c43f0-add3-4fbf-995e-84b92f9cbf25}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

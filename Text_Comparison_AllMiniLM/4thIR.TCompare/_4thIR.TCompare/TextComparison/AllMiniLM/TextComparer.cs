@@ -75,7 +75,7 @@ namespace TextComparison.AllMiniLM
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new TextTranslationException(message, ex);
+                throw new TextComparisonException(message, ex);
             }
 
         }

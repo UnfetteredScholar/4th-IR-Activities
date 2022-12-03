@@ -3,12 +3,26 @@
     <TargetFrameworks>net6.0</TargetFrameworks>
 		<RootNamespace>_4thIR.ProcessScope.Activities</RootNamespace>
 		<AssemblyName>_4thIR.ProcessScope.Activities</AssemblyName>
-    <PackageId>_4thIR.ProcessScope.Activities.Implementation</PackageId>
+    <PackageId>4thIR.ProcessScope.Implementation</PackageId>
   </PropertyGroup>
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\_4thIR.ProcessScope.Activities.xml</DocumentationFile>
+    <Title>4th-IR Process Scope Implementation</Title>
+    <Description>Contains the implementation of the 4th-IR process scope and 4th-IR activity abstract classes.</Description>
+    <Copyright>© 2022 4th-IR</Copyright>
+    <PackageProjectUrl>https://www.4th-ir.com</PackageProjectUrl>
+    <PackageIcon>logo2.png</PackageIcon>
+    <RepositoryUrl>https://github.com/UnfetteredScholar/4th-IR-Activities.git</RepositoryUrl>
+    <Authors>Ato Toffah</Authors>
+    <Company>4th-IR</Company>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\..\4th-IR Logo\logo2.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Activities.Metadata" Version="6.0.0-*" PrivateAssets="All" />
     <PackageReference Include="UiPath.Workflow.Runtime" Version="6.0.0-20220909-01" PrivateAssets="All" />

@@ -58,6 +58,9 @@ namespace _4thIR.ProcessScope.Activities
         {
             _objectContainer = objectContainer;
 
+            _client.DefaultRequestHeaders.Accept.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
             _objectContainer.Add<HttpClient>(_client);
 
             Body = new ActivityAction<IObjectContainer>

@@ -29,14 +29,14 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>0.3.0</PackageVersion>
+    <PackageVersion>0.4.1</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\DocumentClassificationDesigner.xaml" />
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
-    <None Include="..\..\Logo\logo2.png">
+    <None Include="..\..\..\4th-IR Logo\logo2.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -59,7 +59,7 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\_4thIR.DocClassify.Activities.Design.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/UnfetteredScholar/4thIR.DocumentClassification.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/UnfetteredScholar/4th-IR-Activities.git</RepositoryUrl>
     <Title>Document Classifier</Title>
     <PackageIcon>logo2.png</PackageIcon>
   </PropertyGroup>
@@ -76,6 +76,7 @@
     </Page>
     <Page Include="Designers\DocumentClassificationDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Themes\Icons.xaml">
       <Generator>XamlIntelliSenseFileGenerator</Generator>

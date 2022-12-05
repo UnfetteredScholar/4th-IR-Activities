@@ -27,8 +27,6 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Label Content="{x:Static activity:Resources.DocumentClassification_FilePath_DisplayName}" Grid.Row="0"
@@ -36,14 +34,6 @@
             <sapv:ExpressionTextBox Grid.Row="1" ExpressionType="{Binding ModelItem.Properties[FilePath].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.DocumentClassification_FilePath_Description}" UseLocationExpression="False">
                 <sapv:ExpressionTextBox.Expression>
                     <Binding Path="ModelItem.FilePath" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
-                </sapv:ExpressionTextBox.Expression>
-            </sapv:ExpressionTextBox>
-
-            <Label Content="{x:Static activity:Resources.DocumentClassification_DocumentType_DisplayName}" Grid.Row="2"
-                   ToolTip="{x:Static activity:Resources.DocumentClassification_DocumentType_Description}"/>
-            <sapv:ExpressionTextBox Grid.Row="3" ExpressionType="{Binding ModelItem.Properties[DocumentType].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.DocumentClassification_DocumentType_Description}" UseLocationExpression="False">
-                <sapv:ExpressionTextBox.Expression>
-                    <Binding Path="ModelItem.DocumentType" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
                 </sapv:ExpressionTextBox.Expression>
             </sapv:ExpressionTextBox>
         </Grid>

@@ -5,14 +5,24 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.IO;
+using System.ComponentModel;
 using DocumentClassification.Exceptions;
+using System.Net.Http.Json;
 
 namespace DocumentClassification.KYC
 {
     /// <summary>
     /// Document Type
     /// </summary>
-    public enum DocumentType { pdf, image }
+    public enum DocumentType
+    {
+        [Description("Select Item")]
+        selectItem,
+        [Description("PDF")]
+        pdf,
+        [Description("Image")]
+        image
+    }
 
     /// <summary>
     /// Document Class
@@ -24,33 +34,22 @@ namespace DocumentClassification.KYC
     /// </summary>
     public class DocumentClassifier
     {
-        private class RequestContent
-        {
-            public string document_content { get; set; }
-            public string document_type { get; set; }
-
-            public RequestContent()
-            {
-
-            }
-
-        }
-
         private class ResponseContent
         {
             public string document_class { get; set; }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
         /// <summary>
         /// Initializes a new instance of the DocumentClassifier class
         /// </summary>
-        public DocumentClassifier()
+        public DocumentClassifier(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-document-classifier-4thir-kyc-custom-1.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://text-document-classifier-4thir-kyc-custom-1.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         /// <summary>
@@ -76,19 +75,19 @@ namespace DocumentClassification.KYC
         /// <returns>Document class {passport, commercial register, other}</returns>
         public async Task<string> ClassifyDocument(string path, DocumentType documentType)
         {
-            path = @"" + path;
-
-            string requestUrl = "/api/v1/classify/";
-
-            RequestContent request = new RequestContent();
-            request.document_content = ReadDocumentContentBase64(path);
-            request.document_type = documentType.ToString();
-
-            var requestJson = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
-            var response = await client.PostAsync(requestUrl, requestJson);
+            HttpResponseMessage response = new HttpResponseMessage();
 
             try
             {
+                path = @"" + path;
+
+                string requestUrl = "https://text-document-classifier-4thir-kyc-custom-1.ai-sandbox.4th-ir.io/api/v1/classify/";
+
+                var request = new { document_content = ReadDocumentContentBase64(path), document_type = documentType.ToString() };
+
+                var requestJson = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
+                response = await client.PostAsync(requestUrl, requestJson);
+
                 response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();

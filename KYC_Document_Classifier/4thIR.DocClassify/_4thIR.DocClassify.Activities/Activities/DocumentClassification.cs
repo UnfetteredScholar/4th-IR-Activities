@@ -2,18 +2,21 @@ using System;
 using System.Activities;
 using System.Threading;
 using System.Threading.Tasks;
+using System.ComponentModel;
 using _4thIR.DocClassify.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
+using _4thIR.ProcessScope.Activities.Activities;
 using DocumentClassification.KYC;
+using _4thIR.ProcessScope.Activities;
+using UiPath.Shared.Activities.Utilities;
 
 namespace _4thIR.DocClassify.Activities
 {
     [LocalizedDisplayName(nameof(Resources.DocumentClassification_DisplayName))]
     [LocalizedDescription(nameof(Resources.DocumentClassification_Description))]
-    public class DocumentClassification : ContinuableAsyncCodeActivity
+    public class DocumentClassification : FourthIRActivity
     {
-        private static readonly DocumentClassifier _classifier = new DocumentClassifier();
         #region Properties
 
         /// <summary>
@@ -37,7 +40,8 @@ namespace _4thIR.DocClassify.Activities
         [LocalizedDisplayName(nameof(Resources.DocumentClassification_DocumentType_DisplayName))]
         [LocalizedDescription(nameof(Resources.DocumentClassification_DocumentType_Description))]
         [LocalizedCategory(nameof(Resources.Input_Category))]
-        public InArgument<DocumentType> DocumentType { get; set; }
+        [TypeConverter(typeof(EnumNameConverter<DocumentType>))]
+        public DocumentType DocumentType { get; set; }
 
         [LocalizedDisplayName(nameof(Resources.DocumentClassification_DocumentClass_DisplayName))]
         [LocalizedDescription(nameof(Resources.DocumentClassification_DocumentClass_Description))]
@@ -61,7 +65,8 @@ namespace _4thIR.DocClassify.Activities
         protected override void CacheMetadata(CodeActivityMetadata metadata)
         {
             if (FilePath == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(FilePath)));
-            if (DocumentType == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(DocumentType)));
+
+            if (DocumentType == 0) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(DocumentType)));
 
             base.CacheMetadata(metadata);
         }
@@ -71,6 +76,7 @@ namespace _4thIR.DocClassify.Activities
             // Inputs
             var timeout = TimeoutMS.Get(context);
             
+
             // Set a timeout on the execution
             var task = ExecuteWithTimeout(context, cancellationToken);
             if (await Task.WhenAny(task, Task.Delay(timeout, cancellationToken)) != task) throw new TimeoutException(Resources.Timeout_Error);
@@ -83,10 +89,12 @@ namespace _4thIR.DocClassify.Activities
 
         private async Task<string> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
         {
+            DocumentClassifier classifier = new DocumentClassifier(ProcessScope.Activities.ProcessScope.GetHttpClient());
+            
             var filePath = FilePath.Get(context);
-            var documentType = DocumentType.Get(context);
 
-            var res= await _classifier.ClassifyDocument(filePath, documentType);
+            var res = await classifier.ClassifyDocument(filePath, DocumentType);
+
 
             return res;
         }

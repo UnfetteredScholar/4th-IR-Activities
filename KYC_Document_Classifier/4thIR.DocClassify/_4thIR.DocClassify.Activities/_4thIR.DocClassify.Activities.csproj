@@ -10,11 +10,12 @@
     <DocumentationFile>bin\$(Configuration)\_4thIR.DocClassify.Activities.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="4thIR.ProcessScope.Implementation" Version="1.0.0" />
     <PackageReference Include="System.Activities.Metadata" Version="6.0.0-*" PrivateAssets="All" />
-    <PackageReference Include="UiPath.Workflow.Runtime" Version="6.0.0-20220909-01" PrivateAssets="All"/>
+    <PackageReference Include="UiPath.Workflow.Runtime" Version="6.0.0-20220909-01" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\_4thIR.DocClassify\_4thIR.DocClassify.csproj" PrivateAssets="All"/>
+    <ProjectReference Include="..\_4thIR.DocClassify\_4thIR.DocClassify.csproj" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

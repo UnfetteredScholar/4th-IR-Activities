@@ -124,7 +124,7 @@ namespace _4thIR.DocClassify.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The result of classification..
+        ///   Looks up a localized string similar to The result of the classification..
         /// </summary>
         public static string DocumentClassification_DocumentClass_Description {
             get {
@@ -142,7 +142,7 @@ namespace _4thIR.DocClassify.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DocumentType.Type.
+        ///   Looks up a localized string similar to The file format of the document..
         /// </summary>
         public static string DocumentClassification_DocumentType_Description {
             get {

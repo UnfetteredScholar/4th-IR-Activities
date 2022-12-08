@@ -8,9 +8,9 @@ using TextComparison.Exceptions;
 
 namespace TextComparison.MiniLMBase.V2
 {
-    public class SentenceComparison
+    public class Comparison
     {
-        public SentenceComparison()
+        public Comparison()
         {
 
         }
@@ -20,16 +20,16 @@ namespace TextComparison.MiniLMBase.V2
         public double Score { get; set; }
     }
 
-    public class TextParaphraseComparer
+    public class TextSimilarityComparer
     {
         private HttpClient _client = null;
 
-        public TextParaphraseComparer(HttpClient client)
+        public TextSimilarityComparer(HttpClient client)
         {
             _client = client;
         }
 
-        public async Task<SentenceComparison[]> CompareSentences(string[] sentenceGroup1, string[] sentenceGroup2)
+        public async Task<Comparison[]> CompareSentences(string[] sentenceGroup1, string[] sentenceGroup2)
         {
             HttpResponseMessage response = new HttpResponseMessage();
 
@@ -47,7 +47,7 @@ namespace TextComparison.MiniLMBase.V2
                     PropertyNameCaseInsensitive = true
                 };
 
-                SentenceComparison[] responseContents = await response.Content.ReadFromJsonAsync<SentenceComparison[]>(jsonSerializerOptions);
+                Comparison[] responseContents = await response.Content.ReadFromJsonAsync<Comparison[]>(jsonSerializerOptions);
 
                 return responseContents;
             }

@@ -9,7 +9,7 @@ using TextGeneration.Exceptions;
 
 namespace TextGeneration.Bloom560m
 {
-    internal class TextGeneratorBloom
+    public class TextGeneratorBloom
     {
         private class ResponseContent
         {

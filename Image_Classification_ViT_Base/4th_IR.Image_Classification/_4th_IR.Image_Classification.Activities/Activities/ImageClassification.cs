@@ -3,6 +3,7 @@ using System.Activities;
 using System.Threading;
 using System.Threading.Tasks;
 using _4th_IR.Image_Classification.Activities.Properties;
+using _4th_IR.Image_Classification.Classification.Client;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
 
@@ -85,7 +86,7 @@ namespace _4th_IR.Image_Classification.Activities
             var filepath = FilePath.Get(context);
             var userinput = UserInput.Get(context);
 
-            string apiUrl = "https://image-classification-clip-vit.ai-sandbox.4th-ir.io/api/v1/classify";
+            string apiUrl = "https://image-classification-clip-vit.ai-sandbox.4th-ir.io";
 
             Client apiCall = new Client(apiUrl, filepath, userinput);
 

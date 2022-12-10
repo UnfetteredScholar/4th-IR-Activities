@@ -241,6 +241,96 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detects objects in images..
+        /// </summary>
+        public static string ObjectDetectionED_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2D Array containing detection boxes..
+        /// </summary>
+        public static string ObjectDetectionED_DetectionBoxes_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_DetectionBoxes_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detection Boxes.
+        /// </summary>
+        public static string ObjectDetectionED_DetectionBoxes_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_DetectionBoxes_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array containing detection classes..
+        /// </summary>
+        public static string ObjectDetectionED_DetectionClasses_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_DetectionClasses_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detection Classes.
+        /// </summary>
+        public static string ObjectDetectionED_DetectionClasses_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_DetectionClasses_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The number of detections..
+        /// </summary>
+        public static string ObjectDetectionED_Detections_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_Detections_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detections.
+        /// </summary>
+        public static string ObjectDetectionED_Detections_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_Detections_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object Detection.
+        /// </summary>
+        public static string ObjectDetectionED_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string ObjectDetectionED_Path_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string ObjectDetectionED_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionED_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Options.
         /// </summary>
         public static string Options_Category {

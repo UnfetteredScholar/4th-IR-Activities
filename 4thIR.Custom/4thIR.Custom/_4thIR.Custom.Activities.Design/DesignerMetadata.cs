@@ -39,6 +39,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationVissl), new HelpKeywordAttribute(""));
             #endregion
 
+            #region ObjectDetection.EfficientDet
+            builder.AddCustomAttributes(typeof(ObjectDetectionED), "4th-IR.Object Detection.EfficientDet");
+            builder.AddCustomAttributes(typeof(ObjectDetectionED), new DesignerAttribute(typeof(ObjectDetectionEDDesigner)));
+            builder.AddCustomAttributes(typeof(ObjectDetectionED), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

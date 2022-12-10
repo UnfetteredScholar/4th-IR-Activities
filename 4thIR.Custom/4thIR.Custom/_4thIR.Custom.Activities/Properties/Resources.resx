@@ -289,4 +289,44 @@
     <value>The result of the image classification.</value>
     <comment>property description</comment>
   </data>
+  <data name="ObjectDetectionED_DisplayName" xml:space="preserve">
+    <value>Object Detection</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="ObjectDetectionED_Description" xml:space="preserve">
+    <value>Detects objects in images.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="ObjectDetectionED_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionED_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ObjectDetectionED_Detections_DisplayName" xml:space="preserve">
+    <value>Detections</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionED_Detections_Description" xml:space="preserve">
+    <value>The number of detections.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ObjectDetectionED_DetectionBoxes_DisplayName" xml:space="preserve">
+    <value>Detection Boxes</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionED_DetectionBoxes_Description" xml:space="preserve">
+    <value>2D Array containing detection boxes.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ObjectDetectionED_DetectionClasses_DisplayName" xml:space="preserve">
+    <value>Detection Classes</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionED_DetectionClasses_Description" xml:space="preserve">
+    <value>Array containing detection classes.</value>
+    <comment>property description</comment>
+  </data>
 </root>

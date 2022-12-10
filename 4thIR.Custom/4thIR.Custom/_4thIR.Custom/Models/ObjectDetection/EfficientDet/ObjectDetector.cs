@@ -20,13 +20,14 @@ namespace ObjectDetection.EfficientDet
             public double[] detection_classes { get; set; }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
-        public ObjectDetector()
+        public ObjectDetector(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://image-sentiment-analysis-bert-1.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://image-sentiment-analysis-bert-1.ai-sandbox.4th-ir.io");
+           // client.DefaultRequestHeaders.Accept.Clear();
+           // client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         /// <summary>
@@ -37,23 +38,25 @@ namespace ObjectDetection.EfficientDet
         /// <exception cref="Exception"></exception>
         public async Task<Tuple<int, double[,], double[]>> DetectObject(string path)
         {
-            path = "" + path;
+            HttpResponseMessage response = new HttpResponseMessage();
+            path = @"" + path;
 
-            using (var multipartFormData = new MultipartFormDataContent())
+            try
             {
-                StreamContent streamContent = new StreamContent(File.OpenRead(path));
-                streamContent.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
-
-                int index = path.LastIndexOf("\\") + 1;
-                string fileName = path.Substring(index);
-
-                multipartFormData.Add(streamContent, "file", fileName);
-
-                const string requestUri = "/detection/image";
-                var response = await client.PostAsync(requestUri, multipartFormData);
-
-                try
+                using (var multipartFormData = new MultipartFormDataContent())
                 {
+                    StreamContent streamContent = new StreamContent(File.OpenRead(path));
+                    streamContent.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
+
+                    int index = path.LastIndexOf("\\") + 1;
+                    string fileName = path.Substring(index);
+
+                    multipartFormData.Add(streamContent, "file", fileName);
+
+                    const string requestUri = "https://image-sentiment-analysis-bert-1.ai-sandbox.4th-ir.io/detection/image";
+                    response = await client.PostAsync(requestUri, multipartFormData);
+
+
                     response.EnsureSuccessStatusCode();
 
                     string r = await response.Content.ReadAsStringAsync();
@@ -63,30 +66,31 @@ namespace ObjectDetection.EfficientDet
 
                     return new Tuple<int, double[,], double[]>(responseContent.num_detections, responseContent.detection_boxes, responseContent.detection_classes);
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    string message="";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "Image must be jpeg or png format";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Unable to complete object detection";
-                    }
-
-                    throw new ObjectDetectionException(message, ex);
+                    message = "Image must be jpeg or png format";
+                }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Error: Unable to complete object detection";
                 }
 
+                throw new ObjectDetectionException(message, ex);
             }
+
         }
-
-
-
     }
+
+
+
 }
+

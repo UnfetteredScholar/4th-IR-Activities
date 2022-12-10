@@ -51,6 +51,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationCV), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - Resnet 50
+            builder.AddCustomAttributes(typeof(ImageClassificationR50), "4th-IR.Image Classification.Resnet 50");
+            builder.AddCustomAttributes(typeof(ImageClassificationR50), new DesignerAttribute(typeof(ImageClassificationR50Designer)));
+            builder.AddCustomAttributes(typeof(ImageClassificationR50), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

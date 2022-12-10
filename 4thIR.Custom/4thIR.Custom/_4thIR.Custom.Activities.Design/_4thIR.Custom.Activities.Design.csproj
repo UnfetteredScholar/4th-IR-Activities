@@ -34,6 +34,7 @@
   <ItemGroup>
     <None Remove="Designers\DocumentClassificationKYCDesigner.xaml" />
     <None Remove="Designers\ImageClassificationCVDesigner.xaml" />
+    <None Remove="Designers\ImageClassificationR50Designer.xaml" />
     <None Remove="Designers\ImageClassificationVisslDesigner.xaml" />
     <None Remove="Designers\ObjectDetectionEDDesigner.xaml" />
     <None Remove="Designers\ProcessScopeDesigner.xaml" />
@@ -76,6 +77,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\ImageClassificationCVDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\ImageClassificationR50Designer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

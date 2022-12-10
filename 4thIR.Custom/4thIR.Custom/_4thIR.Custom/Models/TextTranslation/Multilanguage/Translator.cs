@@ -65,16 +65,18 @@ namespace TextTranslation.Multilanguage
         /// <returns>Returns the translated text </returns>
         public async Task<string> TranslateText(string sentence, Language sourceLanguage, Language conversionLanguage)
         {
-            RequestContent request = new RequestContent(sentence);
-
-            string requestUri = $"https://text-translation-fairseq-1.ai-sandbox.4th-ir.io/api/v1/sentence?source_lang={sourceLanguage}&conversion_lang={conversionLanguage}";
-
-            var requestJson = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
-            var response = await client.PostAsync(requestUri, requestJson);
-
-
+            HttpResponseMessage response = new HttpResponseMessage();
             try
             {
+                RequestContent request = new RequestContent(sentence);
+
+                string requestUri = $"https://text-translation-fairseq-1.ai-sandbox.4th-ir.io/api/v1/sentence?source_lang={sourceLanguage}&conversion_lang={conversionLanguage}";
+
+                var requestJson = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+                response = await client.PostAsync(requestUri, requestJson);
+
+
+
                 response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();

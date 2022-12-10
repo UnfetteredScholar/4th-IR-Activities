@@ -5,7 +5,7 @@ using System.Text.Json;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
-using _4thIR.QAnswerB.QuestionAnswering.Exceptions;
+using QuestionAnswering.Exceptions;
 
 namespace _4thIR.QAnswerB.QuestionAnswering.Bert
 {

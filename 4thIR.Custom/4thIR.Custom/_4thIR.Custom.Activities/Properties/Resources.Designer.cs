@@ -493,6 +493,96 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The answer to the question..
+        /// </summary>
+        public static string QuestionAnsweringRBS2_Answer_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_Answer_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answer.
+        /// </summary>
+        public static string QuestionAnsweringRBS2_Answer_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_Answer_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The context..
+        /// </summary>
+        public static string QuestionAnsweringRBS2_Context_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_Context_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Context.
+        /// </summary>
+        public static string QuestionAnsweringRBS2_Context_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_Context_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answers questions based on the context provided..
+        /// </summary>
+        public static string QuestionAnsweringRBS2_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question Answering.
+        /// </summary>
+        public static string QuestionAnsweringRBS2_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The question being asked..
+        /// </summary>
+        public static string QuestionAnsweringRBS2_Question_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_Question_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question.
+        /// </summary>
+        public static string QuestionAnsweringRBS2_Question_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_Question_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The accuracy of the answer..
+        /// </summary>
+        public static string QuestionAnsweringRBS2_Score_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_Score_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        public static string QuestionAnsweringRBS2_Score_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringRBS2_Score_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The target language for translation..
         /// </summary>
         public static string TextTranslationTM_ConversionLanguage_Description {

@@ -377,4 +377,44 @@
     <value>The result of the image classification.</value>
     <comment>property description</comment>
   </data>
+  <data name="QuestionAnsweringRBS2_DisplayName" xml:space="preserve">
+    <value>Question Answering</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="QuestionAnsweringRBS2_Description" xml:space="preserve">
+    <value>Answers questions based on the context provided.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="QuestionAnsweringRBS2_Context_DisplayName" xml:space="preserve">
+    <value>Context</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringRBS2_Context_Description" xml:space="preserve">
+    <value>The context.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="QuestionAnsweringRBS2_Question_DisplayName" xml:space="preserve">
+    <value>Question</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringRBS2_Question_Description" xml:space="preserve">
+    <value>The question being asked.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="QuestionAnsweringRBS2_Answer_DisplayName" xml:space="preserve">
+    <value>Answer</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringRBS2_Answer_Description" xml:space="preserve">
+    <value>The answer to the question.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="QuestionAnsweringRBS2_Score_DisplayName" xml:space="preserve">
+    <value>Score</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringRBS2_Score_Description" xml:space="preserve">
+    <value>The accuracy of the answer.</value>
+    <comment>property description</comment>
+  </data>
 </root>

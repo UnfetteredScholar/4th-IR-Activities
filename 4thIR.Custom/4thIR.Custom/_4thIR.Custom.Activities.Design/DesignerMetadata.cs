@@ -57,6 +57,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationR50), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Roberta Base Squad 2 - Question Answer
+            builder.AddCustomAttributes(typeof(QuestionAnsweringRBS2), "4th-IR.Question Answering.Roberta Base Squad 2");
+            builder.AddCustomAttributes(typeof(QuestionAnsweringRBS2), new DesignerAttribute(typeof(QuestionAnsweringRBS2Designer)));
+            builder.AddCustomAttributes(typeof(QuestionAnsweringRBS2), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

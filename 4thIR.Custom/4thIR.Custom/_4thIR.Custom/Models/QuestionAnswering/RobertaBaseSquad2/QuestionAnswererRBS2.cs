@@ -2,7 +2,6 @@
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using QuestionAnswering.Exceptions;
 
@@ -37,16 +36,17 @@ namespace QuestionAnswering.RobertaBaseSquad2
 
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
         /// <summary>
         /// Creates a new instance of the QuestionAnswererRBS2 class
         /// </summary>
-        public QuestionAnswererRBS2()
+        public QuestionAnswererRBS2(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-question-answer-roberta-base-squad2.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://text-question-answer-roberta-base-squad2.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
 
@@ -60,15 +60,17 @@ namespace QuestionAnswering.RobertaBaseSquad2
         /// <exception cref="Exception"></exception>
         public async Task<Tuple<string, double>> AnswerQuestion(string question, string context)
         {
-            RequestContent requestContent = new RequestContent(question, context);
+            HttpResponseMessage response = new HttpResponseMessage();
+            try
+            {
+                RequestContent requestContent = new RequestContent(question, context);
 
             StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
 
-            string requestUri = "/question";
-            var response = await client.PostAsync(requestUri, stringContent);
+            string requestUri = "https://text-question-answer-roberta-base-squad2.ai-sandbox.4th-ir.io/question";
+            response = await client.PostAsync(requestUri, stringContent);
 
-            try
-            {
+            
                 response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();

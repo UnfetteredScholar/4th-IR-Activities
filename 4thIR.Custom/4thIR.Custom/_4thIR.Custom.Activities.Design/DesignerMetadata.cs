@@ -21,6 +21,11 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ProcessScope), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Document Classification KYC
+            builder.AddCustomAttributes(typeof(DocumentClassificationKYC), "4th-IR.Document Classification.KYC");
+            builder.AddCustomAttributes(typeof(DocumentClassificationKYC), new DesignerAttribute(typeof(DocumentClassificationKYCDesigner)));
+            builder.AddCustomAttributes(typeof(DocumentClassificationKYC), new HelpKeywordAttribute(""));
+            #endregion
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }

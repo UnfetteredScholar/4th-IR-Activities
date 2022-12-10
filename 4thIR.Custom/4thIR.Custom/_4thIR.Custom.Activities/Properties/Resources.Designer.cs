@@ -106,6 +106,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Performs classification of documents..
+        /// </summary>
+        public static string DocumentClassificationKYC_Description {
+            get {
+                return ResourceManager.GetString("DocumentClassificationKYC_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Classification.
+        /// </summary>
+        public static string DocumentClassificationKYC_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentClassificationKYC_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The result of the document classification..
+        /// </summary>
+        public static string DocumentClassificationKYC_DocumentClass_Description {
+            get {
+                return ResourceManager.GetString("DocumentClassificationKYC_DocumentClass_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Class.
+        /// </summary>
+        public static string DocumentClassificationKYC_DocumentClass_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentClassificationKYC_DocumentClass_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The file format of the document..
+        /// </summary>
+        public static string DocumentClassificationKYC_DocumentType_Description {
+            get {
+                return ResourceManager.GetString("DocumentClassificationKYC_DocumentType_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Type.
+        /// </summary>
+        public static string DocumentClassificationKYC_DocumentType_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentClassificationKYC_DocumentType_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the document file..
+        /// </summary>
+        public static string DocumentClassificationKYC_FilePath_Description {
+            get {
+                return ResourceManager.GetString("DocumentClassificationKYC_FilePath_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File Path.
+        /// </summary>
+        public static string DocumentClassificationKYC_FilePath_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentClassificationKYC_FilePath_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input.
         /// </summary>
         public static string Input_Category {

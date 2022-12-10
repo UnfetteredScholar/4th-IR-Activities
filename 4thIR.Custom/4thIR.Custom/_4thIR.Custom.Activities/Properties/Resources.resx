@@ -149,10 +149,6 @@
     <value>Authentication</value>
     <comment>category</comment>
   </data>
-  <data name="Common_Category" xml:space="preserve">
-    <value>Common</value>
-    <comment>category</comment>
-  </data>
   <data name="Input_Category" xml:space="preserve">
     <value>Input</value>
     <comment>category</comment>
@@ -197,8 +193,36 @@
     <value>Enter the password.</value>
     <comment>property description</comment>
   </data>
-  <data name="Input_Category" xml:space="preserve">
-    <value>Input</value>
-    <comment>category</comment>
+  <data name="DocumentClassificationKYC_DisplayName" xml:space="preserve">
+    <value>Document Classification</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentClassificationKYC_Description" xml:space="preserve">
+    <value>Performs classification of documents.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentClassificationKYC_FilePath_DisplayName" xml:space="preserve">
+    <value>File Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentClassificationKYC_FilePath_Description" xml:space="preserve">
+    <value>Full path to the document file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentClassificationKYC_DocumentType_DisplayName" xml:space="preserve">
+    <value>Document Type</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentClassificationKYC_DocumentType_Description" xml:space="preserve">
+    <value>The file format of the document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentClassificationKYC_DocumentClass_DisplayName" xml:space="preserve">
+    <value>Document Class</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentClassificationKYC_DocumentClass_Description" xml:space="preserve">
+    <value>The result of the document classification.</value>
+    <comment>property description</comment>
   </data>
 </root>

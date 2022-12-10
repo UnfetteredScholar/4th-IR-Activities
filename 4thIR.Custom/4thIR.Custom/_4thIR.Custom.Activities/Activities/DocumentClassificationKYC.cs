@@ -6,6 +6,8 @@ using _4thIR.Custom.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
 using DocumentClassification.KYC;
+using System.ComponentModel;
+using UiPath.Shared.Activities.Utilities;
 
 namespace _4thIR.Custom.Activities
 {
@@ -36,6 +38,7 @@ namespace _4thIR.Custom.Activities
         [LocalizedDisplayName(nameof(Resources.DocumentClassificationKYC_DocumentType_DisplayName))]
         [LocalizedDescription(nameof(Resources.DocumentClassificationKYC_DocumentType_Description))]
         [LocalizedCategory(nameof(Resources.Input_Category))]
+        [TypeConverter(typeof(EnumNameConverter<DocumentType>))]
         public DocumentType DocumentType { get; set; }
 
         [LocalizedDisplayName(nameof(Resources.DocumentClassificationKYC_DocumentClass_DisplayName))]

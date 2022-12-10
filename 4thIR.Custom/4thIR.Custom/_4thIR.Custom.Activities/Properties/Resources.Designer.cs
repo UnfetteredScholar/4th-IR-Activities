@@ -178,6 +178,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Performs classification of images..
+        /// </summary>
+        public static string ImageClassificationVissl_Description {
+            get {
+                return ResourceManager.GetString("ImageClassificationVissl_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image Classification.
+        /// </summary>
+        public static string ImageClassificationVissl_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassificationVissl_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The result of the image classification..
+        /// </summary>
+        public static string ImageClassificationVissl_Label_Description {
+            get {
+                return ResourceManager.GetString("ImageClassificationVissl_Label_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Label.
+        /// </summary>
+        public static string ImageClassificationVissl_Label_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassificationVissl_Label_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string ImageClassificationVissl_Path_Description {
+            get {
+                return ResourceManager.GetString("ImageClassificationVissl_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string ImageClassificationVissl_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassificationVissl_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input.
         /// </summary>
         public static string Input_Category {

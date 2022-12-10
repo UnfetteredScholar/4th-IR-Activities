@@ -33,6 +33,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextTranslationTM), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - Vissl (RegnetY-60)
+            builder.AddCustomAttributes(typeof(ImageClassificationVissl), "4th-IR.Image Classification.Vissl");
+            builder.AddCustomAttributes(typeof(ImageClassificationVissl), new DesignerAttribute(typeof(ImageClassificationVisslDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationVissl), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

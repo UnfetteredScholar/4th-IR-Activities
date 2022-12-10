@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\DocumentClassificationKYCDesigner.xaml" />
+    <None Remove="Designers\ImageClassificationVisslDesigner.xaml" />
     <None Remove="Designers\ProcessScopeDesigner.xaml" />
     <None Remove="Designers\TextTranslationTMDesigner.xaml" />
   </ItemGroup>
@@ -71,6 +72,10 @@
     </Page>
     <Page Include="Designers\DocumentClassificationKYCDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\ImageClassificationVisslDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\ProcessScopeDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

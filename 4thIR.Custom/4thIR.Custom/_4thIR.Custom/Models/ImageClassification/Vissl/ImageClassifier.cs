@@ -19,16 +19,17 @@ namespace ImageClassification.Vissl
             public string model { get; set; }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
         /// <summary>
         /// Initializes ImageClassifier object
         /// </summary>
-        public ImageClassifier()
+        public ImageClassifier(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://image-classification-vissl.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://image-classification-vissl.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
         }
 
@@ -40,24 +41,27 @@ namespace ImageClassification.Vissl
         /// <returns>Image Label</returns>
         public async Task<string> ClassifyImage(string path)
         {
-            string requestUri = "/api/v1/classify";
-            path = @"" + path;
+            HttpResponseMessage response = new HttpResponseMessage();
 
-            using (var multipartFormContent = new MultipartFormDataContent())
+            try
             {
-                StreamContent fileStreamContent = new StreamContent(File.OpenRead(path));
-                fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/png");
-                int index = path.LastIndexOf('\\');
-                index = index == -1 ? 0 : index + 1;
+                string requestUri = "https://image-classification-vissl.ai-sandbox.4th-ir.io/api/v1/classify";
+                path = @"" + path;
 
-                string fileName = path.Substring(index);
-                multipartFormContent.Add(fileStreamContent, "file", fileName);
-
-
-                var response = await client.PostAsync(requestUri, multipartFormContent);
-
-                try
+                using (var multipartFormContent = new MultipartFormDataContent())
                 {
+                    StreamContent fileStreamContent = new StreamContent(File.OpenRead(path));
+                    fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/png");
+                    int index = path.LastIndexOf('\\');
+                    index = index == -1 ? 0 : index + 1;
+
+                    string fileName = path.Substring(index);
+                    multipartFormContent.Add(fileStreamContent, "file", fileName);
+
+
+                    response = await client.PostAsync(requestUri, multipartFormContent);
+
+
                     response.EnsureSuccessStatusCode();
 
                     var r = await response.Content.ReadAsStringAsync();
@@ -66,29 +70,30 @@ namespace ImageClassification.Vissl
 
                     return responseContent?.label != null ? responseContent.label : string.Empty;
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "string too long";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Operation failed";
-                    }
-
-                    throw new ImageClassificationException(message, ex);
+                    message = "string too long";
+                }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Error: Operation failed";
                 }
 
+                throw new ImageClassificationException(message, ex);
             }
 
-
         }
+
+
     }
 }
+

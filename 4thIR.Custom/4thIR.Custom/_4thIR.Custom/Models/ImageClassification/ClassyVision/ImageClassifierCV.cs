@@ -16,13 +16,14 @@ namespace ImageClassification.ClassyVision
             public string score { get; set; }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
-        public ImageClassifierCV()
+        public ImageClassifierCV(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://image-classification-classy-vision.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://image-classification-classy-vision.ai-sandbox.4th-ir.io");
+            // client.DefaultRequestHeaders.Accept.Clear();
+            // client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
         }
 
@@ -34,26 +35,27 @@ namespace ImageClassification.ClassyVision
         /// <exception cref="Exception"></exception>
         public async Task<string> ClassifyImage(string path)
         {
+            HttpResponseMessage response = new HttpResponseMessage();
             path = @"" + path;
-
-            using (var multipartFormContent = new MultipartFormDataContent())
+            try
             {
-                StreamContent fileStreamContent = new StreamContent(File.OpenRead(path));
-                fileStreamContent.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
-
-                int index = path.LastIndexOf("\\");
-                index++;
-
-                string fileName = path.Substring(index);
-
-                multipartFormContent.Add(fileStreamContent, "file", fileName);
-
-                string requestUr = "/api/v1/classify";
-
-                var response = await client.PostAsync(requestUr, multipartFormContent);
-
-                try
+                using (var multipartFormContent = new MultipartFormDataContent())
                 {
+                    StreamContent fileStreamContent = new StreamContent(File.OpenRead(path));
+                    fileStreamContent.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
+
+                    int index = path.LastIndexOf("\\");
+                    index++;
+
+                    string fileName = path.Substring(index);
+
+                    multipartFormContent.Add(fileStreamContent, "file", fileName);
+
+                    string requestUr = "https://image-classification-classy-vision.ai-sandbox.4th-ir.io/api/v1/classify";
+
+                    response = await client.PostAsync(requestUr, multipartFormContent);
+
+
                     response.EnsureSuccessStatusCode();
 
                     string responseContentString = await response.Content.ReadAsStringAsync();
@@ -62,35 +64,35 @@ namespace ImageClassification.ClassyVision
 
                     return responseContent.label;
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "string too long";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Unable to classify";
-                    }
-
-                    throw new ImageClassificationException(message, ex);
+                    message = "string too long";
+                }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Unable to classify";
                 }
 
-
-
-
-
-
+                throw new ImageClassificationException(message, ex);
             }
+
+
+
+
 
 
         }
 
+
     }
+
 }

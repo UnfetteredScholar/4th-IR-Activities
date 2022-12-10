@@ -45,6 +45,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ObjectDetectionED), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - Classy Vision
+            builder.AddCustomAttributes(typeof(ImageClassificationCV), "4th-IR.Image Classification.ClassyVision");
+            builder.AddCustomAttributes(typeof(ImageClassificationCV), new DesignerAttribute(typeof(ImageClassificationCVDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationCV), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

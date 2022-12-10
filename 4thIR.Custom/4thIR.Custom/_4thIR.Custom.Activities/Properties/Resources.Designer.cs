@@ -457,6 +457,114 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identifies parts of speech in text..
+        /// </summary>
+        public static string PartOfSpeechIdentification_Description {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentification_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Part Of Speech Identification.
+        /// </summary>
+        public static string PartOfSpeechIdentification_DisplayName {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentification_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text to be analyzed..
+        /// </summary>
+        public static string PartOfSpeechIdentification_Sentence_Description {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentification_Sentence_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string PartOfSpeechIdentification_Sentence_DisplayName {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentification_Sentence_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array of words and their corresponding tag..
+        /// </summary>
+        public static string PartOfSpeechIdentification_TextTags_Description {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentification_TextTags_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Tags.
+        /// </summary>
+        public static string PartOfSpeechIdentification_TextTags_DisplayName {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentification_TextTags_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identifies parts of speech in text..
+        /// </summary>
+        public static string PartOfSpeechIdentificationFlair_Description {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentificationFlair_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Part Of Speech Identification.
+        /// </summary>
+        public static string PartOfSpeechIdentificationFlair_DisplayName {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentificationFlair_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string PartOfSpeechIdentificationFlair_Sentence_Description {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentificationFlair_Sentence_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string PartOfSpeechIdentificationFlair_Sentence_DisplayName {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentificationFlair_Sentence_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string PartOfSpeechIdentificationFlair_TextTags_Description {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentificationFlair_TextTags_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Tags.
+        /// </summary>
+        public static string PartOfSpeechIdentificationFlair_TextTags_DisplayName {
+            get {
+                return ResourceManager.GetString("PartOfSpeechIdentificationFlair_TextTags_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Process Scope for executing 4th-IR Activities..
         /// </summary>
         public static string ProcessScope_Description {

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PartOfScpeech.Tagging
+﻿namespace PartOfScpeech.Tagging.Flair
 {
     /// <summary>
     /// Stores a Word and its Part of Speech

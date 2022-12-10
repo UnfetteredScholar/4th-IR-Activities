@@ -449,4 +449,52 @@
     <value>The summarized text.</value>
     <comment>property description</comment>
   </data>
+  <data name="PartOfSpeechIdentificationFlair_DisplayName" xml:space="preserve">
+    <value>Part Of Speech Identification</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="PartOfSpeechIdentificationFlair_Description" xml:space="preserve">
+    <value>Identifies parts of speech in text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="PartOfSpeechIdentificationFlair_Sentence_DisplayName" xml:space="preserve">
+    <value>Sentence</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PartOfSpeechIdentificationFlair_Sentence_Description" xml:space="preserve">
+    <value />
+    <comment>property description</comment>
+  </data>
+  <data name="PartOfSpeechIdentificationFlair_TextTags_DisplayName" xml:space="preserve">
+    <value>Text Tags</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PartOfSpeechIdentificationFlair_TextTags_Description" xml:space="preserve">
+    <value />
+    <comment>property description</comment>
+  </data>
+  <data name="PartOfSpeechIdentification_DisplayName" xml:space="preserve">
+    <value>Part Of Speech Identification</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="PartOfSpeechIdentification_Description" xml:space="preserve">
+    <value>Identifies parts of speech in text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="PartOfSpeechIdentification_Sentence_DisplayName" xml:space="preserve">
+    <value>Sentence</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PartOfSpeechIdentification_Sentence_Description" xml:space="preserve">
+    <value>The text to be analyzed.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PartOfSpeechIdentification_TextTags_DisplayName" xml:space="preserve">
+    <value>Text Tags</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PartOfSpeechIdentification_TextTags_Description" xml:space="preserve">
+    <value>Array of words and their corresponding tag.</value>
+    <comment>property description</comment>
+  </data>
 </root>

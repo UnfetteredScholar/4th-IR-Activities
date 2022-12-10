@@ -69,6 +69,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextSummarizationBB), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Part of Speech - Flair
+            builder.AddCustomAttributes(typeof(PartOfSpeechIdentificationFlair), "4th-IR.Part of Speech.Flair");
+            builder.AddCustomAttributes(typeof(PartOfSpeechIdentificationFlair), new DesignerAttribute(typeof(PartOfSpeechIdentificationFlairDesigner)));
+            builder.AddCustomAttributes(typeof(PartOfSpeechIdentificationFlair), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

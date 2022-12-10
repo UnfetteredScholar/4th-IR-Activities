@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using PartOfScpeech.Exceptions;
 
-namespace PartOfScpeech.Tagging
+namespace PartOfScpeech.Tagging.Flair
 {
     public class PartOfSpeechIdentifier
     {
@@ -20,26 +20,31 @@ namespace PartOfScpeech.Tagging
             public string sentence { get; set; }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
-        public PartOfSpeechIdentifier()
+        public PartOfSpeechIdentifier(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-part-of-speech-flair.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+
+            //client.BaseAddress = new Uri("https://text-part-of-speech-flair.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            // client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public async Task<WordTag[]> IdentifyPartOfSpeech(string sentence)
         {
-            RequestContent requestContent = new RequestContent(sentence);
-
-            StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
-
-            string requestUri = "/tag/sentence";
-            var response = await client.PostAsync(requestUri, stringContent);
+            HttpResponseMessage response = new HttpResponseMessage();
 
             try
             {
+                RequestContent requestContent = new RequestContent(sentence);
+
+                StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
+
+                string requestUri = "https://text-part-of-speech-flair.ai-sandbox.4th-ir.io/tag/sentence";
+                response = await client.PostAsync(requestUri, stringContent);
+
+
                 response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();

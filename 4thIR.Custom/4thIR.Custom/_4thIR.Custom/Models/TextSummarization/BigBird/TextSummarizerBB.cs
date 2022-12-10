@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
@@ -33,13 +31,14 @@ namespace TextSummarization.BigBird
 
             public string article { get; set; }
         }
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
-        public TextSummarizerBB()
+        public TextSummarizerBB(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-summarization-google-bigbird-1.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://text-summarization-google-bigbird-1.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            // client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
 
@@ -51,17 +50,18 @@ namespace TextSummarization.BigBird
         /// <exception cref="Exception"></exception>
         public async Task<Tuple<string, string>> SummarizeText(string articleText)
         {
-
-            using (var formData = new MultipartFormDataContent())
+            HttpResponseMessage response = new HttpResponseMessage();
+            try
             {
-                RequestContent requestContent = new RequestContent(articleText);
-                formData.Add(new StringContent(articleText, Encoding.UTF8, "text/plain"), "article");
-
-                string requestUri = "/summarize/article";
-                var response = await client.PostAsync(requestUri, formData);
-
-                try
+                using (var formData = new MultipartFormDataContent())
                 {
+                    RequestContent requestContent = new RequestContent(articleText);
+                    formData.Add(new StringContent(articleText, Encoding.UTF8, "text/plain"), "article");
+
+                    string requestUri = "https://text-summarization-google-bigbird-1.ai-sandbox.4th-ir.io/summarize/article";
+                    response = await client.PostAsync(requestUri, formData);
+
+
                     response.EnsureSuccessStatusCode();
 
                     string r = await response.Content.ReadAsStringAsync();
@@ -72,27 +72,28 @@ namespace TextSummarization.BigBird
 
                     return new Tuple<string, string>(responseContent.description, responseContent.model);
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "string too long";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Unable to complete operation";
-                    }
-
-                    throw new TextSummarizationException(message, ex);
+                    message = "string too long";
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Error: Unable to complete operation";
+                }
+
+                throw new TextSummarizationException(message, ex);
             }
         }
+
 
 
         public async Task<Tuple<string, string>> SummarizeTextFile(string path)

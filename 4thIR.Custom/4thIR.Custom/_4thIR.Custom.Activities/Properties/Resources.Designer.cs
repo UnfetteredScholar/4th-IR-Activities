@@ -583,6 +583,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Raw Text/ Full path to text file..
+        /// </summary>
+        public static string TextSummarizationBB_Article_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationBB_Article_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Article.
+        /// </summary>
+        public static string TextSummarizationBB_Article_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationBB_Article_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summarizes text..
+        /// </summary>
+        public static string TextSummarizationBB_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationBB_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Summarization.
+        /// </summary>
+        public static string TextSummarizationBB_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationBB_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The summarized text..
+        /// </summary>
+        public static string TextSummarizationBB_SummarizedText_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationBB_SummarizedText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summarized Text.
+        /// </summary>
+        public static string TextSummarizationBB_SummarizedText_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationBB_SummarizedText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The summarized text..
+        /// </summary>
+        public static string TextSummarizationBB_Summary_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationBB_Summary_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        public static string TextSummarizationBB_Summary_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationBB_Summary_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The target language for translation..
         /// </summary>
         public static string TextTranslationTM_ConversionLanguage_Description {

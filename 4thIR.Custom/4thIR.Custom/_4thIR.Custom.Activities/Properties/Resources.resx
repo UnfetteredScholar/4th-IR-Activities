@@ -417,4 +417,36 @@
     <value>The accuracy of the answer.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextSummarizationBB_DisplayName" xml:space="preserve">
+    <value>Text Summarization</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextSummarizationBB_Description" xml:space="preserve">
+    <value>Summarizes text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextSummarizationBB_Article_DisplayName" xml:space="preserve">
+    <value>Article</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextSummarizationBB_Article_Description" xml:space="preserve">
+    <value>Raw Text/ Full path to text file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextSummarizationBB_SummarizedText_DisplayName" xml:space="preserve">
+    <value>Summarized Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextSummarizationBB_SummarizedText_Description" xml:space="preserve">
+    <value>The summarized text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextSummarizationBB_Summary_DisplayName" xml:space="preserve">
+    <value>Summary</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextSummarizationBB_Summary_Description" xml:space="preserve">
+    <value>The summarized text.</value>
+    <comment>property description</comment>
+  </data>
 </root>

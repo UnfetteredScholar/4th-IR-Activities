@@ -63,6 +63,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(QuestionAnsweringRBS2), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Summarization - BigBird
+            builder.AddCustomAttributes(typeof(TextSummarizationBB), "4th-IR.Text Summarization.Big Bird");
+            builder.AddCustomAttributes(typeof(TextSummarizationBB), new DesignerAttribute(typeof(TextSummarizationBBDesigner)));
+            builder.AddCustomAttributes(typeof(TextSummarizationBB), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

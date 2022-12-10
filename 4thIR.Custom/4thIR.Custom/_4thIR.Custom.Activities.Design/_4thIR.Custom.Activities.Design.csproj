@@ -36,6 +36,7 @@
     <None Remove="Designers\ImageClassificationCVDesigner.xaml" />
     <None Remove="Designers\ImageClassificationR50Designer.xaml" />
     <None Remove="Designers\ImageClassificationVisslDesigner.xaml" />
+    <None Remove="Designers\NameEntityRecognitionFlairDesigner.xaml" />
     <None Remove="Designers\ObjectDetectionEDDesigner.xaml" />
     <None Remove="Designers\PartOfSpeechIdentificationFlairDesigner.xaml" />
     <None Remove="Designers\ProcessScopeDesigner.xaml" />
@@ -88,6 +89,10 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\ImageClassificationVisslDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\NameEntityRecognitionFlairDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

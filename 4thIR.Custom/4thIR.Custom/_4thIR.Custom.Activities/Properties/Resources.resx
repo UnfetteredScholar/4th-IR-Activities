@@ -497,4 +497,28 @@
     <value>Array of words and their corresponding tag.</value>
     <comment>property description</comment>
   </data>
+  <data name="NameEntityRecognitionFlair_DisplayName" xml:space="preserve">
+    <value>Name Entity Recognition</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="NameEntityRecognitionFlair_Description" xml:space="preserve">
+    <value>Identifies name entities in text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="NameEntityRecognitionFlair_Sentence_DisplayName" xml:space="preserve">
+    <value>Sentence</value>
+    <comment>property name</comment>
+  </data>
+  <data name="NameEntityRecognitionFlair_Sentence_Description" xml:space="preserve">
+    <value>The sentence to be analyzed.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="NameEntityRecognitionFlair_TextValues_DisplayName" xml:space="preserve">
+    <value>Text Values</value>
+    <comment>property name</comment>
+  </data>
+  <data name="NameEntityRecognitionFlair_TextValues_Description" xml:space="preserve">
+    <value>Array of TextValuePair</value>
+    <comment>property description</comment>
+  </data>
 </root>

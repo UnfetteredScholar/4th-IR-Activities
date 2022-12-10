@@ -1,4 +1,4 @@
-﻿namespace NameEntityRecognition.Flair
+﻿namespace NameEntityRecognition
 {
     /// <summary>
     /// Defines a word and its corresponding value

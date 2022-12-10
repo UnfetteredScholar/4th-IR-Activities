@@ -75,6 +75,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(PartOfSpeechIdentificationFlair), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Name Entity Recognition - Flair
+            builder.AddCustomAttributes(typeof(NameEntityRecognitionFlair), "4th-IR.Name Entity Recognition.Flair");
+            builder.AddCustomAttributes(typeof(NameEntityRecognitionFlair), new DesignerAttribute(typeof(NameEntityRecognitionFlairDesigner)));
+            builder.AddCustomAttributes(typeof(NameEntityRecognitionFlair), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

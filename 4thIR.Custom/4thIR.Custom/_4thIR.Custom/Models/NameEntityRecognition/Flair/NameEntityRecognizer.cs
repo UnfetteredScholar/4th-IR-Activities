@@ -2,14 +2,11 @@
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using NameEntityRecognition.Exceptions;
 
 namespace NameEntityRecognition.Flair
 {
-
-
     public class NameEntityRecognizer
     {
         private class RequestContent
@@ -22,26 +19,29 @@ namespace NameEntityRecognition.Flair
             public string sentence { get; set; }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
-        public NameEntityRecognizer()
+        public NameEntityRecognizer(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-name-entity-recognition-flair.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://text-name-entity-recognition-flair.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public async Task<TextValuePair[]> RecognizeNameEntity(string sentence)
         {
-            RequestContent requestContent = new RequestContent(sentence);
-
-            StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
-
-            string requestUri = "/predict/sentence";
-            var response = await client.PostAsync(requestUri, stringContent);
-
+            HttpResponseMessage response = new HttpResponseMessage();
             try
             {
+                RequestContent requestContent = new RequestContent(sentence);
+
+                StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
+
+                string requestUri = "https://text-name-entity-recognition-flair.ai-sandbox.4th-ir.io/predict/sentence";
+                response = await client.PostAsync(requestUri, stringContent);
+
+
                 response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();

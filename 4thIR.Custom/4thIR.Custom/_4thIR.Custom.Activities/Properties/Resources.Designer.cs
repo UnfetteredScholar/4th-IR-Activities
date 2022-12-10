@@ -349,6 +349,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identifies name entities in text..
+        /// </summary>
+        public static string NameEntityRecognitionFlair_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFlair_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name Entity Recognition.
+        /// </summary>
+        public static string NameEntityRecognitionFlair_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFlair_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The sentence to be analyzed..
+        /// </summary>
+        public static string NameEntityRecognitionFlair_Sentence_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFlair_Sentence_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string NameEntityRecognitionFlair_Sentence_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFlair_Sentence_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array of TextValuePair.
+        /// </summary>
+        public static string NameEntityRecognitionFlair_TextValues_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFlair_TextValues_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Values.
+        /// </summary>
+        public static string NameEntityRecognitionFlair_TextValues_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFlair_TextValues_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Detects objects in images..
         /// </summary>
         public static string ObjectDetectionED_Description {

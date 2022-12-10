@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Text;
 using TextTranslation.Exceptions;
+using System.ComponentModel;
 
 namespace TextTranslation.Multilanguage
 {
     /// <summary>
     /// Supported Languages for translation
     /// </summary>
-    public enum Language { Arabic, Czech, German, English, Spanish, Estonian, Finnish, French, Gujarati, Hindi, Italian, Japanese, Kazakh, Korean, Lithuanian, Latvian, Burmese, Nepali, Dutch, Romanian, Russian, Sinhala, Turkish, Vietnamese, Chinese, Afrikaans, Azerbaijani, Bengali, Persian, Hebrew, Croatian, Indonesian, Georgian, Khmer, Macedonian, Malayalam, Mongolian, Marathi, Polish, Pashto, Portuguese, Swedish, Swahili, Tamil, Telugu, Thai, Tagalog, Ukrainian, Urdu, Xhosa, Galician, Slovene };
+    public enum Language { [Description("Select A Language")] SelectALanguage, Arabic, Czech, German, English, Spanish, Estonian, Finnish, French, Gujarati, Hindi, Italian, Japanese, Kazakh, Korean, Lithuanian, Latvian, Burmese, Nepali, Dutch, Romanian, Russian, Sinhala, Turkish, Vietnamese, Chinese, Afrikaans, Azerbaijani, Bengali, Persian, Hebrew, Croatian, Indonesian, Georgian, Khmer, Macedonian, Malayalam, Mongolian, Marathi, Polish, Pashto, Portuguese, Swedish, Swahili, Tamil, Telugu, Thai, Tagalog, Ukrainian, Urdu, Xhosa, Galician, Slovene };
 
 
     /// <summary>
@@ -41,16 +42,17 @@ namespace TextTranslation.Multilanguage
             }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
         /// <summary>
         /// Constructor for Translator Class
         /// </summary>
-        public Translator()
+        public Translator(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-translation-fairseq-1.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://text-translation-fairseq-1.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         /// <summary>
@@ -65,7 +67,7 @@ namespace TextTranslation.Multilanguage
         {
             RequestContent request = new RequestContent(sentence);
 
-            string requestUri = $"/api/v1/sentence?source_lang={sourceLanguage}&conversion_lang={conversionLanguage}";
+            string requestUri = $"https://text-translation-fairseq-1.ai-sandbox.4th-ir.io/api/v1/sentence?source_lang={sourceLanguage}&conversion_lang={conversionLanguage}";
 
             var requestJson = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
             var response = await client.PostAsync(requestUri, requestJson);

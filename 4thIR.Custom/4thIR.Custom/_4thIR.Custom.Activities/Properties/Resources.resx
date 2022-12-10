@@ -225,4 +225,44 @@
     <value>The result of the document classification.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextTranslationTM_DisplayName" xml:space="preserve">
+    <value>Text Translation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextTranslationTM_Description" xml:space="preserve">
+    <value>Performs translation of text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextTranslationTM_Sentence_DisplayName" xml:space="preserve">
+    <value>Sentence</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTranslationTM_Sentence_Description" xml:space="preserve">
+    <value>The source text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTranslationTM_TranslatedText_DisplayName" xml:space="preserve">
+    <value>Translated Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTranslationTM_TranslatedText_Description" xml:space="preserve">
+    <value>The translated text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTranslationTM_SourceLanguage_DisplayName" xml:space="preserve">
+    <value>Source Language</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTranslationTM_SourceLanguage_Description" xml:space="preserve">
+    <value>The language of the source text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTranslationTM_ConversionLanguage_DisplayName" xml:space="preserve">
+    <value>Conversion Language</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTranslationTM_ConversionLanguage_Description" xml:space="preserve">
+    <value>The target language for translation.</value>
+    <comment>property description</comment>
+  </data>
 </root>

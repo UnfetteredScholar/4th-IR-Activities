@@ -241,6 +241,96 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The target language for translation..
+        /// </summary>
+        public static string TextTranslationTM_ConversionLanguage_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_ConversionLanguage_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conversion Language.
+        /// </summary>
+        public static string TextTranslationTM_ConversionLanguage_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_ConversionLanguage_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Performs translation of text..
+        /// </summary>
+        public static string TextTranslationTM_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Translation.
+        /// </summary>
+        public static string TextTranslationTM_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The source text..
+        /// </summary>
+        public static string TextTranslationTM_Sentence_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_Sentence_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string TextTranslationTM_Sentence_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_Sentence_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The language of the source text..
+        /// </summary>
+        public static string TextTranslationTM_SourceLanguage_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_SourceLanguage_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source Language.
+        /// </summary>
+        public static string TextTranslationTM_SourceLanguage_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_SourceLanguage_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The translated text..
+        /// </summary>
+        public static string TextTranslationTM_TranslatedText_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_TranslatedText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translated Text.
+        /// </summary>
+        public static string TextTranslationTM_TranslatedText_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationTM_TranslatedText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Specifies the amount of time (in milliseconds) to wait for the activity to run before an error is thrown. The default value is 60000 (1 minute)..
         /// </summary>
         public static string Timeout_Description {

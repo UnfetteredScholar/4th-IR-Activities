@@ -27,6 +27,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(DocumentClassificationKYC), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Translation - Transformers (Multilanguage)
+            builder.AddCustomAttributes(typeof(TextTranslationTM), "4th-IR.TextTranslation.Multilanguage");
+            builder.AddCustomAttributes(typeof(TextTranslationTM), new DesignerAttribute(typeof(TextTranslationTMDesigner)));
+            builder.AddCustomAttributes(typeof(TextTranslationTM), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

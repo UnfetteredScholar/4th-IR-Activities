@@ -34,6 +34,7 @@
   <ItemGroup>
     <None Remove="Designers\DocumentClassificationKYCDesigner.xaml" />
     <None Remove="Designers\ProcessScopeDesigner.xaml" />
+    <None Remove="Designers\TextTranslationTMDesigner.xaml" />
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
@@ -72,6 +73,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\ProcessScopeDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\TextTranslationTMDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Themes\Icons.xaml">

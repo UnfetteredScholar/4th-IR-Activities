@@ -87,6 +87,18 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextClassificationZSR), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - Facebook Deit Base
+            builder.AddCustomAttributes(typeof(ImageClassificationFDeitBase), new CategoryAttribute("4th-IR.Image Classification.Facebook.Deit Base"));
+            builder.AddCustomAttributes(typeof(ImageClassificationFDeitBase), new DesignerAttribute(typeof(ImageClassificationFDeitBaseDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationFDeitBase), new HelpKeywordAttribute(""));
+            #endregion
+
+            #region Image Classification - Facebook Dit Base
+            builder.AddCustomAttributes(typeof(ImageClassificationFDitBase), new CategoryAttribute("4th-IR.Image Classification.Facebook.Dit Base"));
+            builder.AddCustomAttributes(typeof(ImageClassificationFDitBase), new DesignerAttribute(typeof(ImageClassificationFDitBaseDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationFDitBase), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

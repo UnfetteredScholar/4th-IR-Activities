@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 using _4thIR.Custom.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
+using ImageClassification.Facebbok.DitBase;
 
 namespace _4thIR.Custom.Activities
 {
     [LocalizedDisplayName(nameof(Resources.ImageClassificationFDitBase_DisplayName))]
     [LocalizedDescription(nameof(Resources.ImageClassificationFDitBase_Description))]
-    public class ImageClassificationFDitBase : ContinuableAsyncCodeActivity
+    public class ImageClassificationFDitBase : FourthIRActivity
     {
         #region Properties
 
@@ -62,7 +63,7 @@ namespace _4thIR.Custom.Activities
         {
             // Inputs
             var timeout = TimeoutMS.Get(context);
-            var path = Path.Get(context);
+            
 
             // Set a timeout on the execution
             var task = ExecuteWithTimeout(context, cancellationToken);
@@ -70,15 +71,19 @@ namespace _4thIR.Custom.Activities
 
             // Outputs
             return (ctx) => {
-                Label.Set(ctx, null);
+                Label.Set(ctx, task.Result);
             };
         }
 
-        private async Task ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
+        private async Task<string> ExecuteWithTimeout(AsyncCodeActivityContext context, CancellationToken cancellationToken = default)
         {
-            ///////////////////////////
-            // Add execution logic HERE
-            ///////////////////////////
+            var path = Path.Get(context);
+
+            ImageClassifierFDitBase classifier = new ImageClassifierFDitBase(ProcessScope.GetHttpClient());
+
+            var res=await classifier.ClassifyImage(path);
+
+            return res;
         }
 
         #endregion

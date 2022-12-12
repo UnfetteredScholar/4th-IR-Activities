@@ -47,6 +47,7 @@
     <None Remove="Designers\QuestionAnsweringRBS2Designer.xaml" />
     <None Remove="Designers\TextClassificationZSRDesigner.xaml" />
     <None Remove="Designers\TextSummarizationBBDesigner.xaml" />
+    <None Remove="Designers\TextSummarizationBert2BertSmallDesigner.xaml" />
     <None Remove="Designers\TextTranslationTMDesigner.xaml" />
   </ItemGroup>
   <!-- Package Icon -->
@@ -141,6 +142,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\TextSummarizationBBDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\TextSummarizationBert2BertSmallDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

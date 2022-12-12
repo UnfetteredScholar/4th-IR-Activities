@@ -111,6 +111,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationVitBaseBean), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Summarization - Bert2Bert Small
+            builder.AddCustomAttributes(typeof(TextSummarizationBert2BertSmall), new CategoryAttribute("4th-IR.Text Summarization.Bert2Bert.Small"));
+            builder.AddCustomAttributes(typeof(TextSummarizationBert2BertSmall), new DesignerAttribute(typeof(TextSummarizationBert2BertSmallDesigner)));
+            builder.AddCustomAttributes(typeof(TextSummarizationBert2BertSmall), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

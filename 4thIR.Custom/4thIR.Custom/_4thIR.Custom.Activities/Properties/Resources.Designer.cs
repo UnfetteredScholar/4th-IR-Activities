@@ -1105,6 +1105,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Summarizes input text..
+        /// </summary>
+        public static string TextSummarizationBert2BertSmall_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationBert2BertSmall_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Summarization.
+        /// </summary>
+        public static string TextSummarizationBert2BertSmall_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationBert2BertSmall_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The summarized text..
+        /// </summary>
+        public static string TextSummarizationBert2BertSmall_Summary_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationBert2BertSmall_Summary_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        public static string TextSummarizationBert2BertSmall_Summary_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationBert2BertSmall_Summary_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text to be summarized..
+        /// </summary>
+        public static string TextSummarizationBert2BertSmall_Text_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationBert2BertSmall_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string TextSummarizationBert2BertSmall_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationBert2BertSmall_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The target language for translation..
         /// </summary>
         public static string TextTranslationTM_ConversionLanguage_Description {

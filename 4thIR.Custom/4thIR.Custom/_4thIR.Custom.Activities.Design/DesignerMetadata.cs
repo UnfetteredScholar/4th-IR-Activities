@@ -81,6 +81,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(NameEntityRecognitionFlair), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Zero Shot Classification - Roberta
+            builder.AddCustomAttributes(typeof(TextClassificationZSR), new CategoryAttribute("4th-IR.Text Classification.Zero Shot.Roberta"));
+            builder.AddCustomAttributes(typeof(TextClassificationZSR), new DesignerAttribute(typeof(TextClassificationZSRDesigner)));
+            builder.AddCustomAttributes(typeof(TextClassificationZSR), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

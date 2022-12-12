@@ -745,6 +745,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Perfroms classification of text..
+        /// </summary>
+        public static string TextClassificationZSR_Description {
+            get {
+                return ResourceManager.GetString("TextClassificationZSR_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Classification.
+        /// </summary>
+        public static string TextClassificationZSR_DisplayName {
+            get {
+                return ResourceManager.GetString("TextClassificationZSR_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array of possible labels..
+        /// </summary>
+        public static string TextClassificationZSR_Labels_Description {
+            get {
+                return ResourceManager.GetString("TextClassificationZSR_Labels_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Labels.
+        /// </summary>
+        public static string TextClassificationZSR_Labels_DisplayName {
+            get {
+                return ResourceManager.GetString("TextClassificationZSR_Labels_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array of LabelScorePair objects..
+        /// </summary>
+        public static string TextClassificationZSR_LabelScores_Description {
+            get {
+                return ResourceManager.GetString("TextClassificationZSR_LabelScores_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Label Scores.
+        /// </summary>
+        public static string TextClassificationZSR_LabelScores_DisplayName {
+            get {
+                return ResourceManager.GetString("TextClassificationZSR_LabelScores_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The input text..
+        /// </summary>
+        public static string TextClassificationZSR_Text_Description {
+            get {
+                return ResourceManager.GetString("TextClassificationZSR_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string TextClassificationZSR_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("TextClassificationZSR_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Raw Text/ Full path to text file..
         /// </summary>
         public static string TextSummarizationBB_Article_Description {

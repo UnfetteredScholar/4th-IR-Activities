@@ -521,4 +521,36 @@
     <value>Array of TextValuePair</value>
     <comment>property description</comment>
   </data>
+  <data name="TextClassificationZSR_DisplayName" xml:space="preserve">
+    <value>Text Classification</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextClassificationZSR_Description" xml:space="preserve">
+    <value>Perfroms classification of text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextClassificationZSR_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextClassificationZSR_Text_Description" xml:space="preserve">
+    <value>The input text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextClassificationZSR_Labels_DisplayName" xml:space="preserve">
+    <value>Labels</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextClassificationZSR_Labels_Description" xml:space="preserve">
+    <value>Array of possible labels.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextClassificationZSR_LabelScores_DisplayName" xml:space="preserve">
+    <value>Label Scores</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextClassificationZSR_LabelScores_Description" xml:space="preserve">
+    <value>Array of LabelScorePair objects.</value>
+    <comment>property description</comment>
+  </data>
 </root>

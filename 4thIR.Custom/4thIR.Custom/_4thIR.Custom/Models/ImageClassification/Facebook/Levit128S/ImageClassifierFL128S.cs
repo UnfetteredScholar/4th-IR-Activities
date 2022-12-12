@@ -4,8 +4,9 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using ImageClassification.Exceptions;
 
-namespace ImageClassification
+namespace ImageClassification.Facebbok.Levit128S
 {
     /// <summary>
     /// Provides functionality for image classification. (Image Classification - Facebook Levit 128S)

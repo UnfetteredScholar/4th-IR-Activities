@@ -99,6 +99,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationFDitBase), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - Microsoft Swin Base
+            builder.AddCustomAttributes(typeof(ImageClassificationMSwinBase), new CategoryAttribute("4th-IR.Image Classification.Microsoft.Swin Base"));
+            builder.AddCustomAttributes(typeof(ImageClassificationMSwinBase), new DesignerAttribute(typeof(ImageClassificationMSwinBaseDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationMSwinBase), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

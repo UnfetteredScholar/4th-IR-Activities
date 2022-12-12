@@ -6,7 +6,7 @@ using System.IO;
 using System.Threading.Tasks;
 using ImageClassification.Exceptions;
 
-namespace ImageClassification.MicrosoftDitBase
+namespace ImageClassification.Microsoft.DitBase
 {
     public class ImageClassifierMDB
     {

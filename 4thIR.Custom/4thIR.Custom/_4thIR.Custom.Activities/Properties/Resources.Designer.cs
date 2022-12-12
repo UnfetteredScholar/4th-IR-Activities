@@ -502,6 +502,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Performs classification of images..
+        /// </summary>
+        public static string ImageClassificationVitBaseBean_Description {
+            get {
+                return ResourceManager.GetString("ImageClassificationVitBaseBean_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image Classification.
+        /// </summary>
+        public static string ImageClassificationVitBaseBean_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassificationVitBaseBean_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The result of the classification..
+        /// </summary>
+        public static string ImageClassificationVitBaseBean_Label_Description {
+            get {
+                return ResourceManager.GetString("ImageClassificationVitBaseBean_Label_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Label.
+        /// </summary>
+        public static string ImageClassificationVitBaseBean_Label_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassificationVitBaseBean_Label_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string ImageClassificationVitBaseBean_Path_Description {
+            get {
+                return ResourceManager.GetString("ImageClassificationVitBaseBean_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string ImageClassificationVitBaseBean_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassificationVitBaseBean_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input.
         /// </summary>
         public static string Input_Category {

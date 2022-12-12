@@ -105,6 +105,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationMSwinBase), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - Vit Base Bean
+            builder.AddCustomAttributes(typeof(ImageClassificationVitBaseBean), new CategoryAttribute("4th-IR.Image Classification.Vit Base.Bean"));
+            builder.AddCustomAttributes(typeof(ImageClassificationVitBaseBean), new DesignerAttribute(typeof(ImageClassificationVitBaseBeanDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationVitBaseBean), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

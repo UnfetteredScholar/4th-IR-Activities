@@ -117,6 +117,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextSummarizationBert2BertSmall), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Summarization - Fairseq
+            builder.AddCustomAttributes(typeof(TextSummarizationFairseq), new CategoryAttribute("4th-IR.Text Summarization.Fairseq"));
+            builder.AddCustomAttributes(typeof(TextSummarizationFairseq), new DesignerAttribute(typeof(TextSummarizationFairseqDesigner)));
+            builder.AddCustomAttributes(typeof(TextSummarizationFairseq), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

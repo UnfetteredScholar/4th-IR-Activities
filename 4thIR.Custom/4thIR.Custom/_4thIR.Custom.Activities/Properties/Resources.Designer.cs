@@ -1159,6 +1159,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Summarizes input text..
+        /// </summary>
+        public static string TextSummarizationFairseq_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationFairseq_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Summarization.
+        /// </summary>
+        public static string TextSummarizationFairseq_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationFairseq_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The summarized text..
+        /// </summary>
+        public static string TextSummarizationFairseq_Summary_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationFairseq_Summary_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        public static string TextSummarizationFairseq_Summary_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationFairseq_Summary_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text to be summarized..
+        /// </summary>
+        public static string TextSummarizationFairseq_Text_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationFairseq_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string TextSummarizationFairseq_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationFairseq_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The target language for translation..
         /// </summary>
         public static string TextTranslationTM_ConversionLanguage_Description {

@@ -673,4 +673,28 @@
     <value>The summarized text.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextSummarizationFairseq_DisplayName" xml:space="preserve">
+    <value>Text Summarization</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextSummarizationFairseq_Description" xml:space="preserve">
+    <value>Summarizes input text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextSummarizationFairseq_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextSummarizationFairseq_Text_Description" xml:space="preserve">
+    <value>The text to be summarized.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextSummarizationFairseq_Summary_DisplayName" xml:space="preserve">
+    <value>Summary</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextSummarizationFairseq_Summary_Description" xml:space="preserve">
+    <value>The summarized text.</value>
+    <comment>property description</comment>
+  </data>
 </root>

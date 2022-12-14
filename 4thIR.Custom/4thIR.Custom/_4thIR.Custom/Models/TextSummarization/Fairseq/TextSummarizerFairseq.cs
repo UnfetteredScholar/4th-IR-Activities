@@ -2,26 +2,14 @@
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
-using System.Net.Http.Headers;
+using System.Net.Http.Json;
 using Newtonsoft.Json;
-using TextSummarization.Fairseq;
 using TextSummarization.Exceptions;
 
 namespace TextSummarization.Fairseq
 {
     public class TextSummarizerFairseq
     {
-        private class RequestContent
-        {
-            public RequestContent(string article)
-            {
-                this.article = article;
-            }
-
-            public string article { get; set; }
-
-        }
-
         private class ResponseContent
         {
             public ResponseContent()
@@ -34,35 +22,32 @@ namespace TextSummarization.Fairseq
 
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
-        public TextSummarizerFairseq()
+        public TextSummarizerFairseq(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-summarization-fairseq.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://text-summarization-fairseq.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<Tuple<string, string>> SummarizeText(string article)
+        public async Task<string> SummarizeText(string article)
         {
-            RequestContent requestContent = new RequestContent(article);
-
-            StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
-
-            string requestUri = "/api/v1/sentence";
-            var response = await client.PostAsync(requestUri, stringContent);
-
+            HttpResponseMessage response = new HttpResponseMessage();
 
             try
             {
+                var requestContent = new { article = article };
+
+                string requestUri = "https://text-summarization-fairseq.ai-sandbox.4th-ir.io/api/v1/sentence";
+                response = await client.PostAsJsonAsync(requestUri,requestContent);
+
                 response.EnsureSuccessStatusCode();
 
-                string r = await response.Content.ReadAsStringAsync();
-                char[] chars = { '[', ']' };
+                ResponseContent[] responseContent = await response.Content.ReadFromJsonAsync<ResponseContent[]>();
 
-                ResponseContent responseContent = JsonConvert.DeserializeObject<ResponseContent>(r.Trim(chars));
-
-                return new Tuple<string, string>(responseContent.summary, responseContent.model);
+                return responseContent[0].summary;
             }
             catch (Exception ex)
             {

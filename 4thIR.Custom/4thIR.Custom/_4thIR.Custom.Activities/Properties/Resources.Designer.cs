@@ -565,6 +565,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identifies name entities is text..
+        /// </summary>
+        public static string NameEntityRecognitionBERT_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionBERT_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name Entity Recognition.
+        /// </summary>
+        public static string NameEntityRecognitionBERT_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionBERT_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The input type..
+        /// </summary>
+        public static string NameEntityRecognitionBERT_InputType_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionBERT_InputType_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input Type.
+        /// </summary>
+        public static string NameEntityRecognitionBERT_InputType_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionBERT_InputType_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raw text or Full path to the text file..
+        /// </summary>
+        public static string NameEntityRecognitionBERT_Text_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionBERT_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string NameEntityRecognitionBERT_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionBERT_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array of TextValuePair objects..
+        /// </summary>
+        public static string NameEntityRecognitionBERT_TextValues_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionBERT_TextValues_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Values.
+        /// </summary>
+        public static string NameEntityRecognitionBERT_TextValues_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionBERT_TextValues_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Identifies name entities in text..
         /// </summary>
         public static string NameEntityRecognitionFairseq_Description {

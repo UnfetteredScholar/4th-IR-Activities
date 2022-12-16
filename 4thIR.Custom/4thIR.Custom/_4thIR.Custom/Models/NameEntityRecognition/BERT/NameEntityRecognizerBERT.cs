@@ -5,7 +5,6 @@ using System.Text.Json;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using NameEntityRecognition.Exceptions;
 
 namespace NameEntityRecognition.BERT
@@ -13,12 +12,13 @@ namespace NameEntityRecognition.BERT
     public class NameEntityRecognizerBERT
     {
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
-        public NameEntityRecognizerBERT()
+        public NameEntityRecognizerBERT(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-name-entity-recognition-bert-1.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://text-name-entity-recognition-bert-1.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
             // client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
@@ -34,7 +34,7 @@ namespace NameEntityRecognition.BERT
 
                     formData.Add(stringContent, "sentence");
 
-                    string requestUri = "/api/v1/sentence";
+                    string requestUri = "https://text-name-entity-recognition-bert-1.ai-sandbox.4th-ir.io/api/v1/sentence";
                     response = await client.PostAsync(requestUri, formData);
 
 
@@ -50,7 +50,7 @@ namespace NameEntityRecognition.BERT
                     return result;
                 }
             }
-            catch (HttpRequestException ex)
+            catch (Exception ex)
             {
                 string message = "";
 
@@ -67,7 +67,7 @@ namespace NameEntityRecognition.BERT
                     message = "Error: Unable to complete operation";
                 }
 
-                throw new Exception(message, ex);
+                throw new NameEntityRecognitionException(message, ex);
             }
         }
 
@@ -85,20 +85,22 @@ namespace NameEntityRecognition.BERT
                 {
                     StreamContent streamContent = new StreamContent(File.OpenRead(path));
 
-                    int index = path.LastIndexOf("\\") + 1;
-                    string fileName = path.Substring(index);
+                    string fileName = Path.GetFileName(path);
 
                     formData.Add(streamContent, "text_file", fileName);
 
-                    string requestUri = "/api/v1/sentence";
+                    string requestUri = "https://text-name-entity-recognition-bert-1.ai-sandbox.4th-ir.io/api/v1/sentence";
                     response = await client.PostAsync(requestUri, formData);
 
 
                     response.EnsureSuccessStatusCode();
 
-                    string r = await response.Content.ReadAsStringAsync();
+                    var jsonOptions = new JsonSerializerOptions()
+                    {
+                        PropertyNameCaseInsensitive = true
+                    };
 
-                    TextValuePair[] result = JsonConvert.DeserializeObject<TextValuePair[]>(r);
+                    TextValuePair[] result = await response.Content.ReadFromJsonAsync<TextValuePair[]>(jsonOptions);
 
                     return result;
                 }

@@ -793,4 +793,36 @@
     <value>Array of TextValuePair objects.</value>
     <comment>property description</comment>
   </data>
+  <data name="NameEntityRecognitionBERT_DisplayName" xml:space="preserve">
+    <value>Name Entity Recognition</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="NameEntityRecognitionBERT_Description" xml:space="preserve">
+    <value>Identifies name entities is text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="NameEntityRecognitionBERT_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="NameEntityRecognitionBERT_Text_Description" xml:space="preserve">
+    <value>Raw text or Full path to the text file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="NameEntityRecognitionBERT_TextValues_DisplayName" xml:space="preserve">
+    <value>Text Values</value>
+    <comment>property name</comment>
+  </data>
+  <data name="NameEntityRecognitionBERT_TextValues_Description" xml:space="preserve">
+    <value>Array of TextValuePair objects.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="NameEntityRecognitionBERT_InputType_DisplayName" xml:space="preserve">
+    <value>Input Type</value>
+    <comment>property name</comment>
+  </data>
+  <data name="NameEntityRecognitionBERT_InputType_Description" xml:space="preserve">
+    <value>The input type.</value>
+    <comment>property description</comment>
+  </data>
 </root>

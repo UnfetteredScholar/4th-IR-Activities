@@ -141,6 +141,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(NameEntityRecognitionFairseq), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Name Entity Recognition - BERT
+            builder.AddCustomAttributes(typeof(NameEntityRecognitionBERT), new CategoryAttribute("4th-IR.Name Entity Recognition.BERT"));
+            builder.AddCustomAttributes(typeof(NameEntityRecognitionBERT), new DesignerAttribute(typeof(NameEntityRecognitionBERTDesigner)));
+            builder.AddCustomAttributes(typeof(NameEntityRecognitionBERT), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

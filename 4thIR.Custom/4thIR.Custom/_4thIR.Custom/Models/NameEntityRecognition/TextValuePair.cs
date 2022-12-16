@@ -16,11 +16,11 @@
         /// <summary>
         /// The word
         /// </summary>
-        public string text { get; set; }
+        public string Text { get; set; }
 
         /// <summary>
         /// The value of the word
         /// </summary>
-        public string value { get; set; }
+        public string Value { get; set; }
     }
 }

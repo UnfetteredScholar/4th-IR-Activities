@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using Newtonsoft.Json;
+using System.Net.Http.Json;
 using NameEntityRecognition.Exceptions;
+using System.Text.Json;
 
 namespace NameEntityRecognition.Fairseq
 {
@@ -21,31 +20,35 @@ namespace NameEntityRecognition.Fairseq
             public string sentence { get; set; }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
-        public NameEntityRecognizerFairseq()
+        public NameEntityRecognizerFairseq(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-name-entity-recognition-flair-2.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://text-name-entity-recognition-flair-2.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public async Task<TextValuePair[]> RecognizeNameEntity(string sentence)
         {
-            RequestContent requestContent = new RequestContent(sentence);
-
-            StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
-
-            string requestUri = "/api/v1/sentence";
-            var response = await client.PostAsync(requestUri, stringContent);
+            HttpResponseMessage response=new HttpResponseMessage();
 
             try
             {
+                var requestContent = new { sentence = sentence };
+
+                string requestUri = "https://text-name-entity-recognition-flair-2.ai-sandbox.4th-ir.io/api/v1/sentence";
+                response = await client.PostAsJsonAsync(requestUri, requestContent);
+
                 response.EnsureSuccessStatusCode();
 
-                string r = await response.Content.ReadAsStringAsync();
+                var jsonOptions = new JsonSerializerOptions()
+                {
+                    PropertyNameCaseInsensitive = true
+                };
 
-                TextValuePair[] result = JsonConvert.DeserializeObject<TextValuePair[]>(r);
+                TextValuePair[] result = await response.Content.ReadFromJsonAsync<TextValuePair[]>(jsonOptions);
 
                 return result;
             }

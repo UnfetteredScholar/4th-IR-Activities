@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
 using NameEntityRecognition.Exceptions;
+using System.Text.Json;
+using System.Net.Http.Json;
 
 namespace NameEntityRecognition.Flair
 {
@@ -34,19 +36,19 @@ namespace NameEntityRecognition.Flair
             HttpResponseMessage response = new HttpResponseMessage();
             try
             {
-                RequestContent requestContent = new RequestContent(sentence);
-
-                StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
+                var requestContent = new { sentence = sentence };
 
                 string requestUri = "https://text-name-entity-recognition-flair.ai-sandbox.4th-ir.io/predict/sentence";
-                response = await client.PostAsync(requestUri, stringContent);
-
+                response = await client.PostAsJsonAsync(requestUri, requestContent);
 
                 response.EnsureSuccessStatusCode();
 
-                string r = await response.Content.ReadAsStringAsync();
+                var jsonOptions = new JsonSerializerOptions()
+                {
+                    PropertyNameCaseInsensitive = true
+                };
 
-                TextValuePair[] result = JsonConvert.DeserializeObject<TextValuePair[]>(r);
+                TextValuePair[] result = await response.Content.ReadFromJsonAsync<TextValuePair[]>(jsonOptions);
 
                 return result;
             }

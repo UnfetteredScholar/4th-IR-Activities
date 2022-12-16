@@ -69,6 +69,8 @@ namespace _4thIR.Custom.Activities
         protected override void CacheMetadata(CodeActivityMetadata metadata)
         {
             if (Text == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(Text)));
+            if (SourceLanguage == 0) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(SourceLanguage)));
+            if (ConversionLanguage == 0) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(ConversionLanguage)));
 
             base.CacheMetadata(metadata);
         }

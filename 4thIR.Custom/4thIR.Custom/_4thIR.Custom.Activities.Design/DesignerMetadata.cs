@@ -135,6 +135,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextGenerationFairseq), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Name Entity Recognition - Fairseq (Multitagging and Deeptagging)
+            builder.AddCustomAttributes(typeof(NameEntityRecognitionFairseq), new CategoryAttribute("4th-IR.Name Entity Recognition.Fairseq"));
+            builder.AddCustomAttributes(typeof(NameEntityRecognitionFairseq), new DesignerAttribute(typeof(NameEntityRecognitionFairseqDesigner)));
+            builder.AddCustomAttributes(typeof(NameEntityRecognitionFairseq), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

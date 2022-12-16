@@ -40,6 +40,7 @@
     <None Remove="Designers\ImageClassificationR50Designer.xaml" />
     <None Remove="Designers\ImageClassificationVisslDesigner.xaml" />
     <None Remove="Designers\ImageClassificationVitBaseBeanDesigner.xaml" />
+    <None Remove="Designers\NameEntityRecognitionFairseqDesigner.xaml" />
     <None Remove="Designers\NameEntityRecognitionFlairDesigner.xaml" />
     <None Remove="Designers\ObjectDetectionEDDesigner.xaml" />
     <None Remove="Designers\PartOfSpeechIdentificationFlairDesigner.xaml" />
@@ -120,6 +121,10 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\ImageClassificationVitBaseBeanDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\NameEntityRecognitionFairseqDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

@@ -769,4 +769,28 @@
     <value>The generated text.</value>
     <comment>property description</comment>
   </data>
+  <data name="NameEntityRecognitionFairseq_DisplayName" xml:space="preserve">
+    <value>Name Entity Recognition</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="NameEntityRecognitionFairseq_Description" xml:space="preserve">
+    <value>Identifies name entities in text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="NameEntityRecognitionFairseq_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="NameEntityRecognitionFairseq_Text_Description" xml:space="preserve">
+    <value>The input text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="NameEntityRecognitionFairseq_TextValues_DisplayName" xml:space="preserve">
+    <value>Text Values</value>
+    <comment>property name</comment>
+  </data>
+  <data name="NameEntityRecognitionFairseq_TextValues_Description" xml:space="preserve">
+    <value>Array of TextValuePair objects.</value>
+    <comment>property description</comment>
+  </data>
 </root>

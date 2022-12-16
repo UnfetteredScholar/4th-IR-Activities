@@ -567,6 +567,60 @@ namespace _4thIR.Custom.Activities.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Identifies name entities in text..
         /// </summary>
+        public static string NameEntityRecognitionFairseq_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFairseq_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name Entity Recognition.
+        /// </summary>
+        public static string NameEntityRecognitionFairseq_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFairseq_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The input text..
+        /// </summary>
+        public static string NameEntityRecognitionFairseq_Text_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFairseq_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string NameEntityRecognitionFairseq_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFairseq_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array of TextValuePair objects..
+        /// </summary>
+        public static string NameEntityRecognitionFairseq_TextValues_Description {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFairseq_TextValues_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Values.
+        /// </summary>
+        public static string NameEntityRecognitionFairseq_TextValues_DisplayName {
+            get {
+                return ResourceManager.GetString("NameEntityRecognitionFairseq_TextValues_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identifies name entities in text..
+        /// </summary>
         public static string NameEntityRecognitionFlair_Description {
             get {
                 return ResourceManager.GetString("NameEntityRecognitionFlair_Description", resourceCulture);

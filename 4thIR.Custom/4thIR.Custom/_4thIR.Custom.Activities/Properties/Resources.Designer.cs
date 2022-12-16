@@ -1213,6 +1213,96 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The target language..
+        /// </summary>
+        public static string TextTranslationMtTransformers2_ConversionLanguage_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_ConversionLanguage_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conversion Language.
+        /// </summary>
+        public static string TextTranslationMtTransformers2_ConversionLanguage_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_ConversionLanguage_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Performs text translation..
+        /// </summary>
+        public static string TextTranslationMtTransformers2_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Translation.
+        /// </summary>
+        public static string TextTranslationMtTransformers2_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The source language..
+        /// </summary>
+        public static string TextTranslationMtTransformers2_SourceLanguage_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_SourceLanguage_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source Language.
+        /// </summary>
+        public static string TextTranslationMtTransformers2_SourceLanguage_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_SourceLanguage_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text to be translated..
+        /// </summary>
+        public static string TextTranslationMtTransformers2_Text_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string TextTranslationMtTransformers2_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The translated text..
+        /// </summary>
+        public static string TextTranslationMtTransformers2_TranslatedText_Description {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_TranslatedText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translated Text.
+        /// </summary>
+        public static string TextTranslationMtTransformers2_TranslatedText_DisplayName {
+            get {
+                return ResourceManager.GetString("TextTranslationMtTransformers2_TranslatedText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The target language for translation..
         /// </summary>
         public static string TextTranslationTM_ConversionLanguage_Description {

@@ -123,6 +123,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextSummarizationFairseq), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Translation - Transformers(English, French, Romanian, German) Machine Translation 2
+            builder.AddCustomAttributes(typeof(TextTranslationMtTransformers2), new CategoryAttribute("4th-IR.Text Translation.Machine Translation.Transformers 2"));
+            builder.AddCustomAttributes(typeof(TextTranslationMtTransformers2), new DesignerAttribute(typeof(TextTranslationMtTransformers2Designer)));
+            builder.AddCustomAttributes(typeof(TextTranslationMtTransformers2), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

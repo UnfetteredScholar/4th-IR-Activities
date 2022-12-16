@@ -49,6 +49,7 @@
     <None Remove="Designers\TextSummarizationBBDesigner.xaml" />
     <None Remove="Designers\TextSummarizationBert2BertSmallDesigner.xaml" />
     <None Remove="Designers\TextSummarizationFairseqDesigner.xaml" />
+    <None Remove="Designers\TextTranslationMtTransformers2Designer.xaml" />
     <None Remove="Designers\TextTranslationTMDesigner.xaml" />
   </ItemGroup>
   <!-- Package Icon -->
@@ -151,6 +152,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\TextSummarizationFairseqDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\TextTranslationMtTransformers2Designer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\TextTranslationTMDesigner.xaml">

@@ -697,4 +697,44 @@
     <value>The summarized text.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextTranslationMtTransformers2_DisplayName" xml:space="preserve">
+    <value>Text Translation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextTranslationMtTransformers2_Description" xml:space="preserve">
+    <value>Performs text translation.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextTranslationMtTransformers2_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTranslationMtTransformers2_Text_Description" xml:space="preserve">
+    <value>The text to be translated.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTranslationMtTransformers2_TranslatedText_DisplayName" xml:space="preserve">
+    <value>Translated Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTranslationMtTransformers2_TranslatedText_Description" xml:space="preserve">
+    <value>The translated text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTranslationMtTransformers2_SourceLanguage_DisplayName" xml:space="preserve">
+    <value>Source Language</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTranslationMtTransformers2_SourceLanguage_Description" xml:space="preserve">
+    <value>The source language.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextTranslationMtTransformers2_ConversionLanguage_DisplayName" xml:space="preserve">
+    <value>Conversion Language</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextTranslationMtTransformers2_ConversionLanguage_Description" xml:space="preserve">
+    <value>The target language.</value>
+    <comment>property description</comment>
+  </data>
 </root>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TextGenerarion.Exceptions
+namespace TextGeneration.Exceptions
 {
     public class DialogueGenerationException : Exception
     {

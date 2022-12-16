@@ -1033,6 +1033,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generates text using the source text..
+        /// </summary>
+        public static string TextGenerationFairseq_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationFairseq_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Generation.
+        /// </summary>
+        public static string TextGenerationFairseq_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationFairseq_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The generated text..
+        /// </summary>
+        public static string TextGenerationFairseq_GeneratedText1_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationFairseq_GeneratedText1_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated Text 1.
+        /// </summary>
+        public static string TextGenerationFairseq_GeneratedText1_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationFairseq_GeneratedText1_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The generated text..
+        /// </summary>
+        public static string TextGenerationFairseq_GeneratedText2_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationFairseq_GeneratedText2_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated Text 2.
+        /// </summary>
+        public static string TextGenerationFairseq_GeneratedText2_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationFairseq_GeneratedText2_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The source text..
+        /// </summary>
+        public static string TextGenerationFairseq_Sentence_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationFairseq_Sentence_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string TextGenerationFairseq_Sentence_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationFairseq_Sentence_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Raw Text/ Full path to text file..
         /// </summary>
         public static string TextSummarizationBB_Article_Description {

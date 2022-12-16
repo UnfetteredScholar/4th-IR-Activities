@@ -737,4 +737,36 @@
     <value>The target language.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextGenerationFairseq_DisplayName" xml:space="preserve">
+    <value>Text Generation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextGenerationFairseq_Description" xml:space="preserve">
+    <value>Generates text using the source text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextGenerationFairseq_Sentence_DisplayName" xml:space="preserve">
+    <value>Sentence</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationFairseq_Sentence_Description" xml:space="preserve">
+    <value>The source text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextGenerationFairseq_GeneratedText1_DisplayName" xml:space="preserve">
+    <value>Generated Text 1</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationFairseq_GeneratedText1_Description" xml:space="preserve">
+    <value>The generated text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextGenerationFairseq_GeneratedText2_DisplayName" xml:space="preserve">
+    <value>Generated Text 2</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationFairseq_GeneratedText2_Description" xml:space="preserve">
+    <value>The generated text.</value>
+    <comment>property description</comment>
+  </data>
 </root>

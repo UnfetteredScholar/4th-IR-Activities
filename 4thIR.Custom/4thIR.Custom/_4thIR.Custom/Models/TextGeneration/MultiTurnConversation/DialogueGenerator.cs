@@ -4,9 +4,9 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Web;
-using TextGenerarion.Exceptions;
+using TextGeneration.Exceptions;
 
-namespace TextGenerarion.MultiTurnConversation
+namespace TextGeneration.MultiTurnConversation
 {
     public class DialogueGenerator
     {

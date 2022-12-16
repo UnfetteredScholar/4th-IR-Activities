@@ -129,6 +129,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextTranslationMtTransformers2), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Generation - Fairseq
+            builder.AddCustomAttributes(typeof(TextGenerationFairseq), new CategoryAttribute("4th-IR.Text Generation.Fairseq"));
+            builder.AddCustomAttributes(typeof(TextGenerationFairseq), new DesignerAttribute(typeof(TextGenerationFairseqDesigner)));
+            builder.AddCustomAttributes(typeof(TextGenerationFairseq), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

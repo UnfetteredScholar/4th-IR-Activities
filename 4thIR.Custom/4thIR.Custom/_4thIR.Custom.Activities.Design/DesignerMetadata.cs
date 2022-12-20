@@ -189,6 +189,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationViTBase), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - Google Vit Base (Fine-tuned)
+            builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBaseFineTuned), new CategoryAttribute("4th-IR.Image Classification.Google Vit Base.Fine Tuned"));
+            builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBaseFineTuned), new DesignerAttribute(typeof(ImageClassificationGoogleVitBaseFineTunedDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBaseFineTuned), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

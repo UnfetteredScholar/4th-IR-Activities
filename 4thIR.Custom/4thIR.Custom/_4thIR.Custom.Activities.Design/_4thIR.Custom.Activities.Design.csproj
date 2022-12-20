@@ -38,6 +38,7 @@
     <None Remove="Designers\ImageClassificationFacebookLevit128SDesigner.xaml" />
     <None Remove="Designers\ImageClassificationFDeitBaseDesigner.xaml" />
     <None Remove="Designers\ImageClassificationFDitBaseDesigner.xaml" />
+    <None Remove="Designers\ImageClassificationGoogleVitBaseDesigner.xaml" />
     <None Remove="Designers\ImageClassificationMSwinBaseDesigner.xaml" />
     <None Remove="Designers\ImageClassificationMXNETResnet50Designer.xaml" />
     <None Remove="Designers\ImageClassificationR50Designer.xaml" />
@@ -119,6 +120,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\ImageClassificationFDitBaseDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\ImageClassificationGoogleVitBaseDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

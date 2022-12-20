@@ -177,6 +177,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationMXNETResnet50), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - Google Vit Base
+            builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBase), new CategoryAttribute("4th-IR.Image Classification.Google Vit Base"));
+            builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBase), new DesignerAttribute(typeof(ImageClassificationGoogleVitBaseDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBase), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

@@ -16,11 +16,11 @@
         /// <summary>
         /// The label or description of the image
         /// </summary>
-        public string label { get; set; }
+        public string Label { get; set; }
 
         /// <summary>
         /// The probability or accuracy of the label
         /// </summary>
-        public double probability { get; set; }
+        public double Probability { get; set; }
     }
 }

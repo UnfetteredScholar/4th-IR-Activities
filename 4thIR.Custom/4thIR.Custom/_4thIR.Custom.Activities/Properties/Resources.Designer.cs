@@ -502,6 +502,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Perfroms image classification..
+        /// </summary>
+        public static string ImageClassificationMXNETResnet50_Description {
+            get {
+                return ResourceManager.GetString("ImageClassificationMXNETResnet50_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image Classification.
+        /// </summary>
+        public static string ImageClassificationMXNETResnet50_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassificationMXNETResnet50_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array of ClassificationLabel objects..
+        /// </summary>
+        public static string ImageClassificationMXNETResnet50_Labels_Description {
+            get {
+                return ResourceManager.GetString("ImageClassificationMXNETResnet50_Labels_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Labels.
+        /// </summary>
+        public static string ImageClassificationMXNETResnet50_Labels_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassificationMXNETResnet50_Labels_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to image file..
+        /// </summary>
+        public static string ImageClassificationMXNETResnet50_Path_Description {
+            get {
+                return ResourceManager.GetString("ImageClassificationMXNETResnet50_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string ImageClassificationMXNETResnet50_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("ImageClassificationMXNETResnet50_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Performs classification of images..
         /// </summary>
         public static string ImageClassificationR50_Description {

@@ -171,6 +171,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationFacebookLevit128S), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification (MXNET-Resnet50)
+            builder.AddCustomAttributes(typeof(ImageClassificationMXNETResnet50), new CategoryAttribute("4th-IR.Image Classification.MXNET.Resnet50"));
+            builder.AddCustomAttributes(typeof(ImageClassificationMXNETResnet50), new DesignerAttribute(typeof(ImageClassificationMXNETResnet50Designer)));
+            builder.AddCustomAttributes(typeof(ImageClassificationMXNETResnet50), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

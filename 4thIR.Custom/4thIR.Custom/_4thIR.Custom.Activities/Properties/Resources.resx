@@ -937,4 +937,28 @@
     <value>The result of the classification.</value>
     <comment>property description</comment>
   </data>
+  <data name="ImageClassificationMXNETResnet50_DisplayName" xml:space="preserve">
+    <value>Image Classification</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="ImageClassificationMXNETResnet50_Description" xml:space="preserve">
+    <value>Perfroms image classification.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="ImageClassificationMXNETResnet50_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ImageClassificationMXNETResnet50_Path_Description" xml:space="preserve">
+    <value>Full path to image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ImageClassificationMXNETResnet50_Labels_DisplayName" xml:space="preserve">
+    <value>Labels</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ImageClassificationMXNETResnet50_Labels_Description" xml:space="preserve">
+    <value>Array of ClassificationLabel objects.</value>
+    <comment>property description</comment>
+  </data>
 </root>

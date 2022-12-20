@@ -889,4 +889,28 @@
     <value>The accuracy of the label.</value>
     <comment>property description</comment>
   </data>
+  <data name="ImageClassificationEfficientNetB1_DisplayName" xml:space="preserve">
+    <value>Image Classification</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="ImageClassificationEfficientNetB1_Description" xml:space="preserve">
+    <value>Performs image classification.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="ImageClassificationEfficientNetB1_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ImageClassificationEfficientNetB1_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ImageClassificationEfficientNetB1_Label_DisplayName" xml:space="preserve">
+    <value>Label</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ImageClassificationEfficientNetB1_Label_Description" xml:space="preserve">
+    <value>Result of the classification.</value>
+    <comment>property description</comment>
+  </data>
 </root>

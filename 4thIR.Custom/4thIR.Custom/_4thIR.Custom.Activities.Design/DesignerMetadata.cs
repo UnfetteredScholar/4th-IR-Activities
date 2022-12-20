@@ -159,6 +159,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(SentimentAnalysisDeBerta), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - EfficientNetB1
+            builder.AddCustomAttributes(typeof(ImageClassificationEfficientNetB1), new CategoryAttribute("4th-IR.Image Classification.EfficientNetB1"));
+            builder.AddCustomAttributes(typeof(ImageClassificationEfficientNetB1), new DesignerAttribute(typeof(ImageClassificationEfficientNetB1Designer)));
+            builder.AddCustomAttributes(typeof(ImageClassificationEfficientNetB1), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

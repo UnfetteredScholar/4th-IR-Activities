@@ -183,6 +183,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBase), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - ViT-Base
+            builder.AddCustomAttributes(typeof(ImageClassificationViTBase), new CategoryAttribute("4th-IR.Image Classification.Vit Base"));
+            builder.AddCustomAttributes(typeof(ImageClassificationViTBase), new DesignerAttribute(typeof(ImageClassificationViTBaseDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationViTBase), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

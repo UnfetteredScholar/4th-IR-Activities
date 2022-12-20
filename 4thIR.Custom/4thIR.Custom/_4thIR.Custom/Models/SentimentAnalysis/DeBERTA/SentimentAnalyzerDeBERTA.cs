@@ -2,7 +2,7 @@
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
-using System.Net.Http.Headers;
+using System.Net.Http.Json;
 using Newtonsoft.Json;
 using SentimentAnalysis.Exceptions;
 
@@ -10,17 +10,6 @@ namespace SentimentAnalysis.DeBERTA
 {
     public class SentimentAnalyzerDeBERTA
     {
-        private class RequestContent
-        {
-            public RequestContent(string sentence)
-            {
-                this.sentence = sentence;
-            }
-
-
-            public string sentence { get; set; }
-        }
-
         private class ResponseContent
         {
             public ResponseContent()
@@ -32,25 +21,27 @@ namespace SentimentAnalysis.DeBERTA
             public double score { get; set; }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
-        public SentimentAnalyzerDeBERTA()
+        public SentimentAnalyzerDeBERTA(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://text-sentiment-analysis-deberta.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://text-sentiment-analysis-deberta.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public async Task<Tuple<string, double>> Analyze(string sentence)
         {
-            RequestContent requestContent = new RequestContent(sentence);
-            StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
-
-            string resquestUri = "/api/v1/sentence";
-            var response = await client.PostAsync(resquestUri, stringContent);
-
+            HttpResponseMessage response = new HttpResponseMessage();
             try
             {
+                var requestContent = new { sentence = sentence };
+                StringContent stringContent = new StringContent(JsonConvert.SerializeObject(requestContent), Encoding.UTF8, "application/json");
+
+                string resquestUri = "https://text-sentiment-analysis-deberta.ai-sandbox.4th-ir.io/api/v1/sentence";
+                response = await client.PostAsync(resquestUri, stringContent);
+
                 response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();

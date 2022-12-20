@@ -1087,6 +1087,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Performs sentiment analysis of text..
+        /// </summary>
+        public static string SentimentAnalysisDeBerta_Description {
+            get {
+                return ResourceManager.GetString("SentimentAnalysisDeBerta_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentiment Analysis.
+        /// </summary>
+        public static string SentimentAnalysisDeBerta_DisplayName {
+            get {
+                return ResourceManager.GetString("SentimentAnalysisDeBerta_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The result of the analysis..
+        /// </summary>
+        public static string SentimentAnalysisDeBerta_Label_Description {
+            get {
+                return ResourceManager.GetString("SentimentAnalysisDeBerta_Label_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Label.
+        /// </summary>
+        public static string SentimentAnalysisDeBerta_Label_DisplayName {
+            get {
+                return ResourceManager.GetString("SentimentAnalysisDeBerta_Label_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The accuracy of the label..
+        /// </summary>
+        public static string SentimentAnalysisDeBerta_Score_Description {
+            get {
+                return ResourceManager.GetString("SentimentAnalysisDeBerta_Score_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        public static string SentimentAnalysisDeBerta_Score_DisplayName {
+            get {
+                return ResourceManager.GetString("SentimentAnalysisDeBerta_Score_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text to be analyzed..
+        /// </summary>
+        public static string SentimentAnalysisDeBerta_Text_Description {
+            get {
+                return ResourceManager.GetString("SentimentAnalysisDeBerta_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string SentimentAnalysisDeBerta_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("SentimentAnalysisDeBerta_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Perfroms classification of text..
         /// </summary>
         public static string TextClassificationZSR_Description {

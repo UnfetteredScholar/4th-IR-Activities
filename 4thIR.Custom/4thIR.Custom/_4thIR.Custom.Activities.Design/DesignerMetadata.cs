@@ -153,6 +153,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextGenerationTransformers), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Sentiment Analysis - DeBerta
+            builder.AddCustomAttributes(typeof(SentimentAnalysisDeBerta), new CategoryAttribute("4th-IR.Sentiment Analysis.DeBerta"));
+            builder.AddCustomAttributes(typeof(SentimentAnalysisDeBerta), new DesignerAttribute(typeof(SentimentAnalysisDeBertaDesigner)));
+            builder.AddCustomAttributes(typeof(SentimentAnalysisDeBerta), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

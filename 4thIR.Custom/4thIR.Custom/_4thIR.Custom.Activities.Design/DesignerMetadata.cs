@@ -165,6 +165,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationEfficientNetB1), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Image Classification - Facebook Levit 128S
+            builder.AddCustomAttributes(typeof(ImageClassificationFacebookLevit128S), new CategoryAttribute("4th-IR.Image Classification.Facebook.Levit 128S"));
+            builder.AddCustomAttributes(typeof(ImageClassificationFacebookLevit128S), new DesignerAttribute(typeof(ImageClassificationFacebookLevit128SDesigner)));
+            builder.AddCustomAttributes(typeof(ImageClassificationFacebookLevit128S), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

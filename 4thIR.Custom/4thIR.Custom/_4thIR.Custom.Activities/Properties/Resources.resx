@@ -825,4 +825,36 @@
     <value>The input type.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextGenerationTransformers_DisplayName" xml:space="preserve">
+    <value>Text Generation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextGenerationTransformers_Description" xml:space="preserve">
+    <value>Generates text using sample input.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextGenerationTransformers_SampleText_DisplayName" xml:space="preserve">
+    <value>Sample Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationTransformers_SampleText_Description" xml:space="preserve">
+    <value>The sample text or sentence.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextGenerationTransformers_GeneratedText1_DisplayName" xml:space="preserve">
+    <value>Generated Text 1</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationTransformers_GeneratedText1_Description" xml:space="preserve">
+    <value>The generated text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextGenerationTransformers_GeneratedText2_DisplayName" xml:space="preserve">
+    <value>Generated Text 2</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationTransformers_GeneratedText2_Description" xml:space="preserve">
+    <value>The generated text.</value>
+    <comment>property description</comment>
+  </data>
 </root>

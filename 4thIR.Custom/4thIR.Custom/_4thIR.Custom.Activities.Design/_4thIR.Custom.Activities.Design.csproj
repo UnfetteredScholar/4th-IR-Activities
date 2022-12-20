@@ -49,6 +49,7 @@
     <None Remove="Designers\QuestionAnsweringRBS2Designer.xaml" />
     <None Remove="Designers\TextClassificationZSRDesigner.xaml" />
     <None Remove="Designers\TextGenerationFairseqDesigner.xaml" />
+    <None Remove="Designers\TextGenerationTransformersDesigner.xaml" />
     <None Remove="Designers\TextSummarizationBBDesigner.xaml" />
     <None Remove="Designers\TextSummarizationBert2BertSmallDesigner.xaml" />
     <None Remove="Designers\TextSummarizationFairseqDesigner.xaml" />
@@ -155,6 +156,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\TextGenerationFairseqDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\TextGenerationTransformersDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

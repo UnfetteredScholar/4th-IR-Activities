@@ -147,6 +147,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(NameEntityRecognitionBERT), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Generation - Transformers
+            builder.AddCustomAttributes(typeof(TextGenerationTransformers), new CategoryAttribute("4th-IR.Text Generation.Transformers"));
+            builder.AddCustomAttributes(typeof(TextGenerationTransformers), new DesignerAttribute(typeof(TextGenerationTransformersDesigner)));
+            builder.AddCustomAttributes(typeof(TextGenerationTransformers), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

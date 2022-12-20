@@ -1231,6 +1231,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generates text using sample input..
+        /// </summary>
+        public static string TextGenerationTransformers_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationTransformers_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Generation.
+        /// </summary>
+        public static string TextGenerationTransformers_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationTransformers_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The generated text..
+        /// </summary>
+        public static string TextGenerationTransformers_GeneratedText1_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationTransformers_GeneratedText1_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated Text 1.
+        /// </summary>
+        public static string TextGenerationTransformers_GeneratedText1_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationTransformers_GeneratedText1_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The generated text..
+        /// </summary>
+        public static string TextGenerationTransformers_GeneratedText2_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationTransformers_GeneratedText2_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated Text 2.
+        /// </summary>
+        public static string TextGenerationTransformers_GeneratedText2_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationTransformers_GeneratedText2_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The sample text or sentence..
+        /// </summary>
+        public static string TextGenerationTransformers_SampleText_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationTransformers_SampleText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sample Text.
+        /// </summary>
+        public static string TextGenerationTransformers_SampleText_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationTransformers_SampleText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Raw Text/ Full path to text file..
         /// </summary>
         public static string TextSummarizationBB_Article_Description {

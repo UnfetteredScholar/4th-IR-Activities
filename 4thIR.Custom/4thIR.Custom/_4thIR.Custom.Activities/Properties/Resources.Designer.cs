@@ -1233,6 +1233,60 @@ namespace _4thIR.Custom.Activities.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Detects objects in images..
         /// </summary>
+        public static string ObjectDetectionDetectron2_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionDetectron2_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contains information about the detected object..
+        /// </summary>
+        public static string ObjectDetectionDetectron2_DetectedObject_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionDetectron2_DetectedObject_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detected Object.
+        /// </summary>
+        public static string ObjectDetectionDetectron2_DetectedObject_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionDetectron2_DetectedObject_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object Detection.
+        /// </summary>
+        public static string ObjectDetectionDetectron2_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionDetectron2_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string ObjectDetectionDetectron2_Path_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionDetectron2_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string ObjectDetectionDetectron2_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionDetectron2_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detects objects in images..
+        /// </summary>
         public static string ObjectDetectionED_Description {
             get {
                 return ResourceManager.GetString("ObjectDetectionED_Description", resourceCulture);

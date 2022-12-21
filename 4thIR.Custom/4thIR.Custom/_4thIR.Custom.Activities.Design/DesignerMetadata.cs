@@ -213,6 +213,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(HandwrittenTextRecognitionOpenVino), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Object Detection Detectron2
+            builder.AddCustomAttributes(typeof(ObjectDetectionDetectron2), new CategoryAttribute("4th-IR.Object Detection.Detectron 2"));
+            builder.AddCustomAttributes(typeof(ObjectDetectionDetectron2), new DesignerAttribute(typeof(ObjectDetectionDetectron2Designer)));
+            builder.AddCustomAttributes(typeof(ObjectDetectionDetectron2), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

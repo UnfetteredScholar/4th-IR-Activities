@@ -1129,4 +1129,28 @@
     <value>The extracted text.</value>
     <comment>property description</comment>
   </data>
+  <data name="ObjectDetectionDetectron2_DisplayName" xml:space="preserve">
+    <value>Object Detection</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="ObjectDetectionDetectron2_Description" xml:space="preserve">
+    <value>Detects objects in images.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="ObjectDetectionDetectron2_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionDetectron2_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ObjectDetectionDetectron2_DetectedObject_DisplayName" xml:space="preserve">
+    <value>Detected Object</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionDetectron2_DetectedObject_Description" xml:space="preserve">
+    <value>Contains information about the detected object.</value>
+    <comment>property description</comment>
+  </data>
 </root>

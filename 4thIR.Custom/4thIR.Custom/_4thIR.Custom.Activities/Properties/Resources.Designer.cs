@@ -268,6 +268,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Extracts written text from images..
+        /// </summary>
+        public static string HandwrittenTextRecognitionOpenVino_Description {
+            get {
+                return ResourceManager.GetString("HandwrittenTextRecognitionOpenVino_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Handwritten Text Recognition.
+        /// </summary>
+        public static string HandwrittenTextRecognitionOpenVino_DisplayName {
+            get {
+                return ResourceManager.GetString("HandwrittenTextRecognitionOpenVino_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The language of the text..
+        /// </summary>
+        public static string HandwrittenTextRecognitionOpenVino_Language_Description {
+            get {
+                return ResourceManager.GetString("HandwrittenTextRecognitionOpenVino_Language_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string HandwrittenTextRecognitionOpenVino_Language_DisplayName {
+            get {
+                return ResourceManager.GetString("HandwrittenTextRecognitionOpenVino_Language_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string HandwrittenTextRecognitionOpenVino_Path_Description {
+            get {
+                return ResourceManager.GetString("HandwrittenTextRecognitionOpenVino_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string HandwrittenTextRecognitionOpenVino_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("HandwrittenTextRecognitionOpenVino_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The extracted text..
+        /// </summary>
+        public static string HandwrittenTextRecognitionOpenVino_Text_Description {
+            get {
+                return ResourceManager.GetString("HandwrittenTextRecognitionOpenVino_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string HandwrittenTextRecognitionOpenVino_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("HandwrittenTextRecognitionOpenVino_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Performs classification of images..
         /// </summary>
         public static string ImageClassificationCV_Description {

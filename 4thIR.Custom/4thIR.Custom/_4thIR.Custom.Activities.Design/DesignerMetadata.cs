@@ -207,6 +207,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(FormulaRecognitionOpenVino), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Handwritten Recognition for Engish, Japanese and Chinese Openvino
+            builder.AddCustomAttributes(typeof(HandwrittenTextRecognitionOpenVino), new CategoryAttribute("4th-IR.Handwritten Recognition.Open Vino"));
+            builder.AddCustomAttributes(typeof(HandwrittenTextRecognitionOpenVino), new DesignerAttribute(typeof(HandwrittenTextRecognitionOpenVinoDesigner)));
+            builder.AddCustomAttributes(typeof(HandwrittenTextRecognitionOpenVino), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

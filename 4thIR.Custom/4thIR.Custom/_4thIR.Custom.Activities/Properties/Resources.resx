@@ -1097,4 +1097,36 @@
     <value>The accuracy of the extracted formula.</value>
     <comment>property description</comment>
   </data>
+  <data name="HandwrittenTextRecognitionOpenVino_DisplayName" xml:space="preserve">
+    <value>Handwritten Text Recognition</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="HandwrittenTextRecognitionOpenVino_Description" xml:space="preserve">
+    <value>Extracts written text from images.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="HandwrittenTextRecognitionOpenVino_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="HandwrittenTextRecognitionOpenVino_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="HandwrittenTextRecognitionOpenVino_Language_DisplayName" xml:space="preserve">
+    <value>Language</value>
+    <comment>property name</comment>
+  </data>
+  <data name="HandwrittenTextRecognitionOpenVino_Language_Description" xml:space="preserve">
+    <value>The language of the text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="HandwrittenTextRecognitionOpenVino_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="HandwrittenTextRecognitionOpenVino_Text_Description" xml:space="preserve">
+    <value>The extracted text.</value>
+    <comment>property description</comment>
+  </data>
 </root>

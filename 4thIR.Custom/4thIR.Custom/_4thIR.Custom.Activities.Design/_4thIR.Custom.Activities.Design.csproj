@@ -34,6 +34,7 @@
   <ItemGroup>
     <None Remove="Designers\DocumentClassificationKYCDesigner.xaml" />
     <None Remove="Designers\FormulaRecognitionOpenVinoDesigner.xaml" />
+    <None Remove="Designers\HandwrittenTextRecognitionOpenVinoDesigner.xaml" />
     <None Remove="Designers\ImageClassificationCVDesigner.xaml" />
     <None Remove="Designers\ImageClassificationEfficientNetB1Designer.xaml" />
     <None Remove="Designers\ImageClassificationFacebookLevit128SDesigner.xaml" />
@@ -109,6 +110,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\FormulaRecognitionOpenVinoDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\HandwrittenTextRecognitionOpenVinoDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

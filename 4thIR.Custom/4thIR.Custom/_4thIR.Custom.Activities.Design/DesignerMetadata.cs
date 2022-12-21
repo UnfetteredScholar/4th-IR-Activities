@@ -195,6 +195,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBaseFineTuned), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Object Detection-FasterRCNN Resnet50fpn
+            builder.AddCustomAttributes(typeof(ObjectDetectionFasterRCNNResnet50fpn), new CategoryAttribute("4th-IR.Object Detection.Faster RCNN.Resnet 50fpn"));
+            builder.AddCustomAttributes(typeof(ObjectDetectionFasterRCNNResnet50fpn), new DesignerAttribute(typeof(ObjectDetectionFasterRCNNResnet50fpnDesigner)));
+            builder.AddCustomAttributes(typeof(ObjectDetectionFasterRCNNResnet50fpn), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

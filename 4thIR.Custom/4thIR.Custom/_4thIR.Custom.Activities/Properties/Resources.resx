@@ -1033,4 +1033,28 @@
     <value>Result of the classification.</value>
     <comment>property description</comment>
   </data>
+  <data name="ObjectDetectionFasterRCNNResnet50fpn_DisplayName" xml:space="preserve">
+    <value>Object Detection</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="ObjectDetectionFasterRCNNResnet50fpn_Description" xml:space="preserve">
+    <value>Detects objects in images.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="ObjectDetectionFasterRCNNResnet50fpn_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionFasterRCNNResnet50fpn_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ObjectDetectionFasterRCNNResnet50fpn_ObjectData_DisplayName" xml:space="preserve">
+    <value>Object Data</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionFasterRCNNResnet50fpn_ObjectData_Description" xml:space="preserve">
+    <value>Contains information about the detected object.</value>
+    <comment>property description</comment>
+  </data>
 </root>

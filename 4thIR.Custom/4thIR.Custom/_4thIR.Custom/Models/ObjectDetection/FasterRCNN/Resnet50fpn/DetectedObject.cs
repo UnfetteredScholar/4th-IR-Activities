@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ObjectDetection.FasterRCNN.Resnet50fpn
+﻿namespace ObjectDetection.FasterRCNN.Resnet50fpn
 {
     /// <summary>
     /// Stores information about detected objects

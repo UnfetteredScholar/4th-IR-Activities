@@ -25,39 +25,39 @@ namespace ObjectDetection.FasterRCNN.Resnet50fpn
             public DetectedObject detected_objects { get; set; }
         }
 
-        private static readonly HttpClient client = new HttpClient();
+        private HttpClient client = null;
 
         /// <summary>
         /// Creates an instance of the ObjectDetectorFRC class
         /// </summary>
-        public ObjectDetectorFRC()
+        public ObjectDetectorFRC(HttpClient httpClient)
         {
-            client.BaseAddress = new Uri("https://image-detection-fasterrcnn-resnet50fpn.ai-sandbox.4th-ir.io");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = httpClient;
+            //client.BaseAddress = new Uri("https://image-detection-fasterrcnn-resnet50fpn.ai-sandbox.4th-ir.io");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
         }
 
         public async Task<DetectedObject> DetectObjects(string path)
         {
-            path = @"" + path;
-
-
-            using (var formData = new MultipartFormDataContent())
+            HttpResponseMessage response = new HttpResponseMessage();
+            try
             {
-                StreamContent imageStream = new StreamContent(File.OpenRead(path));
-                imageStream.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
-
-                int index = path.LastIndexOf('\\') + 1;
-                string fileName = path.Substring(index);
-
-                formData.Add(imageStream, "file", fileName);
-
-                string requestUri = "/api/v1/classify";
-                var response = await client.PostAsync(requestUri, formData);
-
-                try
+                path = @"" + path;
+                using (var formData = new MultipartFormDataContent())
                 {
+                    StreamContent imageStream = new StreamContent(File.OpenRead(path));
+                    imageStream.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
+
+                    string fileName = Path.GetFileName(path);
+
+                    formData.Add(imageStream, "file", fileName);
+
+                    string requestUri = "https://image-detection-fasterrcnn-resnet50fpn.ai-sandbox.4th-ir.io/api/v1/classify";
+                    response = await client.PostAsync(requestUri, formData);
+
+
                     response.EnsureSuccessStatusCode();
 
                     string r = await response.Content.ReadAsStringAsync();
@@ -72,25 +72,25 @@ namespace ObjectDetection.FasterRCNN.Resnet50fpn
 
                     return responseContent;
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "Invalid image format";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Unable to complete operation";
-                    }
-
-                    throw new ObjectDetectionException(message, ex);
+                    message = "Invalid image format";
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Error: Unable to complete operation";
+                }
+
+                throw new ObjectDetectionException(message, ex);
             }
         }
     }

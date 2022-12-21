@@ -1159,6 +1159,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detects objects in images..
+        /// </summary>
+        public static string ObjectDetectionFasterRCNNResnet50fpn_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionFasterRCNNResnet50fpn_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object Detection.
+        /// </summary>
+        public static string ObjectDetectionFasterRCNNResnet50fpn_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionFasterRCNNResnet50fpn_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contains information about the detected object..
+        /// </summary>
+        public static string ObjectDetectionFasterRCNNResnet50fpn_ObjectData_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionFasterRCNNResnet50fpn_ObjectData_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object Data.
+        /// </summary>
+        public static string ObjectDetectionFasterRCNNResnet50fpn_ObjectData_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionFasterRCNNResnet50fpn_ObjectData_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string ObjectDetectionFasterRCNNResnet50fpn_Path_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionFasterRCNNResnet50fpn_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string ObjectDetectionFasterRCNNResnet50fpn_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionFasterRCNNResnet50fpn_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Options.
         /// </summary>
         public static string Options_Category {

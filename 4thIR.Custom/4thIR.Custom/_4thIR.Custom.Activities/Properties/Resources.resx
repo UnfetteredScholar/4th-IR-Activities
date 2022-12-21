@@ -1177,4 +1177,28 @@
     <value>Full path of the storage folder.</value>
     <comment>property description</comment>
   </data>
+  <data name="PoseEstimationMmPose_DisplayName" xml:space="preserve">
+    <value>Pose Estimation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="PoseEstimationMmPose_Description" xml:space="preserve">
+    <value>Detects human figures in images.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="PoseEstimationMmPose_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PoseEstimationMmPose_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PoseEstimationMmPose_DetectedFigures_DisplayName" xml:space="preserve">
+    <value>Detected Figures</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PoseEstimationMmPose_DetectedFigures_Description" xml:space="preserve">
+    <value>Information about the detected figures.</value>
+    <comment>property description</comment>
+  </data>
 </root>

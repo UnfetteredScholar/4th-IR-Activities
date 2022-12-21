@@ -225,6 +225,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ObjectDetectionYolov4), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Pose Estimation mmPose
+            builder.AddCustomAttributes(typeof(PoseEstimationMmPose), new CategoryAttribute("4th-IR.Pose Estimation.mmPose"));
+            builder.AddCustomAttributes(typeof(PoseEstimationMmPose), new DesignerAttribute(typeof(PoseEstimationMmPoseDesigner)));
+            builder.AddCustomAttributes(typeof(PoseEstimationMmPose), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

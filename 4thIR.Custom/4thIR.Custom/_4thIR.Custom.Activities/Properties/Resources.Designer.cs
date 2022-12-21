@@ -1609,6 +1609,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detects human figures in images..
+        /// </summary>
+        public static string PoseEstimationMmPose_Description {
+            get {
+                return ResourceManager.GetString("PoseEstimationMmPose_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information about the detected figures..
+        /// </summary>
+        public static string PoseEstimationMmPose_DetectedFigures_Description {
+            get {
+                return ResourceManager.GetString("PoseEstimationMmPose_DetectedFigures_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detected Figures.
+        /// </summary>
+        public static string PoseEstimationMmPose_DetectedFigures_DisplayName {
+            get {
+                return ResourceManager.GetString("PoseEstimationMmPose_DetectedFigures_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pose Estimation.
+        /// </summary>
+        public static string PoseEstimationMmPose_DisplayName {
+            get {
+                return ResourceManager.GetString("PoseEstimationMmPose_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string PoseEstimationMmPose_Path_Description {
+            get {
+                return ResourceManager.GetString("PoseEstimationMmPose_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string PoseEstimationMmPose_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("PoseEstimationMmPose_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Process Scope for executing 4th-IR Activities..
         /// </summary>
         public static string ProcessScope_Description {

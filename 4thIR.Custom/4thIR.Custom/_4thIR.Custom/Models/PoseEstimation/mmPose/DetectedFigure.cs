@@ -6,12 +6,9 @@ namespace PoseEstimation.mmPose
     /// </summary>
     public class DetectedFigure
     {
-        public DetectedFigure(double[][] keypoints, double score, double area)
+        public DetectedFigure()
         {
-            Keypoints = keypoints;
-            Score = score;
-            Area = area;
-
+          
         }
 
         public double[][] Keypoints { get; set; }

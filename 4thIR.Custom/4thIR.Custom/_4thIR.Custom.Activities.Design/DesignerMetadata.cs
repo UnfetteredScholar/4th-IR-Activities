@@ -219,6 +219,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ObjectDetectionDetectron2), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Object Detection - Yolov4
+            builder.AddCustomAttributes(typeof(ObjectDetectionYolov4), new CategoryAttribute("4th-IR.Object Detection.Yolov 4"));
+            builder.AddCustomAttributes(typeof(ObjectDetectionYolov4), new DesignerAttribute(typeof(ObjectDetectionYolov4Designer)));
+            builder.AddCustomAttributes(typeof(ObjectDetectionYolov4), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

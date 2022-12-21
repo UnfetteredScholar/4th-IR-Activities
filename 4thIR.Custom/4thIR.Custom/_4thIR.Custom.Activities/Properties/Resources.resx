@@ -1153,4 +1153,28 @@
     <value>Contains information about the detected object.</value>
     <comment>property description</comment>
   </data>
+  <data name="ObjectDetectionYolov4_DisplayName" xml:space="preserve">
+    <value>Object Detection</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="ObjectDetectionYolov4_Description" xml:space="preserve">
+    <value>Detects objects in images and creates an image outlining the detected object.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="ObjectDetectionYolov4_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionYolov4_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ObjectDetectionYolov4_StorageLocation_DisplayName" xml:space="preserve">
+    <value>Storage Location</value>
+    <comment>property name</comment>
+  </data>
+  <data name="ObjectDetectionYolov4_StorageLocation_Description" xml:space="preserve">
+    <value>Full path of the storage folder.</value>
+    <comment>property description</comment>
+  </data>
 </root>

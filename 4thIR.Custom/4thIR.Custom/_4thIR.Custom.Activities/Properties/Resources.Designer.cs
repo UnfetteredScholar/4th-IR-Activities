@@ -1429,6 +1429,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detects objects in images and creates an image outlining the detected object..
+        /// </summary>
+        public static string ObjectDetectionYolov4_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionYolov4_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object Detection.
+        /// </summary>
+        public static string ObjectDetectionYolov4_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionYolov4_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string ObjectDetectionYolov4_Path_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionYolov4_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string ObjectDetectionYolov4_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionYolov4_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path of the storage folder..
+        /// </summary>
+        public static string ObjectDetectionYolov4_StorageLocation_Description {
+            get {
+                return ResourceManager.GetString("ObjectDetectionYolov4_StorageLocation_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Storage Location.
+        /// </summary>
+        public static string ObjectDetectionYolov4_StorageLocation_DisplayName {
+            get {
+                return ResourceManager.GetString("ObjectDetectionYolov4_StorageLocation_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Options.
         /// </summary>
         public static string Options_Category {

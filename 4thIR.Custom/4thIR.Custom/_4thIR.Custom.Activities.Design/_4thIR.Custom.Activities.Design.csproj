@@ -54,6 +54,7 @@
     <None Remove="Designers\ObjectDetectionDetectron2Designer.xaml" />
     <None Remove="Designers\ObjectDetectionEDDesigner.xaml" />
     <None Remove="Designers\ObjectDetectionFasterRCNNResnet50fpnDesigner.xaml" />
+    <None Remove="Designers\ObjectDetectionYolov4Designer.xaml" />
     <None Remove="Designers\PartOfSpeechIdentificationFlairDesigner.xaml" />
     <None Remove="Designers\ProcessScopeDesigner.xaml" />
     <None Remove="Designers\QuestionAnsweringRBS2Designer.xaml" />
@@ -191,6 +192,10 @@
     </Page>
     <Page Include="Designers\ObjectDetectionFasterRCNNResnet50fpnDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\ObjectDetectionYolov4Designer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\PartOfSpeechIdentificationFlairDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

@@ -44,7 +44,7 @@ namespace ObjectDetection.Yolov4
                     if (Directory.Exists(storageLocation))
                         name = storageLocation + "\\DetectedObject_" + fileName;
                     else
-                        name = "DetectedObject_"+fileName;
+                        name = Path.GetFullPath(path) + "\\DetectedObject_" + fileName;
 
 
                     File.WriteAllBytes(name, responseContent);

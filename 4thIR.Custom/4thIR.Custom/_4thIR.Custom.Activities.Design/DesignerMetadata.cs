@@ -231,6 +231,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(PoseEstimationMmPose), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Pose Estimation Resnet 101
+            builder.AddCustomAttributes(typeof(PoseEstimationResnet101), new CategoryAttribute("4th-IR.Pose Estimation.Resnet 101"));
+            builder.AddCustomAttributes(typeof(PoseEstimationResnet101), new DesignerAttribute(typeof(PoseEstimationResnet101Designer)));
+            builder.AddCustomAttributes(typeof(PoseEstimationResnet101), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

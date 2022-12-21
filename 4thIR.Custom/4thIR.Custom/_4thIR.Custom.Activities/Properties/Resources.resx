@@ -1201,4 +1201,28 @@
     <value>Information about the detected figures.</value>
     <comment>property description</comment>
   </data>
+  <data name="PoseEstimationResnet101_DisplayName" xml:space="preserve">
+    <value>Pose Estimation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="PoseEstimationResnet101_Description" xml:space="preserve">
+    <value>Detects human figures in images and creates an image with the detected figures outlined.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="PoseEstimationResnet101_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PoseEstimationResnet101_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PoseEstimationResnet101_StorageLocation_DisplayName" xml:space="preserve">
+    <value>Storage Location</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PoseEstimationResnet101_StorageLocation_Description" xml:space="preserve">
+    <value>Full path to the storage folder.</value>
+    <comment>property description</comment>
+  </data>
 </root>

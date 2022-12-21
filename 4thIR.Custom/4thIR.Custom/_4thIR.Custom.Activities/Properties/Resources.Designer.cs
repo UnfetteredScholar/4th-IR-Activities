@@ -1663,6 +1663,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detects human figures in images and creates an image with the detected figures outlined..
+        /// </summary>
+        public static string PoseEstimationResnet101_Description {
+            get {
+                return ResourceManager.GetString("PoseEstimationResnet101_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pose Estimation.
+        /// </summary>
+        public static string PoseEstimationResnet101_DisplayName {
+            get {
+                return ResourceManager.GetString("PoseEstimationResnet101_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string PoseEstimationResnet101_Path_Description {
+            get {
+                return ResourceManager.GetString("PoseEstimationResnet101_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string PoseEstimationResnet101_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("PoseEstimationResnet101_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the storage folder..
+        /// </summary>
+        public static string PoseEstimationResnet101_StorageLocation_Description {
+            get {
+                return ResourceManager.GetString("PoseEstimationResnet101_StorageLocation_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Storage Location.
+        /// </summary>
+        public static string PoseEstimationResnet101_StorageLocation_DisplayName {
+            get {
+                return ResourceManager.GetString("PoseEstimationResnet101_StorageLocation_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Process Scope for executing 4th-IR Activities..
         /// </summary>
         public static string ProcessScope_Description {

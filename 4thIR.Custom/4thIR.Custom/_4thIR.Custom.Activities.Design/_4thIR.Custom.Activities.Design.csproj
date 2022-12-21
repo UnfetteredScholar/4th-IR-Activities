@@ -57,6 +57,7 @@
     <None Remove="Designers\ObjectDetectionYolov4Designer.xaml" />
     <None Remove="Designers\PartOfSpeechIdentificationFlairDesigner.xaml" />
     <None Remove="Designers\PoseEstimationMmPoseDesigner.xaml" />
+    <None Remove="Designers\PoseEstimationResnet101Designer.xaml" />
     <None Remove="Designers\ProcessScopeDesigner.xaml" />
     <None Remove="Designers\QuestionAnsweringRBS2Designer.xaml" />
     <None Remove="Designers\SentimentAnalysisDeBertaDesigner.xaml" />
@@ -202,6 +203,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\PoseEstimationMmPoseDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\PoseEstimationResnet101Designer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

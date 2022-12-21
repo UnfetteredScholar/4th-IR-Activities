@@ -201,6 +201,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ObjectDetectionFasterRCNNResnet50fpn), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Formula Recognition OpenVino
+            builder.AddCustomAttributes(typeof(FormulaRecognitionOpenVino), new CategoryAttribute("4th-IR.Formula Recognition.OpenVino"));
+            builder.AddCustomAttributes(typeof(FormulaRecognitionOpenVino), new DesignerAttribute(typeof(FormulaRecognitionOpenVinoDesigner)));
+            builder.AddCustomAttributes(typeof(FormulaRecognitionOpenVino), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

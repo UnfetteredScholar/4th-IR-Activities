@@ -178,6 +178,96 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Extracts formula&apos;s from images..
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_Description {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Formula Recognition.
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_DisplayName {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The extracted formula..
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_Formula_Description {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_Formula_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Formula.
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_Formula_DisplayName {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_Formula_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The formula type..
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_FormulaType_Description {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_FormulaType_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Formula Type.
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_FormulaType_DisplayName {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_FormulaType_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_Path_Description {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The accuracy of the extracted formula..
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_Score_Description {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_Score_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        public static string FormulaRecognitionOpenVino_Score_DisplayName {
+            get {
+                return ResourceManager.GetString("FormulaRecognitionOpenVino_Score_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Performs classification of images..
         /// </summary>
         public static string ImageClassificationCV_Description {

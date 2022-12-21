@@ -1057,4 +1057,44 @@
     <value>Contains information about the detected object.</value>
     <comment>property description</comment>
   </data>
+  <data name="FormulaRecognitionOpenVino_DisplayName" xml:space="preserve">
+    <value>Formula Recognition</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="FormulaRecognitionOpenVino_Description" xml:space="preserve">
+    <value>Extracts formula's from images.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="FormulaRecognitionOpenVino_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="FormulaRecognitionOpenVino_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="FormulaRecognitionOpenVino_FormulaType_DisplayName" xml:space="preserve">
+    <value>Formula Type</value>
+    <comment>property name</comment>
+  </data>
+  <data name="FormulaRecognitionOpenVino_FormulaType_Description" xml:space="preserve">
+    <value>The formula type.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="FormulaRecognitionOpenVino_Formula_DisplayName" xml:space="preserve">
+    <value>Formula</value>
+    <comment>property name</comment>
+  </data>
+  <data name="FormulaRecognitionOpenVino_Formula_Description" xml:space="preserve">
+    <value>The extracted formula.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="FormulaRecognitionOpenVino_Score_DisplayName" xml:space="preserve">
+    <value>Score</value>
+    <comment>property name</comment>
+  </data>
+  <data name="FormulaRecognitionOpenVino_Score_Description" xml:space="preserve">
+    <value>The accuracy of the extracted formula.</value>
+    <comment>property description</comment>
+  </data>
 </root>

@@ -45,8 +45,7 @@ namespace TextSummarization.Bart.large
         {
             var requestObj = new { sentence = UserSentence };
 
-            using (myClient)
-            {
+
                 using (var request = new HttpRequestMessage(new HttpMethod("POST"), ApiUrl))
                 {
                     request.Headers.TryAddWithoutValidation("accept", AppType);
@@ -87,7 +86,7 @@ namespace TextSummarization.Bart.large
 
                     }
                 }
-            }
+            
         }
     }
 }

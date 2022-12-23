@@ -112,7 +112,7 @@ namespace _4thIR.Custom.Activities.Design
             #endregion
 
             #region Text Summarization - Bart Large
-            builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), new CategoryAttribute("4th-IR.Text Summarization.Bart.Larhe"));
+            builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), new CategoryAttribute("4th-IR.Text Summarization.Bart.large"));
             builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), new DesignerAttribute(typeof(TextSummarizerBartLargeDesigner)));
             builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), new HelpKeywordAttribute(""));
             #endregion

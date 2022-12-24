@@ -1879,6 +1879,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Summarizes input text.
+        /// </summary>
+        public static string TextSummarizerBartLarge_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizerBartLarge_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Summarization.
+        /// </summary>
+        public static string TextSummarizerBartLarge_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizerBartLarge_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to summarized text.
+        /// </summary>
+        public static string TextSummarizerBartLarge_Summary_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizerBartLarge_Summary_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        public static string TextSummarizerBartLarge_Summary_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizerBartLarge_Summary_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text input.
+        /// </summary>
+        public static string TextSummarizerBartLarge_UserSentence_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizerBartLarge_UserSentence_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UserSentence.
+        /// </summary>
+        public static string TextSummarizerBartLarge_UserSentence_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizerBartLarge_UserSentence_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The target language..
         /// </summary>
         public static string TextTranslationMtTransformers2_ConversionLanguage_Description {

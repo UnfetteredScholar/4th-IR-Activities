@@ -200,9 +200,7 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBaseFineTuned), new DesignerAttribute(typeof(ImageClassificationGoogleVitBaseFineTunedDesigner)));
             builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBaseFineTuned), new HelpKeywordAttribute(""));
             #endregion
-            builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), categoryAttribute);
-            builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), new DesignerAttribute(typeof(TextSummarizerBartLargeDesigner)));
-            builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), new HelpKeywordAttribute(""));
+           
 
 
             MetadataStore.AddAttributeTable(builder.CreateTable());

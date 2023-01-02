@@ -1329,4 +1329,140 @@
     <value>Array of possible age ranges.</value>
     <comment>property description</comment>
   </data>
+  <data name="DocumentAnalysisVLA_DisplayName" xml:space="preserve">
+    <value>Document Analysis</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentAnalysisVLA_Description" xml:space="preserve">
+    <value>Perfroms document analysis.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentAnalysisVLA_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentAnalysisVLA_Path_Description" xml:space="preserve">
+    <value>Full path to the document file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentAnalysisVLA_DocumentInfo_DisplayName" xml:space="preserve">
+    <value>Document Info</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentAnalysisVLA_DocumentInfo_Description" xml:space="preserve">
+    <value>The extracted information.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentClassificationVLA_DisplayName" xml:space="preserve">
+    <value>Document Classification</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentClassificationVLA_Description" xml:space="preserve">
+    <value>Performs document classification.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentClassificationVLA_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentClassificationVLA_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentClassificationVLA_DocumentInfo_DisplayName" xml:space="preserve">
+    <value>Document Info</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentClassificationVLA_DocumentInfo_Description" xml:space="preserve">
+    <value>The document info.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentTextExtractionVLA_DisplayName" xml:space="preserve">
+    <value>Document Text Extraction</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentTextExtractionVLA_Description" xml:space="preserve">
+    <value>Extracts the text from a document.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentTextExtractionVLA_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextExtractionVLA_Path_Description" xml:space="preserve">
+    <value>Full path to the document file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentTextExtractionVLA_DocumentName_DisplayName" xml:space="preserve">
+    <value>Document Name</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextExtractionVLA_DocumentName_Description" xml:space="preserve">
+    <value>The name of the document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentTextExtractionVLA_DocumentText_DisplayName" xml:space="preserve">
+    <value>Document Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextExtractionVLA_DocumentText_Description" xml:space="preserve">
+    <value>The document text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentMetaExtractionVLA_DisplayName" xml:space="preserve">
+    <value>Document Meta Extraction</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentMetaExtractionVLA_Description" xml:space="preserve">
+    <value>Extracts Document Metadata.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentMetaExtractionVLA_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentMetaExtractionVLA_Path_Description" xml:space="preserve">
+    <value>Full path to the document file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentMetaExtractionVLA_DocumentInfo_DisplayName" xml:space="preserve">
+    <value>Document Info</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentMetaExtractionVLA_DocumentInfo_Description" xml:space="preserve">
+    <value>The document info.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentTextAnalysisVLA_DisplayName" xml:space="preserve">
+    <value>Document Text Analysis</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentTextAnalysisVLA_Description" xml:space="preserve">
+    <value>Analyzes document text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentTextAnalysisVLA_DocumentName_DisplayName" xml:space="preserve">
+    <value>Document Name</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextAnalysisVLA_DocumentName_Description" xml:space="preserve">
+    <value>Name of the document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentTextAnalysisVLA_DocumentText_DisplayName" xml:space="preserve">
+    <value>Document Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextAnalysisVLA_DocumentText_Description" xml:space="preserve">
+    <value>The document text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentTextAnalysisVLA_DocumentInfo_DisplayName" xml:space="preserve">
+    <value>Document Info</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentTextAnalysisVLA_DocumentInfo_Description" xml:space="preserve">
+    <value>The document info.</value>
+    <comment>property description</comment>
+  </data>
 </root>

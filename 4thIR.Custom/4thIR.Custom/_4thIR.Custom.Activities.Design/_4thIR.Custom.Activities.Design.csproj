@@ -33,7 +33,12 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\AgeClassificationGoogleVitBaseDesigner.xaml" />
+    <None Remove="Designers\DocumentAnalysisVLADesigner.xaml" />
     <None Remove="Designers\DocumentClassificationKYCDesigner.xaml" />
+    <None Remove="Designers\DocumentClassificationVLADesigner.xaml" />
+    <None Remove="Designers\DocumentMetaExtractionVLADesigner.xaml" />
+    <None Remove="Designers\DocumentTextAnalysisVLADesigner.xaml" />
+    <None Remove="Designers\DocumentTextExtractionVLADesigner.xaml" />
     <None Remove="Designers\FormulaRecognitionOpenVinoDesigner.xaml" />
     <None Remove="Designers\HandwrittenTextRecognitionOpenVinoDesigner.xaml" />
     <None Remove="Designers\ImageClassificationCVDesigner.xaml" />
@@ -117,8 +122,28 @@
     <Page Include="Designers\AgeClassificationGoogleVitBaseDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
+    <Page Include="Designers\DocumentAnalysisVLADesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
     <Page Include="Designers\DocumentClassificationKYCDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\DocumentClassificationVLADesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\DocumentMetaExtractionVLADesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\DocumentTextAnalysisVLADesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\DocumentTextExtractionVLADesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\FormulaRecognitionOpenVinoDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

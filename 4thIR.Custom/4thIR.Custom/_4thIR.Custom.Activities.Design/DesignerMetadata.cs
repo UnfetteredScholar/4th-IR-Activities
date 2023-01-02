@@ -261,6 +261,28 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(AgeClassificationGoogleVitBase), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Document Classification- VLA
+            builder.AddCustomAttributes(typeof(DocumentAnalysisVLA), new CategoryAttribute("4th-IR.Document Classification.VLA"));
+            builder.AddCustomAttributes(typeof(DocumentAnalysisVLA), new DesignerAttribute(typeof(DocumentAnalysisVLADesigner)));
+            builder.AddCustomAttributes(typeof(DocumentAnalysisVLA), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(DocumentClassificationVLA), new CategoryAttribute("4th-IR.Document Classification.VLA"));
+            builder.AddCustomAttributes(typeof(DocumentClassificationVLA), new DesignerAttribute(typeof(DocumentClassificationVLADesigner)));
+            builder.AddCustomAttributes(typeof(DocumentClassificationVLA), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(DocumentTextExtractionVLA), new CategoryAttribute("4th-IR.Document Classification.VLA"));
+            builder.AddCustomAttributes(typeof(DocumentTextExtractionVLA), new DesignerAttribute(typeof(DocumentTextExtractionVLADesigner)));
+            builder.AddCustomAttributes(typeof(DocumentTextExtractionVLA), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(DocumentMetaExtractionVLA), new CategoryAttribute("4th-IR.Document Classification.VLA"));
+            builder.AddCustomAttributes(typeof(DocumentMetaExtractionVLA), new DesignerAttribute(typeof(DocumentMetaExtractionVLADesigner)));
+            builder.AddCustomAttributes(typeof(DocumentMetaExtractionVLA), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(DocumentTextAnalysisVLA), new CategoryAttribute("4th-IR.Document Classification.VLA"));
+            builder.AddCustomAttributes(typeof(DocumentTextAnalysisVLA), new DesignerAttribute(typeof(DocumentTextAnalysisVLADesigner)));
+            builder.AddCustomAttributes(typeof(DocumentTextAnalysisVLA), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

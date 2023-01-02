@@ -92,34 +92,36 @@ namespace DocumentClassification.VLA
             public ResponseDocumentMeta document_meta { get; set; }
         }
 
-        private static readonly HttpClient _client = new HttpClient();
+        private HttpClient _client = null;
 
-        public DocumentClassifierVLA()
+        public DocumentClassifierVLA(HttpClient client)
         {
-            _client.BaseAddress = new Uri("https://text-document-classification-vla-2.ai-sandbox.4th-ir.io");
-            _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _client = client;
+            //_client.BaseAddress = new Uri("https://text-document-classification-vla-2.ai-sandbox.4th-ir.io");
+            // _client.DefaultRequestHeaders.Accept.Clear();
+            // _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public async Task<DocumentInfo> ClassifyDocument(string path)
         {
-            path = @"" + path;
-
-            using (var formData = new MultipartFormDataContent())
+            HttpResponseMessage response = new HttpResponseMessage();
+            try
             {
-                StreamContent documentStream = new StreamContent(File.OpenRead(path));
-                documentStream.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+                path = @"" + path;
 
-                int index = path.LastIndexOf('\\') + 1;
-                string fileName = path.Substring(index);
-
-                formData.Add(documentStream, "pdf_file", fileName);
-
-                string requestUri = "/api/v1/classify/";
-                var response = await _client.PostAsync(requestUri, formData);
-
-                try
+                using (var formData = new MultipartFormDataContent())
                 {
+                    StreamContent documentStream = new StreamContent(File.OpenRead(path));
+                    documentStream.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+
+                    string fileName = Path.GetFileName(path);
+
+                    formData.Add(documentStream, "pdf_file", fileName);
+
+                    string requestUri = "https://text-document-classification-vla-2.ai-sandbox.4th-ir.io/api/v1/classify/";
+                    response = await _client.PostAsync(requestUri, formData);
+
+
                     response.EnsureSuccessStatusCode();
 
                     string r = await response.Content.ReadAsStringAsync();
@@ -134,47 +136,49 @@ namespace DocumentClassification.VLA
 
                     return documentInfo;
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "String is too long";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Unable to complete operation";
-                    }
-
-                    throw new DocumentClassificationException(message, ex);
+                    message = "String is too long";
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Error: Unable to complete operation";
+                }
+
+                throw new DocumentClassificationException(message, ex);
             }
         }
+
 
         public async Task<DocumentInfo> ExtractDocumentMeta(string path)
         {
-            path = @"" + path;
-
-            using (var formData = new MultipartFormDataContent())
+            HttpResponseMessage response = new HttpResponseMessage();
+            try
             {
-                StreamContent documentStream = new StreamContent(File.OpenRead(path));
-                documentStream.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+                path = @"" + path;
 
-                int index = path.LastIndexOf('\\') + 1;
-                string fileName = path.Substring(index);
-
-                formData.Add(documentStream, "pdf_file", fileName);
-
-                string requestUri = "/api/v1/extract-meta-data/";
-                var response = await _client.PostAsync(requestUri, formData);
-
-                try
+                using (var formData = new MultipartFormDataContent())
                 {
+                    StreamContent documentStream = new StreamContent(File.OpenRead(path));
+                    documentStream.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+
+                    string fileName = Path.GetFileName(path);
+
+                    formData.Add(documentStream, "pdf_file", fileName);
+
+                    string requestUri = "https://text-document-classification-vla-2.ai-sandbox.4th-ir.io/api/v1/extract-meta-data/";
+                    response = await _client.PostAsync(requestUri, formData);
+
+
                     response.EnsureSuccessStatusCode();
 
                     string r = await response.Content.ReadAsStringAsync();
@@ -189,47 +193,49 @@ namespace DocumentClassification.VLA
 
                     return documentInfo;
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "String is too long";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Unable to complete operation";
-                    }
-
-                    throw new DocumentClassificationException(message, ex);
+                    message = "String is too long";
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Error: Unable to complete operation";
+                }
+
+                throw new DocumentClassificationException(message, ex);
             }
         }
 
+
         public async Task<DocumentInfo> ClassifyAndExtracttMeta(string path)
         {
-            path = @"" + path;
-
-            using (var formData = new MultipartFormDataContent())
+            HttpResponseMessage response = new HttpResponseMessage();
+            try
             {
-                StreamContent documentStream = new StreamContent(File.OpenRead(path));
-                documentStream.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+                path = @"" + path;
 
-                int index = path.LastIndexOf('\\') + 1;
-                string fileName = path.Substring(index);
-
-                formData.Add(documentStream, "pdf_file", fileName);
-
-                string requestUri = "/api/v1/classify-and-extract-meta-data/";
-                var response = await _client.PostAsync(requestUri, formData);
-
-                try
+                using (var formData = new MultipartFormDataContent())
                 {
+                    StreamContent documentStream = new StreamContent(File.OpenRead(path));
+                    documentStream.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+
+                    string fileName = Path.GetFileName(path);
+
+                    formData.Add(documentStream, "pdf_file", fileName);
+
+                    string requestUri = "https://text-document-classification-vla-2.ai-sandbox.4th-ir.io/api/v1/classify-and-extract-meta-data/";
+                    response = await _client.PostAsync(requestUri, formData);
+
+
                     response.EnsureSuccessStatusCode();
 
                     string r = await response.Content.ReadAsStringAsync();
@@ -241,38 +247,39 @@ namespace DocumentClassification.VLA
 
                     return documentInfo;
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "String is too long";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Unable to complete operation";
-                    }
-
-                    throw new DocumentClassificationException(message, ex);
+                    message = "String is too long";
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Error: Unable to complete operation";
+                }
+
+                throw new DocumentClassificationException(message, ex);
             }
         }
 
+
         public async Task<DocumentInfo> TrueDigitalClassifyAndExtracttMeta(string documentName, string documentText)
         {
-
-            var requestContent = new { document_text = documentText, document_name = documentName };
-
-            string requestUri = "/api/v1/true-digital-classify-and-extract-meta-data/";
-            var response = await _client.PostAsync(requestUri, new StringContent(JsonSerializer.Serialize(requestContent), Encoding.UTF8, "application/json"));
-
+            HttpResponseMessage response = new HttpResponseMessage();
             try
             {
+                var requestContent = new { document_text = documentText, document_name = documentName };
+
+                string requestUri = "https://text-document-classification-vla-2.ai-sandbox.4th-ir.io/api/v1/true-digital-classify-and-extract-meta-data/";
+                response = await _client.PostAsync(requestUri, new StringContent(JsonSerializer.Serialize(requestContent), Encoding.UTF8, "application/json"));
+
                 response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();
@@ -306,55 +313,60 @@ namespace DocumentClassification.VLA
 
         }
 
-        public async Task<(string documentName, string documentText)> ConvertToTrueDigital(string path)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns>(Document Name, Document Text)</returns>
+        /// <exception cref="DocumentClassificationException"></exception>
+        public async Task<Tuple<string, string>> ConvertToTrueDigital(string path)
         {
-            path = @"" + path;
-
-            using (var formData = new MultipartFormDataContent())
+            HttpResponseMessage response = new HttpResponseMessage();
+            try
             {
-                StreamContent documentStream = new StreamContent(File.OpenRead(path));
-                documentStream.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+                path = @"" + path;
 
-                int index = path.LastIndexOf('\\') + 1;
-                string fileName = path.Substring(index);
-
-                formData.Add(documentStream, "pdf_file", fileName);
-
-                string requestUri = "/api/v1/convert-to-true-digital-v2/";
-                var response = await _client.PostAsync(requestUri, formData);
-
-                try
+                using (var formData = new MultipartFormDataContent())
                 {
+                    StreamContent documentStream = new StreamContent(File.OpenRead(path));
+                    documentStream.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+
+                    string fileName = Path.GetFileName(path);
+
+                    formData.Add(documentStream, "pdf_file", fileName);
+
+                    string requestUri = "https://text-document-classification-vla-2.ai-sandbox.4th-ir.io/api/v1/convert-to-true-digital-v2/";
+                    response = await _client.PostAsync(requestUri, formData);
+
                     response.EnsureSuccessStatusCode();
 
                     string r = await response.Content.ReadAsStringAsync();
                     ResponseContent responseContent = JsonSerializer.Deserialize<ResponseContent>(r);
 
-
-
-                    return (responseContent.document_name, responseContent.document_text);
-                }
-                catch (Exception ex)
-                {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "String is too long";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Unable to complete operation";
-                    }
-
-                    throw new DocumentClassificationException(message, ex);
+                    return new Tuple<string, string>(responseContent.document_name, responseContent.document_text);
                 }
             }
-        }
+            catch (Exception ex)
+            {
+                string message = "";
 
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+                {
+                    message = "String is too long";
+                }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Error: Unable to complete operation";
+                }
+
+                throw new DocumentClassificationException(message, ex);
+            }
+        }
     }
+
 }
+

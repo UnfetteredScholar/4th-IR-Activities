@@ -160,6 +160,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Perfroms document analysis..
+        /// </summary>
+        public static string DocumentAnalysisVLA_Description {
+            get {
+                return ResourceManager.GetString("DocumentAnalysisVLA_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Analysis.
+        /// </summary>
+        public static string DocumentAnalysisVLA_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentAnalysisVLA_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The extracted information..
+        /// </summary>
+        public static string DocumentAnalysisVLA_DocumentInfo_Description {
+            get {
+                return ResourceManager.GetString("DocumentAnalysisVLA_DocumentInfo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Info.
+        /// </summary>
+        public static string DocumentAnalysisVLA_DocumentInfo_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentAnalysisVLA_DocumentInfo_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the document file..
+        /// </summary>
+        public static string DocumentAnalysisVLA_Path_Description {
+            get {
+                return ResourceManager.GetString("DocumentAnalysisVLA_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string DocumentAnalysisVLA_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentAnalysisVLA_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Performs classification of documents..
         /// </summary>
         public static string DocumentClassificationKYC_Description {
@@ -228,6 +282,258 @@ namespace _4thIR.Custom.Activities.Properties {
         public static string DocumentClassificationKYC_FilePath_DisplayName {
             get {
                 return ResourceManager.GetString("DocumentClassificationKYC_FilePath_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Performs document classification..
+        /// </summary>
+        public static string DocumentClassificationVLA_Description {
+            get {
+                return ResourceManager.GetString("DocumentClassificationVLA_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Classification.
+        /// </summary>
+        public static string DocumentClassificationVLA_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentClassificationVLA_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The document info..
+        /// </summary>
+        public static string DocumentClassificationVLA_DocumentInfo_Description {
+            get {
+                return ResourceManager.GetString("DocumentClassificationVLA_DocumentInfo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Info.
+        /// </summary>
+        public static string DocumentClassificationVLA_DocumentInfo_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentClassificationVLA_DocumentInfo_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string DocumentClassificationVLA_Path_Description {
+            get {
+                return ResourceManager.GetString("DocumentClassificationVLA_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string DocumentClassificationVLA_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentClassificationVLA_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extracts Document Metadata..
+        /// </summary>
+        public static string DocumentMetaExtractionVLA_Description {
+            get {
+                return ResourceManager.GetString("DocumentMetaExtractionVLA_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Meta Extraction.
+        /// </summary>
+        public static string DocumentMetaExtractionVLA_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentMetaExtractionVLA_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The document info..
+        /// </summary>
+        public static string DocumentMetaExtractionVLA_DocumentInfo_Description {
+            get {
+                return ResourceManager.GetString("DocumentMetaExtractionVLA_DocumentInfo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Info.
+        /// </summary>
+        public static string DocumentMetaExtractionVLA_DocumentInfo_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentMetaExtractionVLA_DocumentInfo_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the document file..
+        /// </summary>
+        public static string DocumentMetaExtractionVLA_Path_Description {
+            get {
+                return ResourceManager.GetString("DocumentMetaExtractionVLA_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string DocumentMetaExtractionVLA_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentMetaExtractionVLA_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Analyzes document text..
+        /// </summary>
+        public static string DocumentTextAnalysisVLA_Description {
+            get {
+                return ResourceManager.GetString("DocumentTextAnalysisVLA_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Text Analysis.
+        /// </summary>
+        public static string DocumentTextAnalysisVLA_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentTextAnalysisVLA_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The document info..
+        /// </summary>
+        public static string DocumentTextAnalysisVLA_DocumentInfo_Description {
+            get {
+                return ResourceManager.GetString("DocumentTextAnalysisVLA_DocumentInfo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Info.
+        /// </summary>
+        public static string DocumentTextAnalysisVLA_DocumentInfo_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentTextAnalysisVLA_DocumentInfo_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name of the document..
+        /// </summary>
+        public static string DocumentTextAnalysisVLA_DocumentName_Description {
+            get {
+                return ResourceManager.GetString("DocumentTextAnalysisVLA_DocumentName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Name.
+        /// </summary>
+        public static string DocumentTextAnalysisVLA_DocumentName_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentTextAnalysisVLA_DocumentName_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The document text..
+        /// </summary>
+        public static string DocumentTextAnalysisVLA_DocumentText_Description {
+            get {
+                return ResourceManager.GetString("DocumentTextAnalysisVLA_DocumentText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Text.
+        /// </summary>
+        public static string DocumentTextAnalysisVLA_DocumentText_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentTextAnalysisVLA_DocumentText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extracts the text from a document..
+        /// </summary>
+        public static string DocumentTextExtractionVLA_Description {
+            get {
+                return ResourceManager.GetString("DocumentTextExtractionVLA_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Text Extraction.
+        /// </summary>
+        public static string DocumentTextExtractionVLA_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentTextExtractionVLA_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the document..
+        /// </summary>
+        public static string DocumentTextExtractionVLA_DocumentName_Description {
+            get {
+                return ResourceManager.GetString("DocumentTextExtractionVLA_DocumentName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Name.
+        /// </summary>
+        public static string DocumentTextExtractionVLA_DocumentName_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentTextExtractionVLA_DocumentName_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The document text..
+        /// </summary>
+        public static string DocumentTextExtractionVLA_DocumentText_Description {
+            get {
+                return ResourceManager.GetString("DocumentTextExtractionVLA_DocumentText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Text.
+        /// </summary>
+        public static string DocumentTextExtractionVLA_DocumentText_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentTextExtractionVLA_DocumentText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the document file..
+        /// </summary>
+        public static string DocumentTextExtractionVLA_Path_Description {
+            get {
+                return ResourceManager.GetString("DocumentTextExtractionVLA_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string DocumentTextExtractionVLA_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentTextExtractionVLA_Path_DisplayName", resourceCulture);
             }
         }
         

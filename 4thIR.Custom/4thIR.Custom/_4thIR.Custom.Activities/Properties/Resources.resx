@@ -1513,4 +1513,28 @@
     <value>The context of the answer.</value>
     <comment>property description</comment>
   </data>
+  <data name="DialogueGenerationMultiTurnDialoGPT_DisplayName" xml:space="preserve">
+    <value>Dialogue Generation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DialogueGenerationMultiTurnDialoGPT_Description" xml:space="preserve">
+    <value>Generates conversation responses.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DialogueGenerationMultiTurnDialoGPT_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DialogueGenerationMultiTurnDialoGPT_Text_Description" xml:space="preserve">
+    <value>The input text or statement.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DialogueGenerationMultiTurnDialoGPT_Response_DisplayName" xml:space="preserve">
+    <value>Response</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DialogueGenerationMultiTurnDialoGPT_Response_Description" xml:space="preserve">
+    <value>The generated response.</value>
+    <comment>property description</comment>
+  </data>
 </root>

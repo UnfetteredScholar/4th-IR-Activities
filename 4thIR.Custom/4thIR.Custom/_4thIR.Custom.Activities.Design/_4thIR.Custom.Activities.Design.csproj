@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\AgeClassificationGoogleVitBaseDesigner.xaml" />
+    <None Remove="Designers\DialogueGenerationMultiTurnDialoGPTDesigner.xaml" />
     <None Remove="Designers\DocumentAnalysisVLADesigner.xaml" />
     <None Remove="Designers\DocumentClassificationKYCDesigner.xaml" />
     <None Remove="Designers\DocumentClassificationVLADesigner.xaml" />
@@ -122,6 +123,10 @@
     </Page>
     <Page Include="Designers\AgeClassificationGoogleVitBaseDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\DialogueGenerationMultiTurnDialoGPTDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\DocumentAnalysisVLADesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

@@ -289,6 +289,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(DocumentQuestionAnsweringBertLarge), new HelpKeywordAttribute(""));
             #endregion
 
+            #region MultiTurn Conversation, Text Generation - DialoGPT
+            builder.AddCustomAttributes(typeof(DialogueGenerationMultiTurnDialoGPT), new CategoryAttribute("4th-IR.Text Generation.Multi-Turn Conversation"));
+            builder.AddCustomAttributes(typeof(DialogueGenerationMultiTurnDialoGPT), new DesignerAttribute(typeof(DialogueGenerationMultiTurnDialoGPTDesigner)));
+            builder.AddCustomAttributes(typeof(DialogueGenerationMultiTurnDialoGPT), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

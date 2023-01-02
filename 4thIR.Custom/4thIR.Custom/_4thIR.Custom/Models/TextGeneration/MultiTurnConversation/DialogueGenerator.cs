@@ -20,29 +20,30 @@ namespace TextGeneration.MultiTurnConversation
             public string bot { get; set; }
         }
 
-        private static readonly HttpClient _client = new HttpClient();
+        private HttpClient _client = null;
 
-        public DialogueGenerator()
+        public DialogueGenerator(HttpClient httpClient)
         {
-            _client.BaseAddress = new Uri("https://text-generation-dialogpt.ai-sandbox.4th-ir.io");
-            _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _client = httpClient;
+            //_client.BaseAddress = new Uri("https://text-generation-dialogpt.ai-sandbox.4th-ir.io");
+            // _client.DefaultRequestHeaders.Accept.Clear();
+            //_client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
 
         public async Task<string> GenerateDialogueResponse(string text)
         {
-            var builder = new UriBuilder("https://text-generation-dialogpt.ai-sandbox.4th-ir.io/api/v1/generate");
-            builder.Port = -1;
-            var query = HttpUtility.ParseQueryString(builder.Query);
-            query["text"] = text;
-            builder.Query = query.ToString();
-
-
-            var response = await _client.PostAsync(builder.ToString(), null);
-
+            HttpResponseMessage response = new HttpResponseMessage();
             try
             {
+                var builder = new UriBuilder("https://text-generation-dialogpt.ai-sandbox.4th-ir.io/api/v1/generate");
+                builder.Port = -1;
+                var query = HttpUtility.ParseQueryString(builder.Query);
+                query["text"] = text;
+                builder.Query = query.ToString();
+
+                response = await _client.PostAsync(builder.ToString(), null);
+
                 response.EnsureSuccessStatusCode();
 
                 string r = await response.Content.ReadAsStringAsync();

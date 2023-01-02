@@ -151,6 +151,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generates conversation responses..
+        /// </summary>
+        public static string DialogueGenerationMultiTurnDialoGPT_Description {
+            get {
+                return ResourceManager.GetString("DialogueGenerationMultiTurnDialoGPT_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dialogue Generation.
+        /// </summary>
+        public static string DialogueGenerationMultiTurnDialoGPT_DisplayName {
+            get {
+                return ResourceManager.GetString("DialogueGenerationMultiTurnDialoGPT_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The generated response..
+        /// </summary>
+        public static string DialogueGenerationMultiTurnDialoGPT_Response_Description {
+            get {
+                return ResourceManager.GetString("DialogueGenerationMultiTurnDialoGPT_Response_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Response.
+        /// </summary>
+        public static string DialogueGenerationMultiTurnDialoGPT_Response_DisplayName {
+            get {
+                return ResourceManager.GetString("DialogueGenerationMultiTurnDialoGPT_Response_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The input text or statement..
+        /// </summary>
+        public static string DialogueGenerationMultiTurnDialoGPT_Text_Description {
+            get {
+                return ResourceManager.GetString("DialogueGenerationMultiTurnDialoGPT_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string DialogueGenerationMultiTurnDialoGPT_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("DialogueGenerationMultiTurnDialoGPT_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do.
         /// </summary>
         public static string Do {

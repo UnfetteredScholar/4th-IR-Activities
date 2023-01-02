@@ -1249,4 +1249,28 @@
     <value>Full path to the storage folder.</value>
     <comment>property description</comment>
   </data>
+  <data name="SemanticSegmentationPSPNet_DisplayName" xml:space="preserve">
+    <value>Semantic Segmentation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="SemanticSegmentationPSPNet_Description" xml:space="preserve">
+    <value>Performs segmentation of images.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="SemanticSegmentationPSPNet_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="SemanticSegmentationPSPNet_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="SemanticSegmentationPSPNet_StorageLocation_DisplayName" xml:space="preserve">
+    <value>Storage Location</value>
+    <comment>property name</comment>
+  </data>
+  <data name="SemanticSegmentationPSPNet_StorageLocation_Description" xml:space="preserve">
+    <value>Full path to the storage folder.</value>
+    <comment>property description</comment>
+  </data>
 </root>

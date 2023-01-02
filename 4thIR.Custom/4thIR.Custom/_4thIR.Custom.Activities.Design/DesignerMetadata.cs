@@ -201,8 +201,6 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBaseFineTuned), new HelpKeywordAttribute(""));
             #endregion
            
-
-
             #region Object Detection-FasterRCNN Resnet50fpn
             builder.AddCustomAttributes(typeof(ObjectDetectionFasterRCNNResnet50fpn), new CategoryAttribute("4th-IR.Object Detection.Faster RCNN.Resnet 50fpn"));
             builder.AddCustomAttributes(typeof(ObjectDetectionFasterRCNNResnet50fpn), new DesignerAttribute(typeof(ObjectDetectionFasterRCNNResnet50fpnDesigner)));
@@ -244,6 +242,14 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(PoseEstimationResnet101), new DesignerAttribute(typeof(PoseEstimationResnet101Designer)));
             builder.AddCustomAttributes(typeof(PoseEstimationResnet101), new HelpKeywordAttribute(""));
             #endregion
+
+            #region  Semantic Segmentation- PSPNet
+            builder.AddCustomAttributes(typeof(SemanticSegmentationPSPNet), new CategoryAttribute("4th-IR.Semantic Segmentation.PSPNet"));
+            builder.AddCustomAttributes(typeof(SemanticSegmentationPSPNet), new DesignerAttribute(typeof(SemanticSegmentationPSPNetDesigner)));
+            builder.AddCustomAttributes(typeof(SemanticSegmentationPSPNet), new HelpKeywordAttribute(""));
+            #endregion
+
+
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }

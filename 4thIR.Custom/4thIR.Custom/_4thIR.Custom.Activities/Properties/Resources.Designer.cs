@@ -1843,6 +1843,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Performs segmentation of images..
+        /// </summary>
+        public static string SemanticSegmentationPSPNet_Description {
+            get {
+                return ResourceManager.GetString("SemanticSegmentationPSPNet_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semantic Segmentation.
+        /// </summary>
+        public static string SemanticSegmentationPSPNet_DisplayName {
+            get {
+                return ResourceManager.GetString("SemanticSegmentationPSPNet_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string SemanticSegmentationPSPNet_Path_Description {
+            get {
+                return ResourceManager.GetString("SemanticSegmentationPSPNet_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string SemanticSegmentationPSPNet_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("SemanticSegmentationPSPNet_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the storage folder..
+        /// </summary>
+        public static string SemanticSegmentationPSPNet_StorageLocation_Description {
+            get {
+                return ResourceManager.GetString("SemanticSegmentationPSPNet_StorageLocation_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Storage Location.
+        /// </summary>
+        public static string SemanticSegmentationPSPNet_StorageLocation_DisplayName {
+            get {
+                return ResourceManager.GetString("SemanticSegmentationPSPNet_StorageLocation_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Performs sentiment analysis of text..
         /// </summary>
         public static string SentimentAnalysisDeBerta_Description {

@@ -2707,6 +2707,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generates text using the sample text..
+        /// </summary>
+        public static string TextGenerationGpt2_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationGpt2_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Generation.
+        /// </summary>
+        public static string TextGenerationGpt2_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationGpt2_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array of generated texts..
+        /// </summary>
+        public static string TextGenerationGpt2_GeneratedTexts_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationGpt2_GeneratedTexts_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated Texts.
+        /// </summary>
+        public static string TextGenerationGpt2_GeneratedTexts_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationGpt2_GeneratedTexts_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The sample text..
+        /// </summary>
+        public static string TextGenerationGpt2_Sentence_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationGpt2_Sentence_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string TextGenerationGpt2_Sentence_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationGpt2_Sentence_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generates text using sample input..
         /// </summary>
         public static string TextGenerationTransformers_Description {

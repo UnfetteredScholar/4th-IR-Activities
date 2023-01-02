@@ -295,6 +295,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(DialogueGenerationMultiTurnDialoGPT), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Generation- Gpt2
+            builder.AddCustomAttributes(typeof(TextGenerationGpt2), new CategoryAttribute("4th-IR.Text Generation.Gpt2"));
+            builder.AddCustomAttributes(typeof(TextGenerationGpt2), new DesignerAttribute(typeof(TextGenerationGpt2Designer)));
+            builder.AddCustomAttributes(typeof(TextGenerationGpt2), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

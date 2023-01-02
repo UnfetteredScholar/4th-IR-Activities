@@ -73,6 +73,7 @@
     <None Remove="Designers\SentimentAnalysisDeBertaDesigner.xaml" />
     <None Remove="Designers\TextClassificationZSRDesigner.xaml" />
     <None Remove="Designers\TextGenerationFairseqDesigner.xaml" />
+    <None Remove="Designers\TextGenerationGpt2Designer.xaml" />
     <None Remove="Designers\TextGenerationTransformersDesigner.xaml" />
     <None Remove="Designers\TextSummarizationBBDesigner.xaml" />
     <None Remove="Designers\TextSummarizationBert2BertSmallDesigner.xaml" />
@@ -274,6 +275,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\TextGenerationFairseqDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\TextGenerationGpt2Designer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

@@ -1537,4 +1537,28 @@
     <value>The generated response.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextGenerationGpt2_DisplayName" xml:space="preserve">
+    <value>Text Generation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextGenerationGpt2_Description" xml:space="preserve">
+    <value>Generates text using the sample text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextGenerationGpt2_Sentence_DisplayName" xml:space="preserve">
+    <value>Sentence</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationGpt2_Sentence_Description" xml:space="preserve">
+    <value>The sample text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextGenerationGpt2_GeneratedTexts_DisplayName" xml:space="preserve">
+    <value>Generated Texts</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationGpt2_GeneratedTexts_Description" xml:space="preserve">
+    <value>Array of generated texts.</value>
+    <comment>property description</comment>
+  </data>
 </root>

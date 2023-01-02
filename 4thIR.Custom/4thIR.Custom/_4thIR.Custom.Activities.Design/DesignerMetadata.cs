@@ -283,6 +283,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(DocumentTextAnalysisVLA), new HelpKeywordAttribute(""));
             #endregion
 
+            #region QA bert-large-uncased-whole-word-masking-squad
+            builder.AddCustomAttributes(typeof(DocumentQuestionAnsweringBertLarge), new CategoryAttribute("4th-IR.Question Answering.Bert.Large"));
+            builder.AddCustomAttributes(typeof(DocumentQuestionAnsweringBertLarge), new DesignerAttribute(typeof(DocumentQuestionAnsweringBertLargeDesigner)));
+            builder.AddCustomAttributes(typeof(DocumentQuestionAnsweringBertLarge), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

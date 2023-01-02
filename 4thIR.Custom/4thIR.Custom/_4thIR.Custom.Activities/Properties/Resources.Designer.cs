@@ -394,6 +394,114 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Answer to the question..
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_Answer_Description {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_Answer_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answer.
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_Answer_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_Answer_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The context of the answer..
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_Context_Description {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_Context_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Context.
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_Context_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_Context_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answers questions using context provided by a pdf document..
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_Description {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Question Answering.
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the pdf document..
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_DocumentPath_Description {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_DocumentPath_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document Path.
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_DocumentPath_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_DocumentPath_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The question..
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_Question_Description {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_Question_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question.
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_Question_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_Question_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The accuracy of the anwer..
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_Score_Description {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_Score_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        public static string DocumentQuestionAnsweringBertLarge_Score_DisplayName {
+            get {
+                return ResourceManager.GetString("DocumentQuestionAnsweringBertLarge_Score_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Analyzes document text..
         /// </summary>
         public static string DocumentTextAnalysisVLA_Description {

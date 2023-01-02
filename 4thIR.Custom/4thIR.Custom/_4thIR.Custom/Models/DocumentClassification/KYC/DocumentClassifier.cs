@@ -76,7 +76,6 @@ namespace DocumentClassification.KYC
         public async Task<string> ClassifyDocument(string path, DocumentType documentType)
         {
             HttpResponseMessage response = new HttpResponseMessage();
-
             try
             {
                 path = @"" + path;

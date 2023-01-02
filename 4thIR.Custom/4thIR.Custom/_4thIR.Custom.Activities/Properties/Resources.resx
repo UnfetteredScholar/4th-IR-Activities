@@ -1465,4 +1465,52 @@
     <value>The document info.</value>
     <comment>property description</comment>
   </data>
+  <data name="DocumentQuestionAnsweringBertLarge_DisplayName" xml:space="preserve">
+    <value>Document Question Answering</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_Description" xml:space="preserve">
+    <value>Answers questions using context provided by a pdf document.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_DocumentPath_DisplayName" xml:space="preserve">
+    <value>Document Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_DocumentPath_Description" xml:space="preserve">
+    <value>Full path to the pdf document.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_Question_DisplayName" xml:space="preserve">
+    <value>Question</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_Question_Description" xml:space="preserve">
+    <value>The question.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_Answer_DisplayName" xml:space="preserve">
+    <value>Answer</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_Answer_Description" xml:space="preserve">
+    <value>Answer to the question.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_Score_DisplayName" xml:space="preserve">
+    <value>Score</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_Score_Description" xml:space="preserve">
+    <value>The accuracy of the anwer.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_Context_DisplayName" xml:space="preserve">
+    <value>Context</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DocumentQuestionAnsweringBertLarge_Context_Description" xml:space="preserve">
+    <value>The context of the answer.</value>
+    <comment>property description</comment>
+  </data>
 </root>

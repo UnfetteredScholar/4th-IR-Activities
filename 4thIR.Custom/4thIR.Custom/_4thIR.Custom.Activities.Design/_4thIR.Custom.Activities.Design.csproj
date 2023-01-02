@@ -37,6 +37,7 @@
     <None Remove="Designers\DocumentClassificationKYCDesigner.xaml" />
     <None Remove="Designers\DocumentClassificationVLADesigner.xaml" />
     <None Remove="Designers\DocumentMetaExtractionVLADesigner.xaml" />
+    <None Remove="Designers\DocumentQuestionAnsweringBertLargeDesigner.xaml" />
     <None Remove="Designers\DocumentTextAnalysisVLADesigner.xaml" />
     <None Remove="Designers\DocumentTextExtractionVLADesigner.xaml" />
     <None Remove="Designers\FormulaRecognitionOpenVinoDesigner.xaml" />
@@ -134,6 +135,10 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\DocumentMetaExtractionVLADesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\DocumentQuestionAnsweringBertLargeDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

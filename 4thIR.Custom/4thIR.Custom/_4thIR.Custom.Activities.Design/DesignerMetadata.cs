@@ -249,7 +249,11 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(SemanticSegmentationPSPNet), new HelpKeywordAttribute(""));
             #endregion
 
-
+            # region Semantic Segmentation- Segformer
+            builder.AddCustomAttributes(typeof(SemanticSegmantationSegformer), new CategoryAttribute("4th-IR.Semantic Segmentation.Segformer"));
+            builder.AddCustomAttributes(typeof(SemanticSegmantationSegformer), new DesignerAttribute(typeof(SemanticSegmantationSegformerDesigner)));
+            builder.AddCustomAttributes(typeof(SemanticSegmantationSegformer), new HelpKeywordAttribute(""));
+            #endregion
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }

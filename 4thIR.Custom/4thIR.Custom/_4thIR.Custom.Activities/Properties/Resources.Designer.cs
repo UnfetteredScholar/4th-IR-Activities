@@ -1845,6 +1845,78 @@ namespace _4thIR.Custom.Activities.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Performs segmentation of images..
         /// </summary>
+        public static string SemanticSegmantationSegformer_Description {
+            get {
+                return ResourceManager.GetString("SemanticSegmantationSegformer_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semantic Segmentation.
+        /// </summary>
+        public static string SemanticSegmantationSegformer_DisplayName {
+            get {
+                return ResourceManager.GetString("SemanticSegmantationSegformer_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string SemanticSegmantationSegformer_Path_Description {
+            get {
+                return ResourceManager.GetString("SemanticSegmantationSegformer_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string SemanticSegmantationSegformer_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("SemanticSegmantationSegformer_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The segmentation type..
+        /// </summary>
+        public static string SemanticSegmantationSegformer_SegmantationType_Description {
+            get {
+                return ResourceManager.GetString("SemanticSegmantationSegformer_SegmantationType_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Segmantation Type.
+        /// </summary>
+        public static string SemanticSegmantationSegformer_SegmantationType_DisplayName {
+            get {
+                return ResourceManager.GetString("SemanticSegmantationSegformer_SegmantationType_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the storage folder..
+        /// </summary>
+        public static string SemanticSegmantationSegformer_StorageLocation_Description {
+            get {
+                return ResourceManager.GetString("SemanticSegmantationSegformer_StorageLocation_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Storage Location.
+        /// </summary>
+        public static string SemanticSegmantationSegformer_StorageLocation_DisplayName {
+            get {
+                return ResourceManager.GetString("SemanticSegmantationSegformer_StorageLocation_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Performs segmentation of images..
+        /// </summary>
         public static string SemanticSegmentationPSPNet_Description {
             get {
                 return ResourceManager.GetString("SemanticSegmentationPSPNet_Description", resourceCulture);

@@ -60,6 +60,7 @@
     <None Remove="Designers\PoseEstimationResnet101Designer.xaml" />
     <None Remove="Designers\ProcessScopeDesigner.xaml" />
     <None Remove="Designers\QuestionAnsweringRBS2Designer.xaml" />
+    <None Remove="Designers\SemanticSegmantationSegformerDesigner.xaml" />
     <None Remove="Designers\SemanticSegmentationPSPNetDesigner.xaml" />
     <None Remove="Designers\SentimentAnalysisDeBertaDesigner.xaml" />
     <None Remove="Designers\TextClassificationZSRDesigner.xaml" />
@@ -216,6 +217,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\QuestionAnsweringRBS2Designer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\SemanticSegmantationSegformerDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

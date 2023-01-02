@@ -4,54 +4,55 @@ using System.Net.Http.Headers;
 using System.IO;
 using System.Threading.Tasks;
 using SemanticSegmentation.Exceptions;
+using System.ComponentModel;
 
 namespace SemanticSegmentation.Segformer
 {
-    public enum SegmentationType { Simple, Detailed }
+    public enum SegmentationType { [Description("Select An Option")] SelectAnOption, [Description("Simple")] Simple, [Description("Detailed")] Detailed }
 
     public class SemanticSegmentizerSegformer
     {
-        private static readonly HttpClient _client = new HttpClient();
+        private HttpClient _client = null;
 
-        public SemanticSegmentizerSegformer()
+        public SemanticSegmentizerSegformer(HttpClient httpClient)
         {
-            _client.BaseAddress = new Uri("https://image-semantic-segmentation-segformer.ai-sandbox.4th-ir.io");
-            _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _client = httpClient;
+            //_client.BaseAddress = new Uri("https://image-semantic-segmentation-segformer.ai-sandbox.4th-ir.io");
+            //_client.DefaultRequestHeaders.Accept.Clear();
+            //_client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public async Task SegmentImage(string path, SegmentationType segmentationType, string storageLocation = "")
         {
-            path = @"" + path;
-
-            using (var formData = new MultipartFormDataContent())
+            HttpResponseMessage response = new HttpResponseMessage();
+            try
             {
-                StreamContent imageStream = new StreamContent(File.OpenRead(path));
-                imageStream.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
+                path = @"" + path;
 
-                int index = path.LastIndexOf('\\') + 1;
-                string fileName = path.Substring(index);
-
-                formData.Add(imageStream, "file", fileName);
-                string requestUri;
-
-                switch (segmentationType)
+                using (var formData = new MultipartFormDataContent())
                 {
-                    case SegmentationType.Simple:
-                        requestUri = "/api/v1/segment";
-                        break;
-                    case SegmentationType.Detailed:
-                        requestUri = "/api/v1/segmentation_inference";
-                        break;
-                    default:
-                        requestUri = "/api/v1/segmentation_inference";
-                        break;
-                }
+                    StreamContent imageStream = new StreamContent(File.OpenRead(path));
+                    imageStream.Headers.ContentType = new MediaTypeWithQualityHeaderValue("image/png");
 
-                var response = await _client.PostAsync(requestUri, formData);
+                    string fileName = Path.GetFileName(path);
 
-                try
-                {
+                    formData.Add(imageStream, "file", fileName);
+                    string requestUri;
+
+                    switch (segmentationType)
+                    {
+                        case SegmentationType.Simple:
+                            requestUri = "https://image-semantic-segmentation-segformer.ai-sandbox.4th-ir.io/api/v1/segment";
+                            break;
+                        case SegmentationType.Detailed:
+                            requestUri = "https://image-semantic-segmentation-segformer.ai-sandbox.4th-ir.io/api/v1/segmentation_inference";
+                            break;
+                        default:
+                            requestUri = "https://image-semantic-segmentation-segformer.ai-sandbox.4th-ir.io/api/v1/segmentation_inference";
+                            break;
+                    }
+
+                    response = await _client.PostAsync(requestUri, formData);
 
                     response.EnsureSuccessStatusCode();
 
@@ -65,27 +66,27 @@ namespace SemanticSegmentation.Segformer
 
                     File.WriteAllBytes(name, responseContent);
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
-                    string message = "";
-
-                    if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                    {
-                        message = "Invalid image format";
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    {
-                        message = "ML model not found";
-                    }
-                    else
-                    {
-                        message = "Error: Unable to complete operation";
-                    }
-
-                    throw new SemanticSegmentationException(message, ex);
+                    message = "Invalid image format";
+                }
+                else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    message = "ML model not found";
+                }
+                else
+                {
+                    message = "Error: Unable to complete operation";
                 }
 
+                throw new SemanticSegmentationException(message, ex);
             }
+
         }
     }
 }

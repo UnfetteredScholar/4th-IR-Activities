@@ -61,6 +61,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Determines the age of a human figure in an image..
+        /// </summary>
+        public static string AgeClassificationGoogleVitBase_Description {
+            get {
+                return ResourceManager.GetString("AgeClassificationGoogleVitBase_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age Classification.
+        /// </summary>
+        public static string AgeClassificationGoogleVitBase_DisplayName {
+            get {
+                return ResourceManager.GetString("AgeClassificationGoogleVitBase_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full path to the image file..
+        /// </summary>
+        public static string AgeClassificationGoogleVitBase_Path_Description {
+            get {
+                return ResourceManager.GetString("AgeClassificationGoogleVitBase_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string AgeClassificationGoogleVitBase_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("AgeClassificationGoogleVitBase_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Array of possible age ranges..
+        /// </summary>
+        public static string AgeClassificationGoogleVitBase_PossibleAges_Description {
+            get {
+                return ResourceManager.GetString("AgeClassificationGoogleVitBase_PossibleAges_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Possible Ages.
+        /// </summary>
+        public static string AgeClassificationGoogleVitBase_PossibleAges_DisplayName {
+            get {
+                return ResourceManager.GetString("AgeClassificationGoogleVitBase_PossibleAges_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Authentication.
         /// </summary>
         public static string Authentication_Category {
@@ -1888,7 +1942,7 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Segmantation Type.
+        ///   Looks up a localized string similar to Segmentation Type.
         /// </summary>
         public static string SemanticSegmantationSegformer_SegmantationType_DisplayName {
             get {

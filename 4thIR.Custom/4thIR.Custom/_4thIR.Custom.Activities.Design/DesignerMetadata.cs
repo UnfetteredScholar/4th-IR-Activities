@@ -255,6 +255,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(SemanticSegmantationSegformer), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Age Classification- Google Vit Base
+            builder.AddCustomAttributes(typeof(AgeClassificationGoogleVitBase), new CategoryAttribute("4th-IR.Age Classification.Google Vit Base"));
+            builder.AddCustomAttributes(typeof(AgeClassificationGoogleVitBase), new DesignerAttribute(typeof(AgeClassificationGoogleVitBaseDesigner)));
+            builder.AddCustomAttributes(typeof(AgeClassificationGoogleVitBase), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

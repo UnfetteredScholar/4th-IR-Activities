@@ -1298,11 +1298,35 @@
     <comment>property description</comment>
   </data>
   <data name="SemanticSegmantationSegformer_SegmantationType_DisplayName" xml:space="preserve">
-    <value>Segmantation Type</value>
+    <value>Segmentation Type</value>
     <comment>property name</comment>
   </data>
   <data name="SemanticSegmantationSegformer_SegmantationType_Description" xml:space="preserve">
     <value>The segmentation type.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="AgeClassificationGoogleVitBase_DisplayName" xml:space="preserve">
+    <value>Age Classification</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="AgeClassificationGoogleVitBase_Description" xml:space="preserve">
+    <value>Determines the age of a human figure in an image.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="AgeClassificationGoogleVitBase_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="AgeClassificationGoogleVitBase_Path_Description" xml:space="preserve">
+    <value>Full path to the image file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="AgeClassificationGoogleVitBase_PossibleAges_DisplayName" xml:space="preserve">
+    <value>Possible Ages</value>
+    <comment>property name</comment>
+  </data>
+  <data name="AgeClassificationGoogleVitBase_PossibleAges_Description" xml:space="preserve">
+    <value>Array of possible age ranges.</value>
     <comment>property description</comment>
   </data>
 </root>

@@ -1033,6 +1033,30 @@
     <value>Result of the classification.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextSummarizerBartLarge_DisplayName" xml:space="preserve">
+    <value>Text Summarization</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextSummarizerBartLarge_Description" xml:space="preserve">
+    <value>Summarizes input text</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextSummarizerBartLarge_UserSentence_DisplayName" xml:space="preserve">
+    <value>UserSentence</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextSummarizerBartLarge_UserSentence_Description" xml:space="preserve">
+    <value>Text input</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextSummarizerBartLarge_Summary_DisplayName" xml:space="preserve">
+    <value>Summary</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextSummarizerBartLarge_Summary_Description" xml:space="preserve">
+    <value>summarized text</value>
+    <comment>property description</comment>
+  </data>
   <data name="ObjectDetectionFasterRCNNResnet50fpn_DisplayName" xml:space="preserve">
     <value>Object Detection</value>
     <comment>activity name</comment>

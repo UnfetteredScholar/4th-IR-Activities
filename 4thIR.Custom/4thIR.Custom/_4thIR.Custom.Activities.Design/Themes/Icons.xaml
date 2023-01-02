@@ -7867,5 +7867,60 @@
     </DrawingGroup>
     <DrawingBrush x:Key="PoseEstimationResnet101Icon" Drawing="{StaticResource logo2dafeaffc0abb45a39deb080f152bc0b2_0}" />
 
+    <!--TextSummarizerBartLarge Icon-->
+    <DrawingGroup x:Key="4thirlogoa447fd0104f04f348b5234e93ecb0015_0">
+      <DrawingGroup.ClipGeometry>
+        <RectangleGeometry Rect="0,0,251,75" />
+      </DrawingGroup.ClipGeometry>
+      <DrawingGroup Transform="0.1,0,0,-0.1,0,75">
+        <GeometryDrawing Brush="#FF000000">
+          <GeometryDrawing.Geometry>
+            <PathGeometry FillRule="Nonzero" Figures="M368,473C330,435 300,399 300,392 300,384 320,380 364,380 425,380 429,382 459,416 486,446 491,459 488,493 485,529 482,535 460,538 441,540 420,526 368,473z" />
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF000000">
+          <GeometryDrawing.Geometry>
+            <PathGeometry FillRule="Nonzero" Figures="M810,455C810,386 813,370 825,370 835,370 840,381 840,405 840,439 841,440 880,440 909,440 920,444 920,455 920,466 909,470 880,470 847,470 840,473 840,490 840,507 847,510 886,510 955,510 938,534 867,538L810,541 810,455z" />
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF000000">
+          <GeometryDrawing.Geometry>
+            <PathGeometry FillRule="Nonzero" Figures="M1004,516C947,468 982,370 1056,370 1102,370 1119,379 1135,411 1157,453 1153,478 1121,511 1084,547 1042,549 1004,516z M1108,478C1117,458 1118,445 1110,430 1080,373 1010,390 1010,455 1010,514 1082,531 1108,478z" />
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF000000">
+          <GeometryDrawing.Geometry>
+            <PathGeometry FillRule="Nonzero" Figures="M1207,533C1187,513 1207,395 1233,378 1256,363 1316,370 1333,388 1356,413 1357,540 1335,540 1323,540 1320,526 1320,475 1320,421 1317,409 1300,400 1286,392 1274,392 1260,400 1243,409 1240,421 1240,475 1240,523 1236,540 1227,540 1219,540 1210,537 1207,533z" />
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF000000">
+          <GeometryDrawing.Geometry>
+            <PathGeometry FillRule="Nonzero" Figures="M1420,455C1420,386 1423,370 1435,370 1445,370 1450,380 1450,400 1450,419 1455,430 1464,430 1472,430 1487,417 1497,400 1506,384 1523,370 1533,370 1550,370 1550,371 1534,400 1517,428 1517,430 1534,449 1573,492 1533,540 1458,540L1420,540 1420,455z M1515,485C1515,470 1507,464 1483,462 1453,459 1450,461 1450,485 1450,509 1453,511 1483,508 1507,506 1515,500 1515,485z" />
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF000000">
+          <GeometryDrawing.Geometry>
+            <PathGeometry FillRule="Nonzero" Figures="M1600,526C1600,518 1610,510 1623,508 1643,505 1645,499 1648,438 1650,386 1654,370 1665,370 1677,370 1680,385 1680,440 1680,509 1681,510 1706,510 1722,510 1730,515 1728,523 1725,530 1700,536 1662,538 1613,540 1600,538 1600,526z" />
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF000000">
+          <GeometryDrawing.Geometry>
+            <PathGeometry FillRule="Nonzero" Figures="M1780,455C1780,386 1783,370 1795,370 1805,370 1810,381 1810,405 1810,440 1810,440 1855,440 1900,440 1900,440 1900,405 1900,381 1905,370 1915,370 1927,370 1930,386 1930,455 1930,524 1927,540 1915,540 1905,540 1900,529 1900,505 1900,470 1900,470 1855,470 1810,470 1810,470 1810,505 1810,529 1805,540 1795,540 1783,540 1780,524 1780,455z" />
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF000000">
+          <GeometryDrawing.Geometry>
+            <PathGeometry FillRule="Nonzero" Figures="M2060,454C2060,442 2069,440 2102,442 2161,446 2165,470 2106,470 2071,470 2060,466 2060,454z" />
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF000000">
+          <GeometryDrawing.Geometry>
+            <PathGeometry FillRule="Nonzero" Figures="M493,304C469,275 450,246 450,241 450,236 424,229 393,225 361,222 328,218 320,217 309,215 306,205 308,180 313,135 316,130 344,130 357,130 378,120 392,107L417,84 441,105C522,177 600,270 600,294 600,321 569,361 548,359 541,359 516,334 493,304z" />
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+      </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush x:Key="TextSummarizerBartLargeIcon" Drawing="{StaticResource 4thirlogoa447fd0104f04f348b5234e93ecb0015_0}" />
+
 
 </ResourceDictionary>

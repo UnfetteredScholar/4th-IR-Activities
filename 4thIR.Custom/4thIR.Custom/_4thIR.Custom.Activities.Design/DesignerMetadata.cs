@@ -111,6 +111,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationVitBaseBean), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Summarization - Bart Large
+            builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), new CategoryAttribute("4th-IR.Text Summarization.Bart.large"));
+            builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), new DesignerAttribute(typeof(TextSummarizerBartLargeDesigner)));
+            builder.AddCustomAttributes(typeof(TextSummarizerBartLarge), new HelpKeywordAttribute(""));
+            #endregion
+
             #region Text Summarization - Bert2Bert Small
             builder.AddCustomAttributes(typeof(TextSummarizationBert2BertSmall), new CategoryAttribute("4th-IR.Text Summarization.Bert2Bert.Small"));
             builder.AddCustomAttributes(typeof(TextSummarizationBert2BertSmall), new DesignerAttribute(typeof(TextSummarizationBert2BertSmallDesigner)));
@@ -194,6 +200,8 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBaseFineTuned), new DesignerAttribute(typeof(ImageClassificationGoogleVitBaseFineTunedDesigner)));
             builder.AddCustomAttributes(typeof(ImageClassificationGoogleVitBaseFineTuned), new HelpKeywordAttribute(""));
             #endregion
+           
+
 
             #region Object Detection-FasterRCNN Resnet50fpn
             builder.AddCustomAttributes(typeof(ObjectDetectionFasterRCNNResnet50fpn), new CategoryAttribute("4th-IR.Object Detection.Faster RCNN.Resnet 50fpn"));

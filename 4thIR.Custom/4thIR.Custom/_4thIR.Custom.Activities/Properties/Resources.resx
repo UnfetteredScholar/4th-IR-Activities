@@ -1617,4 +1617,100 @@
     <value>The complete text.</value>
     <comment>property description</comment>
   </data>
+  <data name="QuestionAnsweringIntelDynamicTinybert_DisplayName" xml:space="preserve">
+    <value>Question Answering</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="QuestionAnsweringIntelDynamicTinybert_Description" xml:space="preserve">
+    <value>Provies responses to questions.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="QuestionAnsweringIntelDynamicTinybert_Context_DisplayName" xml:space="preserve">
+    <value>Context</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringIntelDynamicTinybert_Context_Description" xml:space="preserve">
+    <value>The context of the question.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="QuestionAnsweringIntelDynamicTinybert_Question_DisplayName" xml:space="preserve">
+    <value>Question</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringIntelDynamicTinybert_Question_Description" xml:space="preserve">
+    <value>The question to be answered.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="QuestionAnsweringIntelDynamicTinybert_Answer_DisplayName" xml:space="preserve">
+    <value>Answer</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringIntelDynamicTinybert_Answer_Description" xml:space="preserve">
+    <value>The response to the question.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_DisplayName" xml:space="preserve">
+    <value>Question Answering</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_Description" xml:space="preserve">
+    <value>Provies responses to questions.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_Context_DisplayName" xml:space="preserve">
+    <value>Context</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_Context_Description" xml:space="preserve">
+    <value>The context of the question.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_Question_DisplayName" xml:space="preserve">
+    <value>Question</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_Question_Description" xml:space="preserve">
+    <value>The question to be answered.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_Answer_DisplayName" xml:space="preserve">
+    <value>Answer</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_Answer_Description" xml:space="preserve">
+    <value>The response to the question.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_Score_DisplayName" xml:space="preserve">
+    <value>Score</value>
+    <comment>property name</comment>
+  </data>
+  <data name="QuestionAnsweringXLMRobertaBaseSquad2_Score_Description" xml:space="preserve">
+    <value>The accuracy of the answer.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextSummarizationMeetingSummaryFacebookBartLarge_DisplayName" xml:space="preserve">
+    <value>Text Summarization</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextSummarizationMeetingSummaryFacebookBartLarge_Description" xml:space="preserve">
+    <value>Performs summarization of text.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextSummarizationMeetingSummaryFacebookBartLarge_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextSummarizationMeetingSummaryFacebookBartLarge_Text_Description" xml:space="preserve">
+    <value>The input text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextSummarizationMeetingSummaryFacebookBartLarge_Summary_DisplayName" xml:space="preserve">
+    <value>Summary</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextSummarizationMeetingSummaryFacebookBartLarge_Summary_Description" xml:space="preserve">
+    <value>The summarized text.</value>
+    <comment>property description</comment>
+  </data>
 </root>

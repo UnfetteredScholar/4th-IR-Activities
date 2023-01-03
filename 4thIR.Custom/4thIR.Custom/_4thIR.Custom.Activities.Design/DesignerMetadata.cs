@@ -313,6 +313,24 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextCompletionTransformerXL), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Question and Answering Intel DynamicTinybert
+            builder.AddCustomAttributes(typeof(QuestionAnsweringIntelDynamicTinybert), new CategoryAttribute("4th-IR.Question Answering.Intel.Dynamic Tinybert"));
+            builder.AddCustomAttributes(typeof(QuestionAnsweringIntelDynamicTinybert), new DesignerAttribute(typeof(QuestionAnsweringIntelDynamicTinybertDesigner)));
+            builder.AddCustomAttributes(typeof(QuestionAnsweringIntelDynamicTinybert), new HelpKeywordAttribute(""));
+            #endregion
+
+            #region XLM Roberta Base Squad 2 - Question Answer (German)
+            builder.AddCustomAttributes(typeof(QuestionAnsweringXLMRobertaBaseSquad2), new CategoryAttribute("4th-IR.Question Answering.XLM.Roberta Base Squad 2"));
+            builder.AddCustomAttributes(typeof(QuestionAnsweringXLMRobertaBaseSquad2), new DesignerAttribute(typeof(QuestionAnsweringXLMRobertaBaseSquad2Designer)));
+            builder.AddCustomAttributes(typeof(QuestionAnsweringXLMRobertaBaseSquad2), new HelpKeywordAttribute(""));
+            #endregion
+
+            #region Text Summarization - Meeting Summary (Facebook Bart Large)
+            builder.AddCustomAttributes(typeof(TextSummarizationMeetingSummaryFacebookBartLarge), new CategoryAttribute("4th-IR.Text Summarization.Meeting Summary.Facebook Bart Large"));
+            builder.AddCustomAttributes(typeof(TextSummarizationMeetingSummaryFacebookBartLarge), new DesignerAttribute(typeof(TextSummarizationMeetingSummaryFacebookBartLargeDesigner)));
+            builder.AddCustomAttributes(typeof(TextSummarizationMeetingSummaryFacebookBartLarge), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

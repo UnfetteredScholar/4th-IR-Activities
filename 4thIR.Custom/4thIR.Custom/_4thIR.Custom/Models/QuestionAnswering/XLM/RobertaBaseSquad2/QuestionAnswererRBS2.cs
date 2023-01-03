@@ -21,26 +21,28 @@ namespace QuestionAnswering.XLM.RobertaBaseSquad2
             public double score { get; set; }
         }
 
-        private static readonly HttpClient _client = new HttpClient();
+        private HttpClient _client = null;
 
-        public QuestionAnswererRBS2()
+        public QuestionAnswererRBS2(HttpClient client)
         {
-            _client.BaseAddress = new Uri("https://text-question-answer-xlm-roberta-squad2.ai-sandbox.4th-ir.io");
-            _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _client = client;
+            //_client.BaseAddress = new Uri("https://text-question-answer-xlm-roberta-squad2.ai-sandbox.4th-ir.io");
+            //_client.DefaultRequestHeaders.Accept.Clear();
+            //_client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public async Task<(string answer, double score)> AnswerQuestion(string questionAsked, string questionContext)
         {
-            var requestContent = new { question = questionAsked, context = questionContext };
-
-            StringContent stringContent = new StringContent(JsonSerializer.Serialize(requestContent), Encoding.UTF8, "application/json");
-
-            string requestUri = "/question";
-            var response = await _client.PostAsync(requestUri, stringContent);
-
+            HttpResponseMessage response = new HttpResponseMessage();
             try
             {
+                var requestContent = new { question = questionAsked, context = questionContext };
+
+                StringContent stringContent = new StringContent(JsonSerializer.Serialize(requestContent), Encoding.UTF8, "application/json");
+
+                string requestUri = "https://text-question-answer-xlm-roberta-squad2.ai-sandbox.4th-ir.io/question";
+                response = await _client.PostAsync(requestUri, stringContent);
+
                 string r = await response.Content.ReadAsStringAsync();
 
                 ResponseContent responseContent = JsonSerializer.Deserialize<ResponseContent>(r);

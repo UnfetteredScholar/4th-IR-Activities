@@ -2275,6 +2275,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The response to the question..
+        /// </summary>
+        public static string QuestionAnsweringIntelDynamicTinybert_Answer_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringIntelDynamicTinybert_Answer_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answer.
+        /// </summary>
+        public static string QuestionAnsweringIntelDynamicTinybert_Answer_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringIntelDynamicTinybert_Answer_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The context of the question..
+        /// </summary>
+        public static string QuestionAnsweringIntelDynamicTinybert_Context_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringIntelDynamicTinybert_Context_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Context.
+        /// </summary>
+        public static string QuestionAnsweringIntelDynamicTinybert_Context_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringIntelDynamicTinybert_Context_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provies responses to questions..
+        /// </summary>
+        public static string QuestionAnsweringIntelDynamicTinybert_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringIntelDynamicTinybert_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question Answering.
+        /// </summary>
+        public static string QuestionAnsweringIntelDynamicTinybert_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringIntelDynamicTinybert_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The question to be answered..
+        /// </summary>
+        public static string QuestionAnsweringIntelDynamicTinybert_Question_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringIntelDynamicTinybert_Question_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question.
+        /// </summary>
+        public static string QuestionAnsweringIntelDynamicTinybert_Question_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringIntelDynamicTinybert_Question_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The answer to the question..
         /// </summary>
         public static string QuestionAnsweringRBS2_Answer_Description {
@@ -2361,6 +2433,96 @@ namespace _4thIR.Custom.Activities.Properties {
         public static string QuestionAnsweringRBS2_Score_DisplayName {
             get {
                 return ResourceManager.GetString("QuestionAnsweringRBS2_Score_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The response to the question..
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_Answer_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_Answer_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answer.
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_Answer_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_Answer_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The context of the question..
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_Context_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_Context_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Context.
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_Context_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_Context_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provies responses to questions..
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question Answering.
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The question to be answered..
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_Question_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_Question_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question.
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_Question_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_Question_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The accuracy of the answer..
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_Score_Description {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_Score_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        public static string QuestionAnsweringXLMRobertaBaseSquad2_Score_DisplayName {
+            get {
+                return ResourceManager.GetString("QuestionAnsweringXLMRobertaBaseSquad2_Score_DisplayName", resourceCulture);
             }
         }
         
@@ -3135,6 +3297,60 @@ namespace _4thIR.Custom.Activities.Properties {
         public static string TextSummarizationFairseq_Text_DisplayName {
             get {
                 return ResourceManager.GetString("TextSummarizationFairseq_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Performs summarization of text..
+        /// </summary>
+        public static string TextSummarizationMeetingSummaryFacebookBartLarge_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationMeetingSummaryFacebookBartLarge_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Summarization.
+        /// </summary>
+        public static string TextSummarizationMeetingSummaryFacebookBartLarge_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationMeetingSummaryFacebookBartLarge_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The summarized text..
+        /// </summary>
+        public static string TextSummarizationMeetingSummaryFacebookBartLarge_Summary_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationMeetingSummaryFacebookBartLarge_Summary_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        public static string TextSummarizationMeetingSummaryFacebookBartLarge_Summary_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationMeetingSummaryFacebookBartLarge_Summary_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The input text..
+        /// </summary>
+        public static string TextSummarizationMeetingSummaryFacebookBartLarge_Text_Description {
+            get {
+                return ResourceManager.GetString("TextSummarizationMeetingSummaryFacebookBartLarge_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string TextSummarizationMeetingSummaryFacebookBartLarge_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("TextSummarizationMeetingSummaryFacebookBartLarge_Text_DisplayName", resourceCulture);
             }
         }
         

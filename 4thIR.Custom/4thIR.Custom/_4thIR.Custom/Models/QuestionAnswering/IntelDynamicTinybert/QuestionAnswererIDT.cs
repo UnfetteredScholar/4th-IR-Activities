@@ -30,29 +30,32 @@ namespace QuestionAnswering.IntelDynamicTinybert
 
         }
 
-        private static readonly HttpClient _client = new HttpClient();
+        private HttpClient _client = null;
 
-        public QuestionAnswererIDT()
+        public QuestionAnswererIDT(HttpClient client)
         {
-            _client.BaseAddress = new Uri("https://text-question-answer-intel-dynamic-tinybert.ai-sandbox.4th-ir.io");
-            _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _client = client;
+            //_client.BaseAddress = new Uri("https://text-question-answer-intel-dynamic-tinybert.ai-sandbox.4th-ir.io");
+            //_client.DefaultRequestHeaders.Accept.Clear();
+            //_client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
 
         public async Task<string> AnswerQuestion(string context, string question)
         {
-
-            RequestContent requestContent = new RequestContent(context, question);
-
-
-            StringContent questionContent = new StringContent(JsonSerializer.Serialize(requestContent), Encoding.UTF8, "application/json");
-
-            string requestUri = "/api/v1/predict";
-            var response = await _client.PostAsync(requestUri, questionContent);
-
+            HttpResponseMessage response = new HttpResponseMessage();
             try
             {
+
+                RequestContent requestContent = new RequestContent(context, question);
+
+
+                StringContent questionContent = new StringContent(JsonSerializer.Serialize(requestContent), Encoding.UTF8, "application/json");
+
+                string requestUri = "https://text-question-answer-intel-dynamic-tinybert.ai-sandbox.4th-ir.io/api/v1/predict";
+                response = await _client.PostAsync(requestUri, questionContent);
+
+
                 response.EnsureSuccessStatusCode();
 
                 var r = await response.Content.ReadAsStringAsync();

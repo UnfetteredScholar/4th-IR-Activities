@@ -29,13 +29,14 @@ namespace SentenceCompletion.TransformerXL
 
         }
 
-        private static readonly HttpClient _client = new HttpClient();
+        private HttpClient _client = null;
 
-        public SentenceCompleter()
+        public SentenceCompleter(HttpClient client)
         {
-            _client.BaseAddress = new Uri("https://text-part-of-speech-tagging-transformer-xl.ai-sandbox.4th-ir.io");
-            _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _client = client;
+            //_client.BaseAddress = new Uri("https://text-part-of-speech-tagging-transformer-xl.ai-sandbox.4th-ir.io");
+            // _client.DefaultRequestHeaders.Accept.Clear();
+            // _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
 
@@ -47,17 +48,18 @@ namespace SentenceCompletion.TransformerXL
         /// <exception cref="TextGenerationException"></exception>
         public async Task<Tuple<string, string>> CompleteText(string sentence)
         {
-
-            RequestContent requestContent = new RequestContent(sentence);
-
-
-            StringContent textContent = new StringContent(JsonSerializer.Serialize(requestContent), Encoding.UTF8, "application/json");
-
-            string requestUri = "/api/v1/predict";
-            var response = await _client.PostAsync(requestUri, textContent);
-
+            HttpResponseMessage response = new HttpResponseMessage();
             try
             {
+                RequestContent requestContent = new RequestContent(sentence);
+
+
+                StringContent textContent = new StringContent(JsonSerializer.Serialize(requestContent), Encoding.UTF8, "application/json");
+
+                string requestUri = "https://text-part-of-speech-tagging-transformer-xl.ai-sandbox.4th-ir.io/api/v1/predict";
+                response = await _client.PostAsync(requestUri, textContent);
+
+
                 response.EnsureSuccessStatusCode();
 
                 var r = await response.Content.ReadAsStringAsync();

@@ -72,6 +72,7 @@
     <None Remove="Designers\SemanticSegmentationPSPNetDesigner.xaml" />
     <None Remove="Designers\SentimentAnalysisDeBertaDesigner.xaml" />
     <None Remove="Designers\TextClassificationZSRDesigner.xaml" />
+    <None Remove="Designers\TextCompletionTransformerXLDesigner.xaml" />
     <None Remove="Designers\TextGenerationFairseqDesigner.xaml" />
     <None Remove="Designers\TextGenerationGpt2Designer.xaml" />
     <None Remove="Designers\TextGenerationOpenaiGptDesigner.xaml" />
@@ -274,6 +275,10 @@
     </Page>
     <Page Include="Designers\TextClassificationZSRDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\TextCompletionTransformerXLDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\TextGenerationFairseqDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

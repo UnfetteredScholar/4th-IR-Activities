@@ -2635,6 +2635,78 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The added text..
+        /// </summary>
+        public static string TextCompletionTransformerXL_AddedText_Description {
+            get {
+                return ResourceManager.GetString("TextCompletionTransformerXL_AddedText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Added Text.
+        /// </summary>
+        public static string TextCompletionTransformerXL_AddedText_DisplayName {
+            get {
+                return ResourceManager.GetString("TextCompletionTransformerXL_AddedText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The complete text..
+        /// </summary>
+        public static string TextCompletionTransformerXL_CompleteText_Description {
+            get {
+                return ResourceManager.GetString("TextCompletionTransformerXL_CompleteText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Complete Text.
+        /// </summary>
+        public static string TextCompletionTransformerXL_CompleteText_DisplayName {
+            get {
+                return ResourceManager.GetString("TextCompletionTransformerXL_CompleteText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Performs text completion..
+        /// </summary>
+        public static string TextCompletionTransformerXL_Description {
+            get {
+                return ResourceManager.GetString("TextCompletionTransformerXL_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Completion.
+        /// </summary>
+        public static string TextCompletionTransformerXL_DisplayName {
+            get {
+                return ResourceManager.GetString("TextCompletionTransformerXL_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text to be completed..
+        /// </summary>
+        public static string TextCompletionTransformerXL_IncompleteText_Description {
+            get {
+                return ResourceManager.GetString("TextCompletionTransformerXL_IncompleteText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incomplete Text.
+        /// </summary>
+        public static string TextCompletionTransformerXL_IncompleteText_DisplayName {
+            get {
+                return ResourceManager.GetString("TextCompletionTransformerXL_IncompleteText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generates text using the source text..
         /// </summary>
         public static string TextGenerationFairseq_Description {

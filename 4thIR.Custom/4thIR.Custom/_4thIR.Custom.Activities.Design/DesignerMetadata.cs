@@ -307,6 +307,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextGenerationOpenaiGpt), new HelpKeywordAttribute(""));
             #endregion
 
+            #region POS Tagging - Transformer XL
+            builder.AddCustomAttributes(typeof(TextCompletionTransformerXL), new CategoryAttribute("4th-IR.Text Completion.Transformer XL"));
+            builder.AddCustomAttributes(typeof(TextCompletionTransformerXL), new DesignerAttribute(typeof(TextCompletionTransformerXLDesigner)));
+            builder.AddCustomAttributes(typeof(TextCompletionTransformerXL), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

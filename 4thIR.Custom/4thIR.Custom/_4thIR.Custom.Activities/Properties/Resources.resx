@@ -1585,4 +1585,36 @@
     <value>The generated response.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextCompletionTransformerXL_DisplayName" xml:space="preserve">
+    <value>Text Completion</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextCompletionTransformerXL_Description" xml:space="preserve">
+    <value>Performs text completion.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextCompletionTransformerXL_IncompleteText_DisplayName" xml:space="preserve">
+    <value>Incomplete Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextCompletionTransformerXL_IncompleteText_Description" xml:space="preserve">
+    <value>The text to be completed.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextCompletionTransformerXL_AddedText_DisplayName" xml:space="preserve">
+    <value>Added Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextCompletionTransformerXL_AddedText_Description" xml:space="preserve">
+    <value>The added text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextCompletionTransformerXL_CompleteText_DisplayName" xml:space="preserve">
+    <value>Complete Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextCompletionTransformerXL_CompleteText_Description" xml:space="preserve">
+    <value>The complete text.</value>
+    <comment>property description</comment>
+  </data>
 </root>

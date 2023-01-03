@@ -1561,4 +1561,28 @@
     <value>Array of generated texts.</value>
     <comment>property description</comment>
   </data>
+  <data name="TextGenerationOpenaiGpt_DisplayName" xml:space="preserve">
+    <value>Text Generation</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="TextGenerationOpenaiGpt_Description" xml:space="preserve">
+    <value>Performs text generation.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="TextGenerationOpenaiGpt_Sentence_DisplayName" xml:space="preserve">
+    <value>Sentence</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationOpenaiGpt_Sentence_Description" xml:space="preserve">
+    <value>The prompt.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="TextGenerationOpenaiGpt_GeneratedTexts_DisplayName" xml:space="preserve">
+    <value>Generated Texts</value>
+    <comment>property name</comment>
+  </data>
+  <data name="TextGenerationOpenaiGpt_GeneratedTexts_Description" xml:space="preserve">
+    <value>The generated response.</value>
+    <comment>property description</comment>
+  </data>
 </root>

@@ -301,6 +301,12 @@ namespace _4thIR.Custom.Activities.Design
             builder.AddCustomAttributes(typeof(TextGenerationGpt2), new HelpKeywordAttribute(""));
             #endregion
 
+            #region Text Generation- OpenaiGpt
+            builder.AddCustomAttributes(typeof(TextGenerationOpenaiGpt), new CategoryAttribute("4th-IR.Text Generation.Open AI Gpt"));
+            builder.AddCustomAttributes(typeof(TextGenerationOpenaiGpt), new DesignerAttribute(typeof(TextGenerationOpenaiGptDesigner)));
+            builder.AddCustomAttributes(typeof(TextGenerationOpenaiGpt), new HelpKeywordAttribute(""));
+            #endregion
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

@@ -2761,6 +2761,60 @@ namespace _4thIR.Custom.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Performs text generation..
+        /// </summary>
+        public static string TextGenerationOpenaiGpt_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationOpenaiGpt_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text Generation.
+        /// </summary>
+        public static string TextGenerationOpenaiGpt_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationOpenaiGpt_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The generated response..
+        /// </summary>
+        public static string TextGenerationOpenaiGpt_GeneratedTexts_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationOpenaiGpt_GeneratedTexts_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated Texts.
+        /// </summary>
+        public static string TextGenerationOpenaiGpt_GeneratedTexts_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationOpenaiGpt_GeneratedTexts_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The prompt..
+        /// </summary>
+        public static string TextGenerationOpenaiGpt_Sentence_Description {
+            get {
+                return ResourceManager.GetString("TextGenerationOpenaiGpt_Sentence_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string TextGenerationOpenaiGpt_Sentence_DisplayName {
+            get {
+                return ResourceManager.GetString("TextGenerationOpenaiGpt_Sentence_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generates text using sample input..
         /// </summary>
         public static string TextGenerationTransformers_Description {
